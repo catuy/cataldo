@@ -1,0 +1,17 @@
+name = "catuy-portfolio"
+compatibility_date = "2023-12-01"
+
+[env.production]
+route = "ctld.com/*"
+
+[[env.production.vars]]
+GITHUB_CLIENT_ID = ""
+GITHUB_CLIENT_SECRET = ""
+
+[build]
+command = "./build.sh"
+cwd = "."
+watch_dir = "."
+
+[build.upload]
+format = "service-worker"

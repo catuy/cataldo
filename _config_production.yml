@@ -1,0 +1,45 @@
+# Production configuration for Cloudflare Pages
+# This file extends the base _config.yml for production builds
+
+# Override base URL for production
+url: "https://catuy-github-io.pages.dev"
+baseurl: ""
+
+# Ensure proper asset paths for Cloudflare Pages
+sass:
+  style: compressed
+  sourcemap: never
+  quiet_deps: true
+  verbose: false
+
+# Optimize for production
+incremental: false
+profile: false
+
+# Exclude development files
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+  - LICENSE.txt
+  - .DS_Store
+  - .git/
+  - .github/
+  - functions/
+
+# Cloudflare Pages specific settings
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Ensure proper permalink structure
+permalink: /work/:title/
