@@ -1,19 +1,20 @@
 ---
 layout: post
 date: 2015-01-01 17:12:19 -0300
-visible: false
-title:  Monitor Cannabis
+# visible: false
+title:  "Monitor Cannabis"
 categories: todos consultorias
 images: /assets/blogimages/tiles/monitor.gif
 tags:
   - Web
-description: "The Inter typeface <br>Used by millions world-wide, including big names like Unity, Pixar, GitHub, Mozilla, Figma and many others."
+description: "Monitor Cannabis<br>Supporting a regional knowledge platform for cannabis policy by designing its identity, brand system, and digital communication strategy."
 ---
-Monitorcannabis.uy es un componente del proyecto “Hacia una estrategia de evaluación y monitoreo de la regulación de la marihuana en Uruguay” gestionado por la Fundación Friedrich Ebert en Uruguay (FESUR) y financiado por Open Society Foundations . El proyecto cuenta con la colaboración de la Junta Nacional de Drogas, la Universidad de la República y ProDerechos. Busca facilitar el intercambio de información relevante sobre la implementación de la regulación del cannabis en Uruguay, su monitoreo y evaluación, entre actores nacionales, de otros países de la región y del mundo.
+Monitorcannabis.uy is part of the project “Towards a strategy for evaluating and monitoring cannabis regulation in Uruguay”, managed by the Friedrich Ebert Foundation in Uruguay (FESUR) and funded by the Open Society Foundations. The project involves collaboration with the National Drug Board, the University of the Republic, and ProDerechos. Its goal is to facilitate the exchange of relevant information on the implementation, monitoring, and evaluation of cannabis regulation in Uruguay—among local stakeholders as well as regional and international actors.
 
-En este marco, mi rol en el proyecto fue: Consultoría general en DCV. Diseño de sistema de identidad, arquitectura marcaria, sitio web y comunicación estratégica.
+Within this framework, my role in the project included:
+General consulting in visual communication, identity system design, brand architecture, website design, and strategic communication.
 
-Equipo de trabajo: Diego Cataldo, Clara Musto, Mauricio Coitiño, ProDerechos
+Team: Diego Cataldo, Clara Musto, Mauricio Coitiño, ProDerechos
 
 <img class="post-image-full" src="/assets/blogimages/monitor-1.jpg">
 <img class="post-image-full" src="/assets/blogimages/monitor-2.jpg">

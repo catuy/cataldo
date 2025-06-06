@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Emprendedores innovadores"
+date:   2019-01-01 17:12:19 -0300
+description: "Emprendedores innovadores<br>Lead Product Designer, optimizing UX, design systems and led a rebranding to amplify product impact and efficiency."
+categories: todos consultorias
+images: /assets/blogimages/tiles/pei.jpg
+tags: [Web]
+visible: false
+---
+El Programa de Emprendedores Innovadores es un portal donde los emprendedores más destacados del país comparten herramientas y consejos para que des tus primeros pasos en el mundo lean startup.
+
+Mi rol en este proyecto abarcó: Consultoría en el diseño del producto, consultoría general estratégica en UX, UI. Diseño, desarrollo e implementación del portal web. 
+
+<video autobuffer autoPlay loop muted><source src="/assets/blogimages/pei-1.mp4" type="video/mp4" /></video>
+<video autobuffer autoPlay loop muted><source src="/assets/blogimages/pei-2.mp4" type="video/mp4" /></video>
+<video autobuffer autoPlay loop muted><source src="/assets/blogimages/pei-3.mp4" type="video/mp4" /></video>

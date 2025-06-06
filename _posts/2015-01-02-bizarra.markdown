@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Birra Bizarra"
+date:   2009-01-01 17:12:19 -0300
+description: "Birra Bizarra<br>I designed a multi-award-winning typeface featuring portraits of Uruguay's disappeared detainees during the dictatorship, recognized by the <a href='https://mude.pt/' target='blank'>Museum of Design and Fashion (Lisbon)</a>, the <a href='https://www.dimad.org/en' target='blank'>Ibero-American Design Biennial in Spain (2010 and 2017)</a>, and <a href='https://www.tiposlatinos.com/' target='blank'>Tipos Latinos 2010</a>"
+categories: todos academicos
+images: /assets/blogimages/tiles/bizarra.gif
+tags: [Tipografía]
+visible: false
+
+---
+
+
+<video autobuffer autoPlay loop muted><source src="/assets/blogimages/bizarra-1.mp4" type="video/mp4" /></video>

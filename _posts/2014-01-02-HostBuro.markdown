@@ -1,0 +1,13 @@
+---
+layout: post
+date: 2015-01-01 17:12:19 -0300
+visible: false
+title:  "HostBüro"
+categories: todos consultorias
+images: /assets/blogimages/tiles/hostburo.jpg
+tags:
+  - Web
+description: "HostBüro<br>Supporting a regional knowledge platform for cannabis policy by designing its identity, brand system, and digital communication strategy."
+---
+
+<video autobuffer autoPlay loop muted><source src="/assets/blogimages/hostburo-1.mp4" type="video/mp4" /></video>
