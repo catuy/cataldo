@@ -1,0 +1,7 @@
+# This file forces a new deployment on Cloudflare Pages
+# Last updated: 2025-06-05 22:48:00
+# Reason: Fix Ruby 3.4+ compatibility with csv and logger gems
+
+Deploy timestamp: 2025-06-05T22:48:00Z
+Commit: 1652a25
+Changes: Added csv and logger gems to Gemfile for Ruby 3.4+ compatibility
