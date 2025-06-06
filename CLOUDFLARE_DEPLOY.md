@@ -87,12 +87,28 @@ JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config_prod
 └── assets/                 # Assets estáticos
 ```
 
+### Verificación del Deploy
+
+Para verificar que Cloudflare Pages está usando la versión correcta:
+
+1. **Revisar el commit en los logs**: En los logs de build de Cloudflare Pages, verifica que el commit hash coincida con el más reciente en tu repositorio.
+
+2. **Verificar las dependencias**: En los logs debería aparecer "Bundle complete! 10 Gemfile dependencies" (no 8).
+
+3. **Forzar nuevo deploy**: Si Cloudflare Pages sigue usando un commit anterior, puedes forzar un nuevo deploy haciendo un commit vacío:
+   ```bash
+   git commit --allow-empty -m "Force redeploy"
+   git push origin master
+   ```
+
 ### Notas Importantes
 
-1. **Sass Deprecation Warning**: Las advertencias sobre `@import` en Sass no afectan el funcionamiento pero se pueden ignorar en producción.
+1. **Ruby 3.4+ Compatibility**: El proyecto incluye las gemas `csv` y `logger` requeridas para Ruby 3.4+. Estas gemas no están incluidas por defecto en versiones recientes de Ruby.
 
-2. **CMS Configuration**: El archivo `admin/config.yml` está configurado para usar GitHub como backend con autenticación OAuth.
+2. **Sass Deprecation Warning**: Las advertencias sobre `@import` en Sass no afectan el funcionamiento pero se pueden ignorar en producción.
 
-3. **Performance**: Los headers en `_headers` están optimizados para cache y seguridad.
+3. **CMS Configuration**: El archivo `admin/config.yml` está configurado para usar GitHub como backend con autenticación OAuth.
 
-4. **SEO**: El sitio incluye Jekyll SEO Tag y Feed para optimización.
+4. **Performance**: Los headers en `_headers` están optimizados para cache y seguridad.
+
+5. **SEO**: El sitio incluye Jekyll SEO Tag y Feed para optimización.
