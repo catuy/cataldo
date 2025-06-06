@@ -43,6 +43,8 @@ Si el build falla, verifica:
 - Que todas las dependencias del Gemfile estén correctas
 - Que el script `build.sh` tenga permisos de ejecución
 
+**Problema específico con Ruby 3.4+**: El proyecto incluye las gemas `csv` y `logger` que son requeridas para Ruby 3.4+ y no están incluidas por defecto.
+
 #### 2. Problemas de Rutas
 - Verifica que `baseurl` esté configurado correctamente en `_config_production.yml`
 - Asegúrate de que las rutas de assets sean relativas
