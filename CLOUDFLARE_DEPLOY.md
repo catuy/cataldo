@@ -43,7 +43,7 @@ Si el build falla, verifica:
 - Que todas las dependencias del Gemfile estén correctas
 - Que el script `build.sh` tenga permisos de ejecución
 
-**Problema específico con Ruby 3.4+**: El proyecto incluye las gemas `csv` y `logger` que son requeridas para Ruby 3.4+ y no están incluidas por defecto.
+**Problema específico con Ruby 3.4+**: El proyecto incluye las gemas `csv`, `logger` y `base64` que son requeridas para Ruby 3.4+ y no están incluidas por defecto.
 
 #### 2. Problemas de Rutas
 - Verifica que `baseurl` esté configurado correctamente en `_config_production.yml`
@@ -93,7 +93,7 @@ Para verificar que Cloudflare Pages está usando la versión correcta:
 
 1. **Revisar el commit en los logs**: En los logs de build de Cloudflare Pages, verifica que el commit hash coincida con el más reciente en tu repositorio.
 
-2. **Verificar las dependencias**: En los logs debería aparecer "Bundle complete! 10 Gemfile dependencies" (no 8).
+2. **Verificar las dependencias**: En los logs debería aparecer "Bundle complete! 11 Gemfile dependencies" (no 8).
 
 3. **Forzar nuevo deploy**: Si Cloudflare Pages sigue usando un commit anterior, puedes forzar un nuevo deploy haciendo un commit vacío:
    ```bash
@@ -103,7 +103,7 @@ Para verificar que Cloudflare Pages está usando la versión correcta:
 
 ### Notas Importantes
 
-1. **Ruby 3.4+ Compatibility**: El proyecto incluye las gemas `csv` y `logger` requeridas para Ruby 3.4+. Estas gemas no están incluidas por defecto en versiones recientes de Ruby.
+1. **Ruby 3.4+ Compatibility**: El proyecto incluye las gemas `csv`, `logger` y `base64` requeridas para Ruby 3.4+. Estas gemas no están incluidas por defecto en versiones recientes de Ruby.
 
 2. **Sass Deprecation Warning**: Las advertencias sobre `@import` en Sass no afectan el funcionamiento pero se pueden ignorar en producción.
 
