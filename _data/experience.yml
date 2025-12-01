@@ -1,3 +1,15 @@
+- title: Design & Development Lead
+  company: UNESCO-IOC / Global Ocean Observing System (GOOS)
+  period: September 2025 - Present
+  description: Led the design and development of the Interactive Ocean Observing Report Card for UNESCO-IOC's Global Ocean Observing System. Designed a comprehensive design system in Figma and developed a React-based web platform featuring interactive data visualizations, monitoring network cards with KPIs, and oceanographic data displays. Delivered complete component documentation through Storybook.
+  tags:
+    - React
+    - Design Systems
+    - Data Visualization
+    - Tailwind CSS
+    - Storybook
+    - Figma
+
 - title: Senior Product Designer (Consultant)
   company: ClassWallet
   period: 2023 - Present
