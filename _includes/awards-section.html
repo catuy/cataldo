@@ -12,9 +12,27 @@
                         {{ award.emoji }}
                     </div>
                 </div>
-                <div>
-                    <h3 class="font-medium mb-1">{{ award.year }} – {{ award.title }}</h3>
-                    <p class="text-sm text-text-secondary mb-2">{{ award.organization }}</p>
+                <div class="flex-1">
+                    <!-- Type Badge -->
+                    {% if award.type %}
+                    <div class="mb-2">
+                        {% assign type_lower = award.type | downcase %}
+                        {% if type_lower == 'exhibition' %}
+                            <span class="px-2 py-1 bg-black/5 text-fx-base-900 text-xs rounded-full font-medium">Exhibition</span>
+                        {% elsif type_lower == 'award' %}
+                            <span class="px-2 py-1 bg-black/5 text-fx-base-900 text-xs rounded-full font-medium">Award</span>
+                        {% elsif type_lower == 'talk' %}
+                            <span class="px-2 py-1 bg-black/5 text-fx-base-900 text-xs rounded-full font-medium">Talk</span>
+                        {% elsif type_lower == 'publication' %}
+                            <span class="px-2 py-1 bg-black/5 text-fx-base-900 text-xs rounded-full font-medium">Publication</span>
+                        {% elsif type_lower == 'teaching' %}
+                            <span class="px-2 py-1 bg-black/5 text-fx-base-900 text-xs rounded-full font-medium">Teaching</span>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+
+                    <h3 class="font-medium mb-1">{{ award.title }}</h3>
+                    <p class="text-sm text-text-secondary mb-2">{{ award.organization }}, {{ award.year }}</p>
                     <p class="text-sm text-black/70">
                         {{ award.description }}
                     </p>
