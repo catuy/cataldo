@@ -1,41 +1,35 @@
 - title: Strategy & Research
-  description: Conducting user research, competitor analysis, and market studies to inform design decisions. Developing product roadmaps and defining user journeys aligned with business objectives.
+  description: Conducting user research and market analysis to inform design decisions. Developing product roadmaps and user journeys aligned with business goals.
   icon_bg: bg-fx-base-100
   icon_color: "#6F6E69"
   icon_path: M208,28H136a12,12,0,0,0,0,24h49.51L132,105.51l-29.76-29.75a12,12,0,0,0-17,0l-56,56a12,12,0,0,0,17,17L93.51,101.51l29.75,29.76a12,12,0,0,0,17,0L204,67.51V112a12,12,0,0,0,24,0V40A12,12,0,0,0,208,28Z
 
-- title: UX Design
-  description: Designing wireframes, prototypes, and user flows to ensure intuitive navigation. Performing usability testing and iterating based on user feedback.
+- title: UX/UI Design
+  description: Designing wireframes, prototypes, and user flows. Crafting accessible interfaces and building scalable design systems in Figma and Sketch.
   icon_bg: bg-fx-base-100
   icon_color: "#6F6E69"
   icon_path: M216,36H40A20,20,0,0,0,20,56V200a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V56A20,20,0,0,0,216,36Zm-4,160H44V60H212ZM164,88a12,12,0,0,1-12,12H104a12,12,0,0,1,0-24h48A12,12,0,0,1,164,88Zm0,40a12,12,0,0,1-12,12H104a12,12,0,0,1,0-24h48A12,12,0,0,1,164,128Z
 
-- title: UI Design
-  description: Crafting visually appealing and accessible interfaces following best practices. Building and maintaining scalable design systems (e.g., Material UI, Figma libraries).
-  icon_bg: bg-fx-base-100
-  icon_color: "#6F6E69"
-  icon_path: M200,76H156V32a12,12,0,0,0-24,0V76H88V32a12,12,0,0,0-24,0V76H56A20,20,0,0,0,36,96V208a20,20,0,0,0,20,20H200a20,20,0,0,0,20-20V96A20,20,0,0,0,200,76Zm-4,128H60V100H196Z
-
 - title: Development
-  description: Translating designs into responsive, accessible front-end code (HTML, CSS, JavaScript). Collaborating with developers to implement and optimize designs.
+  description: Translating designs into responsive, accessible code using HTML, CSS, and JavaScript. Working with modern frameworks like React to implement optimized solutions.
   icon_bg: bg-fx-base-100
   icon_color: "#6F6E69"
   icon_path: M71.68,97.22,34.74,128l36.94,30.78a12,12,0,1,1-15.36,18.44l-48-40a12,12,0,0,1,0-18.44l48-40A12,12,0,0,1,71.68,97.22Zm176,21.56-48-40a12,12,0,1,0-15.36,18.44L221.26,128l-36.94,30.78a12,12,0,1,0,15.36,18.44l48-40a12,12,0,0,0,0-18.44ZM164.1,28.72a12,12,0,0,0-15.38,7.18l-64,176a12,12,0,0,0,7.18,15.37A11.79,11.79,0,0,0,96,228a12,12,0,0,0,11.28-7.9l64-176A12,12,0,0,0,164.1,28.72Z
 
 - title: Collaboration
-  description: Working closely with cross-functional teams, including developers, product managers, and stakeholders. Facilitating workshops and presentations to align teams on design goals and solutions.
+  description: Working closely with developers, product managers, and stakeholders. Facilitating workshops and presentations to align teams on design goals and solutions.
   icon_bg: bg-fx-base-100
   icon_color: "#6F6E69"
   icon_path: M252.44,121.34l-48-32A12,12,0,0,0,188,96v28H140V112a12,12,0,0,0-12-12H44V72a12,12,0,0,0-19.56-9.34l-20,16a12,12,0,0,0,0,18.68l20,16A12,12,0,0,0,44,104V100h72v12a12,12,0,0,0,12,12h60v28a12,12,0,0,0,19.56,9.34l48-32a12,12,0,0,0,0-18.68ZM212,135.58V120.42L225.58,128Z
 
-- title: Accessibility & Inclusivity
-  description: Ensuring WCAG compliance to create experiences usable by everyone. Advocating for inclusive design practices in every project.
+- title: Accessibility
+  description: Ensuring WCAG compliance to create inclusive experiences for everyone. Advocating for accessibility best practices throughout the design and development process.
   icon_bg: bg-fx-base-100
   icon_color: "#6F6E69"
   icon_path: M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm0,192a84,84,0,1,1,84-84A84.09,84.09,0,0,1,128,212Zm32-84a12,12,0,0,1-12,12H116v36a12,12,0,0,1-24,0V128a12,12,0,0,1,12-12h32a12,12,0,0,1,12,12ZM128,56a16,16,0,1,1-16,16A16,16,0,0,1,128,56Z
 
 - title: Tools & Technology
-  description: Proficient in Figma, Sketch, Adobe Creative Suite, Storybook, and design handoff tools. Hands-on experience with HTML, CSS, JavaScript, and modern frameworks like React.
+  description: Proficient in Figma, Sketch, Adobe Creative Suite, and Storybook. Experienced with design handoff tools and modern development frameworks.
   icon_bg: bg-fx-base-100
   icon_color: "#6F6E69"
   icon_path: M232.49,55.51l-32-32a12,12,0,0,0-17,0l-96,96A12,12,0,0,0,84,128v32a12,12,0,0,0,12,12h32a12,12,0,0,0,8.49-3.51l96-96A12,12,0,0,0,232.49,55.51ZM108,148H96V136l80-80,12,12Zm120-6.48V184a20,20,0,0,1-20,20H48a20,20,0,0,1-20-20V48A20,20,0,0,1,48,28h42.48a12,12,0,0,1,0,24H52V180H204V141.52a12,12,0,0,1,24,0Z
