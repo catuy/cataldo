@@ -1,35 +1,41 @@
-- title: Web Development
-  description: Building fast, responsive, and scalable web applications using modern frameworks and best practices.
-  icon_bg: bg-blue-100
-  icon_color: "#3b82f6"
+- title: Strategy & Research
+  description: Conducting user research, competitor analysis, and market studies to inform design decisions. Developing product roadmaps and defining user journeys aligned with business objectives.
+  icon_bg: bg-fx-base-100
+  icon_color: "#6F6E69"
+  icon_path: M208,28H136a12,12,0,0,0,0,24h49.51L132,105.51l-29.76-29.75a12,12,0,0,0-17,0l-56,56a12,12,0,0,0,17,17L93.51,101.51l29.75,29.76a12,12,0,0,0,17,0L204,67.51V112a12,12,0,0,0,24,0V40A12,12,0,0,0,208,28Z
+
+- title: UX Design
+  description: Designing wireframes, prototypes, and user flows to ensure intuitive navigation. Performing usability testing and iterating based on user feedback.
+  icon_bg: bg-fx-base-100
+  icon_color: "#6F6E69"
+  icon_path: M216,36H40A20,20,0,0,0,20,56V200a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V56A20,20,0,0,0,216,36Zm-4,160H44V60H212ZM164,88a12,12,0,0,1-12,12H104a12,12,0,0,1,0-24h48A12,12,0,0,1,164,88Zm0,40a12,12,0,0,1-12,12H104a12,12,0,0,1,0-24h48A12,12,0,0,1,164,128Z
+
+- title: UI Design
+  description: Crafting visually appealing and accessible interfaces following best practices. Building and maintaining scalable design systems (e.g., Material UI, Figma libraries).
+  icon_bg: bg-fx-base-100
+  icon_color: "#6F6E69"
+  icon_path: M200,76H156V32a12,12,0,0,0-24,0V76H88V32a12,12,0,0,0-24,0V76H56A20,20,0,0,0,36,96V208a20,20,0,0,0,20,20H200a20,20,0,0,0,20-20V96A20,20,0,0,0,200,76Zm-4,128H60V100H196Z
+
+- title: Development
+  description: Translating designs into responsive, accessible front-end code (HTML, CSS, JavaScript). Collaborating with developers to implement and optimize designs.
+  icon_bg: bg-fx-base-100
+  icon_color: "#6F6E69"
   icon_path: M71.68,97.22,34.74,128l36.94,30.78a12,12,0,1,1-15.36,18.44l-48-40a12,12,0,0,1,0-18.44l48-40A12,12,0,0,1,71.68,97.22Zm176,21.56-48-40a12,12,0,1,0-15.36,18.44L221.26,128l-36.94,30.78a12,12,0,1,0,15.36,18.44l48-40a12,12,0,0,0,0-18.44ZM164.1,28.72a12,12,0,0,0-15.38,7.18l-64,176a12,12,0,0,0,7.18,15.37A11.79,11.79,0,0,0,96,228a12,12,0,0,0,11.28-7.9l64-176A12,12,0,0,0,164.1,28.72Z
 
-- title: UI/UX Design
-  description: Creating beautiful and intuitive user interfaces with focus on user experience and accessibility.
-  icon_bg: bg-purple-100
-  icon_color: "#a855f7"
-  icon_path: M216,28H40A20,20,0,0,0,20,48V208a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V48A20,20,0,0,0,216,28Zm-4,176H44V52H212ZM164,76a12,12,0,0,1-12,12H104a12,12,0,0,1,0-24h48A12,12,0,0,1,164,76Zm0,52a12,12,0,0,1-12,12H104a12,12,0,0,1,0-24h48A12,12,0,0,1,164,128Zm0,52a12,12,0,0,1-12,12H104a12,12,0,0,1,0-24h48A12,12,0,0,1,164,180Z
+- title: Collaboration
+  description: Working closely with cross-functional teams, including developers, product managers, and stakeholders. Facilitating workshops and presentations to align teams on design goals and solutions.
+  icon_bg: bg-fx-base-100
+  icon_color: "#6F6E69"
+  icon_path: M252.44,121.34l-48-32A12,12,0,0,0,188,96v28H140V112a12,12,0,0,0-12-12H44V72a12,12,0,0,0-19.56-9.34l-20,16a12,12,0,0,0,0,18.68l20,16A12,12,0,0,0,44,104V100h72v12a12,12,0,0,0,12,12h60v28a12,12,0,0,0,19.56,9.34l48-32a12,12,0,0,0,0-18.68ZM212,135.58V120.42L225.58,128Z
 
-- title: Performance Optimization
-  description: Optimizing web applications for speed, SEO, and core web vitals to ensure the best user experience.
-  icon_bg: bg-green-100
-  icon_color: "#22c55e"
-  icon_path: M228.88,73.37,131.12,6a12,12,0,0,0-11.94,0l-96,55.38A12,12,0,0,0,18,72.62V183.38a12,12,0,0,0,5.18,9.86l92.36,64.14,3.76,2.59a12,12,0,0,0,13.46,0L232.94,192a12,12,0,0,0,5.06-9.86V72.62A12,12,0,0,0,228.88,73.37ZM128,32.39l72.21,41.74-27.71,16-72.27-41.77ZM126,120.39,53.79,78.65l30.18-17.44L156.24,103Zm-80,18.44,70,40.44v70.24L46,209.44Zm94,110.68V148.27l70-40.44V209.48Z
+- title: Accessibility & Inclusivity
+  description: Ensuring WCAG compliance to create experiences usable by everyone. Advocating for inclusive design practices in every project.
+  icon_bg: bg-fx-base-100
+  icon_color: "#6F6E69"
+  icon_path: M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm0,192a84,84,0,1,1,84-84A84.09,84.09,0,0,1,128,212Zm32-84a12,12,0,0,1-12,12H116v36a12,12,0,0,1-24,0V128a12,12,0,0,1,12-12h32a12,12,0,0,1,12,12ZM128,56a16,16,0,1,1-16,16A16,16,0,0,1,128,56Z
 
-- title: Code Review
-  description: Providing thorough code reviews to ensure quality, maintainability, and adherence to best practices.
-  icon_bg: bg-orange-100
-  icon_color: "#f97316"
-  icon_path: M232,80H182.62L166.81,44.4A20,20,0,0,0,148.24,32H107.76A20,20,0,0,0,89.19,44.4L73.38,80H24A12,12,0,0,0,12,92V192a20,20,0,0,0,20,20H224a20,20,0,0,0,20-20V92A12,12,0,0,0,232,80ZM111.07,56h33.86l7.2,24h-48.26ZM220,188H36V104H220ZM128,116a36,36,0,1,0,36,36A36,36,0,0,0,128,116Zm0,48a12,12,0,1,1,12-12A12,12,0,0,1,128,164Z
-
-- title: Consulting
-  description: Offering technical consulting and strategic guidance for your web development projects.
-  icon_bg: bg-red-100
-  icon_color: "#ef4444"
-  icon_path: M136,108a16,16,0,1,1,16,16A16,16,0,0,1,136,108ZM88,92a16,16,0,1,0,16,16A16,16,0,0,0,88,92Zm128,20v48a36,36,0,0,1-36,36H146.94A44,44,0,0,1,56,176v-8a20,20,0,0,1,20-20h4a20,20,0,0,1,20,20v8a20,20,0,0,0,20,20h60a12,12,0,0,0,12-12V112a84,84,0,0,0-168,0v16a12,12,0,0,1-24,0V112a108,108,0,0,1,216,0ZM96,176v-8h-4v8a12,12,0,0,0,4,0Z
-
-- title: Mentoring
-  description: Mentoring junior developers and helping teams level up their frontend development skills.
-  icon_bg: bg-teal-100
-  icon_color: "#14b8a6"
-  icon_path: M232,56V200a16,16,0,0,1-16,16H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56Zm-76,64a12,12,0,0,0-12,12v36a12,12,0,0,0,24,0V132A12,12,0,0,0,156,120ZM100,88a12,12,0,0,0-12,12v68a12,12,0,0,0,24,0V100A12,12,0,0,0,100,88Z
+- title: Tools & Technology
+  description: Proficient in Figma, Sketch, Adobe Creative Suite, Storybook, and design handoff tools. Hands-on experience with HTML, CSS, JavaScript, and modern frameworks like React.
+  icon_bg: bg-fx-base-100
+  icon_color: "#6F6E69"
+  icon_path: M232.49,55.51l-32-32a12,12,0,0,0-17,0l-96,96A12,12,0,0,0,84,128v32a12,12,0,0,0,12,12h32a12,12,0,0,0,8.49-3.51l96-96A12,12,0,0,0,232.49,55.51ZM108,148H96V136l80-80,12,12Zm120-6.48V184a20,20,0,0,1-20,20H48a20,20,0,0,1-20-20V48A20,20,0,0,1,48,28h42.48a12,12,0,0,1,0,24H52V180H204V141.52a12,12,0,0,1,24,0Z
