@@ -1,0 +1,26 @@
+<!-- Awards Section -->
+<section id="awards" class="mb-16">
+    <h2 class="text-sm text-text-secondary mb-6">Awards & Recognition</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+        {% for award in site.data.awards %}
+        <!-- Award Item -->
+        <div class="bg-white rounded-2xl p-6 border border-border-light">
+            <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                    <div class="w-12 h-12 rounded-xl {{ award.emoji_bg }} flex items-center justify-center text-2xl">
+                        {{ award.emoji }}
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-medium mb-1">{{ award.title }}</h3>
+                    <p class="text-sm text-text-secondary mb-2">{{ award.organization }}</p>
+                    <p class="text-sm text-black/70">
+                        {{ award.description }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

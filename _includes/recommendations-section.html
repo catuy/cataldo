@@ -1,0 +1,22 @@
+<!-- Recommendations Section -->
+<section id="recommendations" class="mb-16">
+    <h2 class="text-sm text-text-secondary mb-6">What people say</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+        {% for recommendation in site.data.recommendations %}
+        <!-- Recommendation Card -->
+        <div class="bg-white rounded-2xl p-6 border border-border-light">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br {{ recommendation.gradient }}"></div>
+                <div>
+                    <h4 class="font-medium">{{ recommendation.name }}</h4>
+                    <p class="text-sm text-text-secondary">{{ recommendation.role }}</p>
+                </div>
+            </div>
+            <p class="text-black/70 text-sm leading-relaxed">
+                "{{ recommendation.text }}"
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</section>

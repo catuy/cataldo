@@ -1,0 +1,21 @@
+<!-- Services Section -->
+<section id="services" class="mb-16">
+    <h2 class="text-sm text-text-secondary mb-6">Services</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+        {% for service in site.data.services %}
+        <!-- Service Card -->
+        <div class="bg-white rounded-2xl p-6 border border-border-light hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 rounded-xl {{ service.icon_bg }} flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="{{ service.icon_color }}">
+                    <path d="{{ service.icon_path }}"></path>
+                </svg>
+            </div>
+            <h3 class="text-lg font-medium mb-2">{{ service.title }}</h3>
+            <p class="text-black/70 text-sm">
+                {{ service.description }}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</section>

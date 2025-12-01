@@ -1,0 +1,23 @@
+- title: Developer of the Year
+  organization: Tech Awards 2023
+  description: Recognized for outstanding contributions to open-source and innovative web solutions.
+  emoji: 🏆
+  emoji_bg: bg-yellow-100
+
+- title: Best Web Design
+  organization: Awwwards - Site of the Day
+  description: Portfolio project recognized for exceptional design and user experience.
+  emoji: 🥇
+  emoji_bg: bg-blue-100
+
+- title: Innovation Award
+  organization: Startup Summit 2022
+  description: Awarded for developing an innovative solution that improved team productivity by 60%.
+  emoji: ⭐
+  emoji_bg: bg-purple-100
+
+- title: Top Contributor
+  organization: GitHub - React Community
+  description: Recognized as one of the top 100 contributors to React ecosystem packages.
+  emoji: 🎖️
+  emoji_bg: bg-green-100

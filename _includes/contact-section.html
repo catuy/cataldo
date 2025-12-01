@@ -1,0 +1,40 @@
+<!-- Contact Section -->
+<section id="contact" class="mb-16">
+    <h2 class="text-sm text-text-secondary mb-6">Get in touch</h2>
+
+    <div class="bg-white rounded-2xl p-8 md:p-12 border border-border-light">
+        <div class="max-w-2xl">
+            <h3 class="text-2xl md:text-3xl font-medium mb-4">{{ site.data.contact.title }}</h3>
+            <p class="text-base text-black/70 leading-relaxed mb-8">
+                {{ site.data.contact.intro }}
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                {% for link in site.data.contact.social_links %}
+                <!-- Social Link -->
+                <a href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noopener"{% endif %} class="flex items-start gap-4 p-4 rounded-xl hover:bg-black/5 transition-colors group">
+                    <div class="w-12 h-12 rounded-xl {{ link.icon_bg }} flex items-center justify-center flex-shrink-0 {{ link.icon_hover_bg }} transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="{{ link.icon_color }}">
+                            <path d="{{ link.icon_path }}"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-1">{{ link.name }}</h4>
+                        <p class="text-sm text-text-secondary">{{ link.value }}</p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+
+            <div class="pt-6 border-t border-border-light">
+                <p class="text-sm text-text-secondary mb-4">{{ site.data.contact.cta.text }}</p>
+                <a href="{{ site.data.contact.cta.button_url }}" class="inline-flex items-center gap-2 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors font-medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" class="opacity-50">
+                        <path d="{{ site.data.contact.cta.button_icon_path }}"></path>
+                    </svg>
+                    <span>{{ site.data.contact.cta.button_text }}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
