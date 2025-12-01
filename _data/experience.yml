@@ -1,28 +1,54 @@
-- title: Lead Product Designer
+- title: Senior Product Designer (Consultant)
   company: ClassWallet
-  period: 2020 - Present
-  description: Shaping innovative user experiences in education finance for a US-based fintech company. Crafting design systems, workflows, and usability improvements for thousands of users across educational institutions.
+  period: 2023 - Present
+  description: Senior Product Designer at ClassWallet, a U.S.-based fintech focused on education financing. My responsibilities include defining product strategy, designing complex user flows, and developing a cohesive design system aligned with company goals. I collaborate closely with internal product and engineering teams to ensure consistency, accessibility, and scalability across the platform.
   tags:
+    - Product Strategy
     - Design Systems
-    - UX/UI
-    - Figma
-    - User Research
+    - User Flows
+    - Fintech
+    - Education
 
-- title: Lead Product Designer
-  company: National Agency for Research and Innovation (ANII)
-  period: ~10 years
-  description: Crafted user-centered platforms to support government initiatives, enhancing collaboration across Uruguay's scientific and educational sectors. Developed comprehensive design strategy and design systems for state portals.
+- title: UX Lead for Uruguay
+  company: Inter-American Development Bank (IDB)
+  period: 2022 - Present
+  description: Served as UX lead for the Inter-American Development Bank's digital transformation initiatives in Uruguay. Provided specialized consulting on usability and design strategy for public sector digital platforms, ensuring alignment with international standards and institutional impact objectives.
   tags:
-    - Design Strategy
-    - Design Systems
-    - Government
+    - Digital Transformation
     - Public Sector
+    - Design Strategy
+    - Usability
+    - International Standards
 
-- title: Lead Product Designer
-  company: SQFACTORY
-  period: Contract
-  description: Optimized UX, developed design systems and led a complete rebranding initiative. Collaborated with cross-functional teams to deliver cohesive product experiences.
+- title: Senior UX Consultant
+  company: National Agency for Research and Innovation (ANII)
+  period: 2014 - 2023
+  description: For nearly a decade, I was a key UX consultant for ANII, Uruguay's national innovation agency. Led the redesign of their digital ecosystem, developing their design system and improving usability of public-facing platforms. My work focused on accessibility, interface consistency, and human-centered improvements to promote transparency and participation in innovation funding processes.
   tags:
-    - UX Optimization
-    - Rebranding
     - Design Systems
+    - Accessibility
+    - Public Innovation
+    - Digital Ecosystems
+    - Government
+
+- title: Professor
+  company: FADU, University of the Republic
+  period: 2013 - 2023
+  description: Mentored students in developing complex design challenges, participated in final evaluation panels, and contributed to academic and interdisciplinary research focused on innovation, communication, and design practice.
+  tags:
+    - Teaching
+    - Mentoring
+    - Design Education
+    - Academic Research
+    - Innovation
+
+- title: Independent Consultant
+  company: Visual Communication & UX/UI
+  period: 2005 - Present
+  description: As an independent consultant, I have designed and developed digital experiences for a wide variety of clients, including public institutions, NGOs, and global brands such as Wix, Coca-Cola, and Unilever. My work combines strategy, design, and technical execution, with a strong focus on design systems, dashboards, institutional portals, and creative tools.
+  tags:
+    - UX/UI Design
+    - Design Systems
+    - Dashboards
+    - Visual Communication
+    - Global Brands
