@@ -3,7 +3,7 @@
     <h2 class="text-md text-text-secondary mb-6">Selected projects</h2>
 
     <div class="grid md:grid-cols-2 gap-6">
-        {% assign visible_posts = site.posts | where: "visible", true | reverse %}
+        {% assign visible_posts = site.posts | where: "visible", true %}
         {% for post in visible_posts limit:6 %}
         <!-- Project Card -->
         <div class="bg-white rounded-2xl overflow-hidden border border-border-light group block">
