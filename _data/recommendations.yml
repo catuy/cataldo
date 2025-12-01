@@ -2,18 +2,22 @@
   role: Product Manager at TechCorp
   text: Alex is an exceptional developer. Their attention to detail and ability to solve complex problems is outstanding. They consistently deliver high-quality work and are a pleasure to work with.
   gradient: from-blue-400 to-purple-500
+  avatar: https://i.pravatar.cc/150?img=5
 
 - name: Michael Chen
   role: CTO at StartupHub
   text: Working with Alex was a game-changer for our team. They brought modern best practices and helped us build a scalable architecture that supports our rapid growth.
   gradient: from-green-400 to-teal-500
+  avatar: https://i.pravatar.cc/150?img=12
 
 - name: Emily Rodriguez
   role: Lead Designer at Creative Co.
   text: Alex bridges the gap between design and development perfectly. They understand both the technical and creative aspects, making collaboration seamless and enjoyable.
   gradient: from-orange-400 to-red-500
+  avatar: https://i.pravatar.cc/150?img=47
 
 - name: David Park
   role: Senior Developer at Digital Agency
   text: I've learned so much from Alex. Their mentorship helped me grow as a developer. They're always willing to share knowledge and help the team succeed.
   gradient: from-pink-400 to-purple-500
+  avatar: https://i.pravatar.cc/150?img=15
