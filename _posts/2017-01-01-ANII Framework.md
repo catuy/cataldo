@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "National Agency for Research and Innovation"
-date:   2024-12-10 17:12:20 -0300
+date:   2025-05-01 17:12:20 -0300
 visible: true
 description: "National Agency for Research and Innovation<br>Lead Product Designer, crafting user-centered platforms to support government initiatives, enhancing collaboration across Uruguay's scientific and educational sectors."
 categories: todos consultorias

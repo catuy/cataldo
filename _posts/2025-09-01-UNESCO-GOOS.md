@@ -1,7 +1,7 @@
 ---
 layout: post
 title: UNESCO Ocean Observing Report Card
-date: 2025-09-01 00:00:00 -0300
+date: 2025-04-01 00:00:00 -0300
 visible: true
 images: /assets/thumbs/goos.png
 tags:
