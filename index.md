@@ -17,7 +17,7 @@ permalink: /
                     <h1 class="text-[64px] md:text-[72px] font-medium leading-none">
                         Hi, I'm Diego Cataldo
                     </h1>
-                    <img src="/assets/blogimages/me.jpg" alt="Diego Cataldo" class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-border-light">
+                    <img src="/assets/blogimages/me.jpeg" alt="Diego Cataldo" class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-border-light">
                 </div>
 
                 <!-- Code Icon + Full-Stack Designer -->
@@ -42,40 +42,7 @@ permalink: /
             </div>
         </div>
     </section>
-
-    <!-- Company Logos -->
-    <section class="mb-8 hidden">
-        <div class="flex flex-wrap items-center gap-6 md:gap-8">
-            <div class="h-12 flex items-center">
-                <img src="logos/anii.png" alt="ANII" class="h-12 object-contain grayscale">
-            </div>
-            <div class="h-12 flex items-center">
-                <img src="logos/unesco.png" alt="UNESCO" class="h-12 object-contain grayscale">
-            </div>
-            <div class="h-12 flex items-center">
-                <img src="logos/goos-logo.png" alt="GOOS" class="h-12 object-contain grayscale">
-            </div>
-            <div class="h-12 flex items-center">
-                <img src="logos/IDB-Logo.png" alt="BID" class="h-12 object-contain grayscale">
-            </div>
-            <div class="h-12 flex items-center">
-                <img src="logos/logo-FADU-1.jpg" alt="FADU Uruguay" class="h-12 object-contain grayscale">
-            </div>
-            <div class="h-12 flex items-center">
-                <img src="logos/classwallet.png" alt="ClassWallet" class="h-12 object-contain grayscale">
-            </div>
-            <div class="h-12 flex items-center">
-                <img src="logos/broadreach_medical_resources.png" alt="BroadReach Medical Resources" class="h-12 object-contain grayscale">
-            </div>
-            <div class="h-12 flex items-center">
-                <img src="logos/sbdg.png" alt="SBDG" class="h-12 object-contain grayscale">
-            </div>
-            <div class="h-12 flex items-center">
-                <img src="logos/stony-hill.png" alt="Stony Hill" class="h-12 object-contain grayscale">
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Divider -->
     <div class="border-t border-dashed border-black/10 my-12"></div>
 
