@@ -28,9 +28,15 @@
             </div>
 
             <div class="p-6">
-                <!-- Category Badge -->
-                {% if post.categories %}
-                    <div class="flex items-center gap-2 mb-3">
+                <!-- Country and Category Badges -->
+                <div class="flex items-center gap-2 mb-3">
+                    <!-- Country Badge -->
+                    {% if post.country %}
+                        <span class="px-2 py-1 bg-fx-base-100 text-fx-base-900 text-xs rounded-full font-medium">{{ post.country }}</span>
+                    {% endif %}
+
+                    <!-- Category Badge -->
+                    {% if post.categories %}
                         {% for category in post.categories limit:1 %}
                             {% assign category_lower = category | downcase %}
                             {% if category_lower == 'consultorias' or category_lower == 'consulting' %}
@@ -47,8 +53,8 @@
                                 <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full font-medium">{{ category }}</span>
                             {% endif %}
                         {% endfor %}
-                    </div>
-                {% endif %}
+                    {% endif %}
+                </div>
 
                 <!-- Title -->
                 <h3 class="text-xl font-medium mb-2">{{ post.title }}</h3>

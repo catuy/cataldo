@@ -5,6 +5,7 @@ visible: true
 title:  "Monitor Cannabis"
 categories: todos consultorias
 images: /assets/thumbs/monitor.png
+country: Uruguay
 tags:
   - Web
 description: "Monitor Cannabis<br>Supporting a regional knowledge platform for cannabis policy by designing its identity, brand system, and digital communication strategy."

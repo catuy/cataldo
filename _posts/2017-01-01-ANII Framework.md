@@ -6,7 +6,7 @@ visible: true
 description: "National Agency for Research and Innovation<br>Lead Product Designer, crafting user-centered platforms to support government initiatives, enhancing collaboration across Uruguay's scientific and educational sectors."
 categories: todos consultorias
 images: /assets/thumbs/anii2.png
-
+country: Uruguay
 tags: [Web]
 ---
 <!-- Intro -->
