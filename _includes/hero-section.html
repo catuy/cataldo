@@ -1,0 +1,35 @@
+<!-- Hero Section -->
+<section class="min-h-screen flex flex-col justify-center">
+    <div>
+        <!-- Headline -->
+        <div class="mb-8">
+            <!-- Hi, I'm Diego + Photo -->
+            <div class="flex items-center gap-4 mb-4">
+                <h1 class="text-[64px] md:text-[72px] font-medium leading-none">
+                    Hi, I'm {{ site.data.hero.name }}
+                </h1>
+                <img src="{{ site.data.hero.photo }}" alt="{{ site.data.hero.name }}" class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-border-light">
+            </div>
+
+            <!-- Role -->
+            <div class="flex items-center gap-2">
+                <h1 id="rotating-title" class="text-[64px] md:text-[72px] font-medium leading-none text-text-secondary">
+                    {{ site.data.hero.role }}
+                </h1>
+            </div>
+        </div>
+
+        <!-- Description -->
+        <p class="text-xl md:text-2xl text-text-primary mb-8 leading-relaxed">
+            {{ site.data.hero.description }}
+        </p>
+
+        <!-- Location Badge -->
+        <div class="flex items-center gap-2">
+            <div class="relative">
+                <div class="w-2.5 h-2.5 rounded-full bg-green-dot green-dot-shadow"></div>
+            </div>
+            <p class="text-base text-text-secondary">{{ site.data.hero.location }}</p>
+        </div>
+    </div>
+</section>
