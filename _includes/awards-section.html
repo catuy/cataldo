@@ -1,6 +1,6 @@
 <!-- Awards Section -->
 <section id="awards" class="mb-16">
-    <h2 class="text-sm text-text-secondary mb-6">Awards & Recognition</h2>
+    <h2 class="text-md text-text-secondary mb-6">Exhibitions, Awards & Recognition</h2>
 
     <div class="grid md:grid-cols-2 gap-6">
         {% for award in site.data.awards %}
@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="font-medium mb-1">{{ award.title }}</h3>
+                    <h3 class="font-medium mb-1">{{ award.year }} – {{ award.title }}</h3>
                     <p class="text-sm text-text-secondary mb-2">{{ award.organization }}</p>
                     <p class="text-sm text-black/70">
                         {{ award.description }}

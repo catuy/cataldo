@@ -1,23 +1,121 @@
-- title: Developer of the Year
-  organization: Tech Awards 2023
-  description: Recognized for outstanding contributions to open-source and innovative web solutions.
+# Exhibitions & Awards
+- title: International Printmaking Biennial
+  year: 2023
+  organization: Museu do Douro, Portugal
+  description: Selected for exhibition at the International Printmaking Biennial.
+  emoji: 🖼️
+  emoji_bg: bg-black/5
+  type: exhibition
+
+- title: International Print Exhibit
+  year: 2022
+  organization: National Taiwan Museum of Fine Arts, Taiwan
+  description: Work featured in international print exhibition.
+  emoji: 🎨
+  emoji_bg: bg-black/5
+  type: exhibition
+
+- title: "30 Seconds Museum"
+  year: 2021
+  organization: Neo Shibuya, Tokyo
+  description: Digital art exhibition in Tokyo's Neo Shibuya district.
+  emoji: 🏛️
+  emoji_bg: bg-black/5
+  type: exhibition
+
+- title: Ibero-American Design Biennial
+  year: 2017
+  organization: Plaza Matadero, Madrid
+  description: Selected work for Ibero-American Design Biennial.
   emoji: 🏆
-  emoji_bg: bg-yellow-100
+  emoji_bg: bg-black/5
+  type: exhibition
 
-- title: Best Web Design
-  organization: Awwwards - Site of the Day
-  description: Portfolio project recognized for exceptional design and user experience.
-  emoji: 🥇
-  emoji_bg: bg-blue-100
+- title: Museum of Design and Fashion
+  year: 2017
+  organization: MUDE, Lisbon
+  description: Exhibition at Museum of Design and Fashion in Lisbon.
+  emoji: 👔
+  emoji_bg: bg-black/5
+  type: exhibition
 
-- title: Innovation Award
-  organization: Startup Summit 2022
-  description: Awarded for developing an innovative solution that improved team productivity by 60%.
-  emoji: ⭐
-  emoji_bg: bg-purple-100
+- title: Venice Architecture Biennale
+  year: 2016
+  organization: Uruguay Pavilion, Venice
+  description: Contributed to Uruguay Pavilion at Venice Architecture Biennale.
+  emoji: 🏛️
+  emoji_bg: bg-black/5
+  type: exhibition
 
-- title: Top Contributor
-  organization: GitHub - React Community
-  description: Recognized as one of the top 100 contributors to React ecosystem packages.
-  emoji: 🎖️
-  emoji_bg: bg-green-100
+- title: Tipos Latinos Typography Biennial
+  year: 2010
+  organization: Latin America
+  description: Recognition at Latin American typography biennial.
+  emoji: 📝
+  emoji_bg: bg-black/5
+  type: award
+
+- title: American Design Awards
+  year: 2010
+  organization: GDUSA, USA
+  description: Award from Graphic Design USA.
+  emoji: 🏅
+  emoji_bg: bg-black/5
+  type: award
+
+# Publications & Talks
+- title: Latam Congress of Interdisciplinary Higher Education
+  year: 2016
+  organization: CCE, Uruguay
+  description: Speaker at Latin American congress on higher education.
+  emoji: 🎤
+  emoji_bg: bg-black/5
+  type: talk
+
+- title: Final Project Jury
+  year: 2015–2023
+  organization: FADU, University of the Republic, Uruguay
+  description: Jury member for final year design projects.
+  emoji: 🎓
+  emoji_bg: bg-black/5
+  type: teaching
+
+- title: "ZM – Photographers and Poets"
+  year: 2013
+  organization: Editorial Yaugurú, Uruguay/Spain
+  description: Publication featuring collaborative work.
+  emoji: 📚
+  emoji_bg: bg-black/5
+  type: publication
+
+- title: Jury Member – FADU Visual Identity Competitions
+  year: 2011-2012
+  organization: Gen12/14, Uruguay
+  description: Jury member for student visual identity design competitions.
+  emoji: 👨‍⚖️
+  emoji_bg: bg-black/5
+  type: teaching
+
+- title: "20×20 Designers Compilation"
+  year: 2010
+  organization: Editorial Yaugurú, Uruguay/Argentina
+  description: Featured in designers compilation publication.
+  emoji: 📖
+  emoji_bg: bg-black/5
+  type: publication
+
+- title: "Typography in Uruguay"
+  year: 2010
+  organization: ORT University, Uruguay
+  description: Talk on typography design in Uruguay.
+  emoji: 💬
+  emoji_bg: bg-black/5
+  type: talk
+
+- title: "Web Design Index"
+  year: 2010
+  organization: The Pepin Press, Netherlands
+  description: Work featured in international web design index.
+  emoji: 📕
+  emoji_bg: bg-black/5
+  type: publication
