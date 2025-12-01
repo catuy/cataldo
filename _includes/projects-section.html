@@ -68,7 +68,7 @@
                 {% if post.tags %}
                     <div class="flex flex-wrap gap-2 mb-4">
                         {% for tag in post.tags limit:3 %}
-                            <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black/70">{{ tag }}</span>
+                            <span class="px-3 py-1 bg-white rounded-full border border-black text-base font-medium text-black/70">{{ tag }}</span>
                         {% endfor %}
                     </div>
                 {% endif %}
