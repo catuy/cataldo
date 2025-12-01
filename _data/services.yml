@@ -2,7 +2,7 @@
   description: Conducting user research and market analysis to inform design decisions. Developing product roadmaps and user journeys aligned with business goals.
   icon_bg: bg-fx-base-100
   icon_color: "#6F6E69"
-  icon_path: M208,28H136a12,12,0,0,0,0,24h49.51L132,105.51l-29.76-29.75a12,12,0,0,0-17,0l-56,56a12,12,0,0,0,17,17L93.51,101.51l29.75,29.76a12,12,0,0,0,17,0L204,67.51V112a12,12,0,0,0,24,0V40A12,12,0,0,0,208,28Z
+  icon_path: M208,32H184V24a8,8,0,0,0-16,0v8H152a8,8,0,0,0,0,16h8v8a8,8,0,0,0,16,0V48h32a8,8,0,0,0,0-16ZM56,72H72a8,8,0,0,0,0-16H56a8,8,0,0,0,0,16ZM184,184a8,8,0,0,0-8,8v16H152a8,8,0,0,0,0,16h24v8a8,8,0,0,0,16,0v-8h16a8,8,0,0,0,0-16H192V192A8,8,0,0,0,184,184ZM208,80H192a8,8,0,0,0,0,16h16a8,8,0,0,0,0-16Zm0,32H192a8,8,0,0,0,0,16h16a8,8,0,0,0,0-16ZM72,200H56a8,8,0,0,0,0,16H72a8,8,0,0,0,0-16ZM40,136H56a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16Zm0,32H56a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM155.88,119.12l-96,96a8,8,0,1,1-11.31-11.31l96-96a8,8,0,1,1,11.31,11.31ZM101.66,56.84a8,8,0,1,1-11.32,11.32L67.88,45.71,45.43,68.16A8,8,0,0,1,34.11,56.84l28.28-28.28a8,8,0,0,1,11.32,0Z
 
 - title: UX/UI Design
   description: Designing wireframes, prototypes, and user flows. Crafting accessible interfaces and building scalable design systems in Figma and Sketch.
