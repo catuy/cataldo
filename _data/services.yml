@@ -2,7 +2,7 @@
   description: Conducting user research and market analysis to inform design decisions. Developing product roadmaps and user journeys aligned with business goals.
   icon_bg: bg-fx-base-100
   icon_color: "#6F6E69"
-  icon_path: M208,32H184V24a8,8,0,0,0-16,0v8H152a8,8,0,0,0,0,16h8v8a8,8,0,0,0,16,0V48h32a8,8,0,0,0,0-16ZM56,72H72a8,8,0,0,0,0-16H56a8,8,0,0,0,0,16ZM184,184a8,8,0,0,0-8,8v16H152a8,8,0,0,0,0,16h24v8a8,8,0,0,0,16,0v-8h16a8,8,0,0,0,0-16H192V192A8,8,0,0,0,184,184ZM208,80H192a8,8,0,0,0,0,16h16a8,8,0,0,0,0-16Zm0,32H192a8,8,0,0,0,0,16h16a8,8,0,0,0,0-16ZM72,200H56a8,8,0,0,0,0,16H72a8,8,0,0,0,0-16ZM40,136H56a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16Zm0,32H56a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM155.88,119.12l-96,96a8,8,0,1,1-11.31-11.31l96-96a8,8,0,1,1,11.31,11.31ZM101.66,56.84a8,8,0,1,1-11.32,11.32L67.88,45.71,45.43,68.16A8,8,0,0,1,34.11,56.84l28.28-28.28a8,8,0,0,1,11.32,0Z
+  icon_path: M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM200,152H184a8,8,0,0,1-8-8V120a8,8,0,0,1,16,0v16h8a8,8,0,0,1,0,16Zm0-48H184V88a8,8,0,0,0-16,0v24a8,8,0,0,0,8,8h24a8,8,0,0,0,0-16ZM72,168a8,8,0,0,0,8-8V96a8,8,0,0,0-16,0v64A8,8,0,0,0,72,168Zm32,0a8,8,0,0,0,8-8V120a8,8,0,0,0-16,0v40A8,8,0,0,0,104,168Zm32,0a8,8,0,0,0,8-8V80a8,8,0,0,0-16,0v80A8,8,0,0,0,136,168Z
 
 - title: UX/UI Design
   description: Designing wireframes, prototypes, and user flows. Crafting accessible interfaces and building scalable design systems in Figma and Sketch.
@@ -14,7 +14,7 @@
   description: Translating designs into responsive, accessible code using HTML, CSS, and JavaScript. Working with modern frameworks like React to implement optimized solutions.
   icon_bg: bg-fx-base-100
   icon_color: "#6F6E69"
-  icon_path: M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM92.8,145.6a8,8,0,1,1-9.6,12.8l-32-24a8,8,0,0,1,0-12.8l32-24a8,8,0,0,1,9.6,12.8L69.33,128Zm58.89-71.4-32,112a8,8,0,1,1-15.38-4.4l32-112a8,8,0,0,1,15.38,4.4Zm53.11,60.2-32,24a8,8,0,0,1-9.6-12.8L186.67,128,163.2,110.4a8,8,0,1,1,9.6-12.8l32,24a8,8,0,0,1,0,12.8Z
+  icon_path: M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM58.34,117.66l-24-24a8,8,0,0,1,0-11.32l24-24A8,8,0,0,1,69.66,69.66L51.31,88l18.35,18.34a8,8,0,0,1-11.32,11.32Zm48,20.68a8,8,0,0,1-1.69-11l32-48a8,8,0,1,1,13.32,8.88l-32,48A8,8,0,0,1,106.35,138.34Zm111.31-9-24,24a8,8,0,0,1-11.32-11.32L200.69,124,182.34,105.66a8,8,0,0,1,11.32-11.32l24,24A8,8,0,0,1,217.66,129.32Z
 
 - title: Collaboration
   description: Working closely with developers, product managers, and stakeholders. Facilitating workshops and presentations to align teams on design goals and solutions.
