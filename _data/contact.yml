@@ -1,5 +1,9 @@
 title: Let's work together
-intro: I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!
+intro: If you've made it this far, we likely share a vision for meaningful work. I'm drawn to projects with clear purpose—those that make a positive impact and foster change. I believe in collaborating with teams committed to creating a fairer, more inclusive, and sustainable world. If these values resonate with you, I'd love to connect.
+
+cv_button:
+  text: Download full CV
+  url: https://cataldo.pages.dev/assets/blogimages/resume.pdf
 
 social_links:
   - name: Email

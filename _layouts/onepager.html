@@ -246,6 +246,15 @@
         body.dark-theme .bg-gradient-to-br {
             filter: brightness(0.5);
         }
+
+        /* Preloader styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+        }
     </style>
 
     <!-- Google tag (gtag.js) -->
@@ -256,8 +265,17 @@
       gtag('js', new Date());
       gtag('config', 'G-31X1TYL0TS');
     </script>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 <body class="min-h-screen transition-colors duration-300">
+
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-fx-black z-[9999] flex items-center justify-center">
+        <div class="w-16 h-16 border-4 border-fx-paper border-t-transparent rounded-full animate-spin"></div>
+    </div>
 
     <!-- Main Container -->
     <main class="max-w-[1040px] mx-auto px-6 md:px-12 pb-32">
@@ -473,6 +491,186 @@
                     link.classList.add('bg-black', 'text-white', '!text-white');
                 }
             });
+        });
+    </script>
+
+    <!-- GSAP Animations -->
+    <script>
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Preloader animation
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+
+            gsap.to(preloader, {
+                opacity: 0,
+                duration: 0.8,
+                ease: "power2.inOut",
+                onComplete: () => {
+                    preloader.style.display = 'none';
+                }
+            });
+        });
+
+        // Animation settings
+        const fadeUpConfig = {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            ease: "power2.out"
+        };
+
+        // Hero section animation - sequential timeline
+        const heroTimeline = gsap.timeline({
+            defaults: { ease: "power3.out" },
+            delay: 1 // Wait for preloader to finish
+        });
+
+        heroTimeline
+            .from("#hero .flex.items-center.gap-4", {
+                opacity: 0,
+                y: 30,
+                duration: 1,
+                clearProps: "all"
+            })
+            .from("#hero #rotating-title", {
+                opacity: 0,
+                y: 20,
+                duration: 0.8,
+                clearProps: "all"
+            }, "-=0.5")
+            .from("#hero p", {
+                opacity: 0,
+                y: 20,
+                duration: 0.8,
+                clearProps: "all"
+            }, "-=0.4")
+            .from("#hero .flex.items-center.gap-2:last-child", {
+                opacity: 0,
+                y: 10,
+                duration: 0.6,
+                clearProps: "all"
+            }, "-=0.3");
+
+        // Section headers animation
+        gsap.utils.toArray("section h2").forEach(header => {
+            gsap.from(header, {
+                scrollTrigger: {
+                    trigger: header,
+                    start: "top 90%",
+                    toggleActions: "play none none none"
+                },
+                opacity: 0,
+                y: 20,
+                duration: 0.6,
+                ease: "power2.out"
+            });
+        });
+
+        // Experience cards staggered animation
+        gsap.from("#experience .space-y-6 > div", {
+            scrollTrigger: {
+                trigger: "#experience",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 30,
+            stagger: 0.15,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+
+        // Projects cards grid animation
+        gsap.from("#projects .grid > div", {
+            scrollTrigger: {
+                trigger: "#projects",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 30,
+            stagger: 0.1,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+
+        // Services cards grid animation
+        gsap.from("#services .grid > div", {
+            scrollTrigger: {
+                trigger: "#services",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 30,
+            stagger: 0.1,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+
+        // Awards cards animation
+        gsap.from("#awards .grid > div", {
+            scrollTrigger: {
+                trigger: "#awards",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 30,
+            stagger: 0.1,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+
+        // Recommendations cards animation
+        gsap.from("#recommendations .grid > div", {
+            scrollTrigger: {
+                trigger: "#recommendations",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 30,
+            stagger: 0.15,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+
+        // Contact section animation
+        gsap.from("#contact .bg-white", {
+            scrollTrigger: {
+                trigger: "#contact",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+
+        // About section animation
+        gsap.from("#about .bg-white", {
+            scrollTrigger: {
+                trigger: "#about",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+
+        // Navigation menu animation on load
+        gsap.from("nav", {
+            opacity: 0,
+            y: 20,
+            duration: 1,
+            delay: 0.5,
+            ease: "power3.out"
         });
     </script>
 
