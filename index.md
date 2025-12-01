@@ -51,71 +51,7 @@ permalink: /
     <!-- Divider -->
     <div class="border-t border-dashed border-black/10 mb-12"></div>
 
-    <!-- Work Experience Section -->
-    <section id="experience" class="mb-16">
-        <h2 class="text-sm text-text-secondary mb-6">Work experience</h2>
-
-        <div class="space-y-6">
-            <!-- Experience Item -->
-            <div class="bg-white rounded-2xl p-6 md:p-8 border border-border-light hover:shadow-lg transition-shadow">
-                <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                    <div>
-                        <h3 class="text-xl font-medium mb-1">Lead Product Designer</h3>
-                        <p class="text-text-secondary">ClassWallet</p>
-                    </div>
-                    <span class="text-sm text-text-secondary mt-2 md:mt-0">2020 - Present</span>
-                </div>
-                <p class="text-black/70 mb-4">
-                    Shaping innovative user experiences in education finance for a US-based fintech company. Crafting design systems, workflows, and usability improvements for thousands of users across educational institutions.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-black/5 text-sm rounded-full">Design Systems</span>
-                    <span class="px-3 py-1 bg-black/5 text-sm rounded-full">UX/UI</span>
-                    <span class="px-3 py-1 bg-black/5 text-sm rounded-full">Figma</span>
-                    <span class="px-3 py-1 bg-black/5 text-sm rounded-full">User Research</span>
-                </div>
-            </div>
-
-            <!-- Experience Item -->
-            <div class="bg-white rounded-2xl p-6 md:p-8 border border-border-light hover:shadow-lg transition-shadow">
-                <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                    <div>
-                        <h3 class="text-xl font-medium mb-1">Lead Product Designer</h3>
-                        <p class="text-text-secondary">National Agency for Research and Innovation (ANII)</p>
-                    </div>
-                    <span class="text-sm text-text-secondary mt-2 md:mt-0">~10 years</span>
-                </div>
-                <p class="text-black/70 mb-4">
-                    Crafted user-centered platforms to support government initiatives, enhancing collaboration across Uruguay's scientific and educational sectors. Developed comprehensive design strategy and design systems for state portals.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-black/5 text-sm rounded-full">Design Strategy</span>
-                    <span class="px-3 py-1 bg-black/5 text-sm rounded-full">Design Systems</span>
-                    <span class="px-3 py-1 bg-black/5 text-sm rounded-full">Government</span>
-                    <span class="px-3 py-1 bg-black/5 text-sm rounded-full">Public Sector</span>
-                </div>
-            </div>
-
-            <!-- Experience Item -->
-            <div class="bg-white rounded-2xl p-6 md:p-8 border border-border-light hover:shadow-lg transition-shadow">
-                <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                    <div>
-                        <h3 class="text-xl font-medium mb-1">Lead Product Designer</h3>
-                        <p class="text-text-secondary">SQFACTORY</p>
-                    </div>
-                    <span class="text-sm text-text-secondary mt-2 md:mt-0">Contract</span>
-                </div>
-                <p class="text-black/70 mb-4">
-                    Optimized UX, developed design systems and led a complete rebranding initiative. Collaborated with cross-functional teams to deliver cohesive product experiences.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-black/5 text-sm rounded-full">UX Optimization</span>
-                    <span class="px-3 py-1 bg-black/5 text-sm rounded-full">Rebranding</span>
-                    <span class="px-3 py-1 bg-black/5 text-sm rounded-full">Design Systems</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include experience-section.html %}
 
     <!-- Divider -->
     <div class="border-t border-dashed border-black/10 mb-12"></div>
