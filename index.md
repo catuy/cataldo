@@ -46,53 +46,7 @@ permalink: /
     <!-- Divider -->
     <div class="border-t border-dashed border-black/10 my-12"></div>
 
-    <!-- About Me Section -->
-    <section id="about" class="mb-16">
-        <h2 class="text-md text-text-secondary mb-6">About me</h2>
-
-        <div>
-            <h3 class="text-2xl md:text-3xl font-medium mb-4">Full-Stack Designer bridging strategy, design, and development to create meaningful digital experiences.</h3>
-            <p class="text-lg text-black/70 leading-relaxed mb-4">
-                My journey began in graphic design, evolved through designing physical interfaces for musical instruments, and now focuses on building digital experiences. I work on projects with clear purpose that generate positive impact and foster change.
-            </p>
-            <p class="text-lg text-black/70 leading-relaxed mb-4">
-                    I specialize in user research, competitive analysis, UX/UI design, and frontend development. From creating scalable design systems for government agencies to shaping fintech products, I bring structure and creativity to every project.
-                </p>
-                <p class="text-lg text-black/70 leading-relaxed mb-4">
-                    Beyond client work, I mentor emerging designers at Uruguayan design schools and explore creative expression through creative coding and screen printing. I prioritize inclusivity, sustainability, and equity in collaborative projects.
-                </p>
-            <div id="aboutMoreContent" class="hidden">
-                <p class="text-lg text-black/70 leading-relaxed mb-4">
-                    I specialize in user research, competitive analysis, UX/UI design, and frontend development. From creating scalable design systems for government agencies to shaping fintech products, I bring structure and creativity to every project.
-                </p>
-                <p class="text-lg text-black/70 leading-relaxed mb-4">
-                    Beyond client work, I mentor emerging designers at Uruguayan design schools and explore creative expression through creative coding and screen printing. I prioritize inclusivity, sustainability, and equity in collaborative projects.
-                </p>
-            </div>
-            <button id="readMoreBtn" class="text-lg text-black leading-relaxed mb-6 hover:underline">
-                Read more
-            </button>
-
-            <!-- Skills Tags -->
-            <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black">Figma</span>
-                <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black">Sketch</span>
-                <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black">React</span>
-                <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black">HTML/CSS</span>
-                <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black">JavaScript</span>
-                <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black">Storybook</span>
-                <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black">Adobe CC</span>
-                <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black">User Research</span>
-                <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black">Design Systems</span>
-                <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black">UX/UI Design</span>
-                <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black">Creative Coding</span>
-                <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black">Screen Printing</span>
-                <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black">Mentoring</span>
-                <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black">Accessibility</span>
-                <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black">Sustainability</span>
-            </div>
-        </div>
-    </section>
+    {% include about-section.html %}
 
     <!-- Divider -->
     <div class="border-t border-dashed border-black/10 mb-12"></div>

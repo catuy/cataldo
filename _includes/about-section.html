@@ -1,0 +1,33 @@
+<!-- About Me Section -->
+<section id="about" class="mb-16">
+    <h2 class="text-md text-text-secondary mb-6">About me</h2>
+
+    <div>
+        <h3 class="text-2xl md:text-3xl font-medium mb-4">{{ site.data.about.title }}</h3>
+        <p class="text-lg text-black/70 leading-relaxed mb-4">
+            {{ site.data.about.intro }}
+        </p>
+        {% for paragraph in site.data.about.paragraphs %}
+        <p class="text-lg text-black/70 leading-relaxed mb-4">
+            {{ paragraph }}
+        </p>
+        {% endfor %}
+        <div id="aboutMoreContent" class="hidden">
+            {% for paragraph in site.data.about.paragraphs %}
+            <p class="text-lg text-black/70 leading-relaxed mb-4">
+                {{ paragraph }}
+            </p>
+            {% endfor %}
+        </div>
+        <button id="readMoreBtn" class="text-lg text-black leading-relaxed mb-6 hover:underline">
+            Read more
+        </button>
+
+        <!-- Skills Tags -->
+        <div class="flex flex-wrap gap-2">
+            {% for skill in site.data.about.skills %}
+            <span class="px-3 py-1 bg-white rounded-full border border-black text-lg font-medium text-black">{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </div>
+</section>
