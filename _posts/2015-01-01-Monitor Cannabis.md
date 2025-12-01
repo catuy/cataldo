@@ -4,7 +4,7 @@ date: 2015-01-01 17:12:19 -0300
 visible: true
 title:  "Monitor Cannabis"
 categories: todos consultorias
-images: /assets/blogimages/tiles/monitor.gif
+images: /assets/thumbs/monitor.png
 tags:
   - Web
 description: "Monitor Cannabis<br>Supporting a regional knowledge platform for cannabis policy by designing its identity, brand system, and digital communication strategy."
