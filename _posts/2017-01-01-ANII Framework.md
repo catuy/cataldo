@@ -2,7 +2,8 @@
 layout: post
 title:  "National Agency for Research and Innovation"
 date:   2024-12-10 17:12:20 -0300
-description: "National Agency for Research and Innovation<br>Lead Product Designer, crafting user-centered platforms to support government initiatives, enhancing collaboration across Uruguay’s scientific and educational sectors."
+visible: true
+description: "National Agency for Research and Innovation<br>Lead Product Designer, crafting user-centered platforms to support government initiatives, enhancing collaboration across Uruguay's scientific and educational sectors."
 categories: todos consultorias
 images: 
     - /assets/blogimages/tiles/anii.gif

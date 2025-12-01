@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2015-01-01 17:12:19 -0300
-# visible: false
+visible: true
 title:  "Monitor Cannabis"
 categories: todos consultorias
 images: /assets/blogimages/tiles/monitor.gif
