@@ -8,7 +8,7 @@
   description: Designing wireframes, prototypes, and user flows. Crafting accessible interfaces and building scalable design systems in Figma and Sketch.
   icon_bg: bg-fx-base-100
   icon_color: "#6F6E69"
-  icon_path: M216,36H40A20,20,0,0,0,20,56V200a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V56A20,20,0,0,0,216,36Zm-4,160H44V60H212Zm-84-24a12,12,0,0,1-12,12H104a12,12,0,0,1,0-24h12A12,12,0,0,1,128,172ZM212,84H116v84h96Z
+  icon_path: M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM40,152H88v48H40Zm64,48V152h48v48Zm64,0V152h48v48ZM216,136H40V56H216Z
 
 - title: Development
   description: Translating designs into responsive, accessible code using HTML, CSS, and JavaScript. Working with modern frameworks like React to implement optimized solutions.
