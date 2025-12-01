@@ -16,7 +16,10 @@
       "Bash(cat:*)",
       "Bash(npm run build:css:*)",
       "Bash(.gitignore)",
-      "WebFetch(domain:stephango.com)"
+      "WebFetch(domain:stephango.com)",
+      "Bash(for img in *.png)",
+      "Bash(do)",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []
