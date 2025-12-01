@@ -17,7 +17,7 @@ permalink: /
                     <h1 class="text-[64px] md:text-[72px] font-medium leading-none">
                         Hi, I'm Diego Cataldo
                     </h1>
-                    <img src="me.jpeg" alt="Diego Cataldo" class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-border-light">
+                    <img src="/assets/blogimages/me.jpg" alt="Diego Cataldo" class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-border-light">
                 </div>
 
                 <!-- Code Icon + Full-Stack Designer -->
