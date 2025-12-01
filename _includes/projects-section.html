@@ -3,18 +3,19 @@
     <h2 class="text-sm text-text-secondary mb-6">Selected projects</h2>
 
     <div class="grid md:grid-cols-2 gap-6">
-        {% for post in site.posts reversed %}
+        {% assign visible_posts = site.posts | where: "visible", true | reverse %}
+        {% for post in visible_posts limit:6 %}
         <!-- Project Card -->
-        <a href="{{ post.url | relative_url }}" class="bg-white rounded-2xl overflow-hidden border border-border-light hover:shadow-xl transition-shadow group block">
+        <div class="bg-white rounded-2xl overflow-hidden border border-border-light group block">
             <!-- Project Image -->
             <div class="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
                 {% if post.images %}
                     {% if post.images.first %}
                         <!-- Handle array of images -->
-                        <img src="{{ post.images.first | relative_url }}" alt="{{ post.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="{{ post.images.first | relative_url }}" alt="{{ post.title }}" class="w-full h-full object-cover">
                     {% else %}
                         <!-- Handle single image string -->
-                        <img src="{{ post.images | relative_url }}" alt="{{ post.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="{{ post.images | relative_url }}" alt="{{ post.title }}" class="w-full h-full object-cover">
                     {% endif %}
                 {% else %}
                     <!-- Fallback if no image -->
@@ -72,7 +73,7 @@
                     </div>
                 {% endif %}
             </div>
-        </a>
+        </div>
         {% endfor %}
     </div>
 </section>
