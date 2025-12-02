@@ -1,25 +1,19 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git checkout:*)",
-      "Bash(bundle exec jekyll:*)",
-      "Bash(lsof:*)",
-      "Bash(xargs kill:*)",
+      "Bash(jekyll build:*)",
+      "Bash(kill:*)",
+      "Bash(bundle exec jekyll serve:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git push:*)",
-      "Bash(curl:*)",
-      "Bash(npm init:*)",
-      "Bash(npm install:*)",
-      "Bash(npx tailwindcss init)",
-      "Bash(./node_modules/.bin/tailwindcss:*)",
-      "Bash(cat:*)",
-      "Bash(npm run build:css:*)",
-      "Bash(.gitignore)",
-      "WebFetch(domain:stephango.com)",
-      "Bash(for img in *.png)",
-      "Bash(do)",
-      "Bash(done)"
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd 1-Minute Portfolio slideshow feature with auto-play\n\nImplement a dynamic portfolio slideshow that auto-plays through all 76 projects\nin 76 seconds (1 second per project). Features include:\n\n- Auto-start slideshow on open with progress circle countdown\n- Hover over progress circle shows pause icon\n- Hide info bar (year, description, counter) during auto-play\n- Auto-pause when using navigation arrows\n- Support for images and videos with type-based rendering (image/web)\n- Browser chrome wrapper for web-type slides\n- Rename button from \"View slideshow\" to \"1-Minute Portfolio\"\n- Connect slideshow to both menu gallery button and projects section button\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(bundle exec jekyll build:*)",
+      "Bash(ffprobe:*)",
+      "Bash(sort:*)",
+      "Bash(brew install:*)",
+      "Bash(chmod:*)",
+      "Bash(./convert-videos.sh:*)",
+      "Bash(./generate-posters.sh:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
