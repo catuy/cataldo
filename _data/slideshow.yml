@@ -1,610 +1,471 @@
 ---
 - file: anii-1.mp4
-  year: 2017
+  year: 2020
   title: ANII Framework
   description: Design system and framework for the National Agency for Research and
-    Innovation
-  link: https://mail.google.com/mail/u/0/?ui=2#inbox
-  height: 80
-  fit: contain
+    Innovation.
+  link_text: View Project
+  link_url: https://mail.google.com/mail/u/0/?ui=2#inbox
   type: web
 - file: atlas-1.mp4
-  year:
+  year: 2020
   title: Atlas
-  description:
-  link:
-  height: 90
-  fit: contain
-  type: image
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  link_text:
+  link_url:
+  type: web
 - file: atlas-5.mp4
-  year:
-  title: Atlas
-  description:
-  link:
-  height: 90
-  fit: contain
-  type: image
-- file: bi1.png
-  year:
-  title:
-  description:
-  link:
-  height: 90
-  fit: contain
-  type: image
+  year: 2020
+  title: cabezaaaaa
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  link_text:
+  link_url:
+  type: web
 - file: brecha-1.mp4
   year: 2020
   title: Brecha
   description:
-  link:
-  height: 80
-  fit: contain
-  type: web
-- file: brecha-2.mp4
-  year: 2020
-  title: Brecha
-  description:
-  link:
-  height: 80
-  fit: contain
-  type: web
-- file: brecha-3.mp4
-  year: 2020
-  title: Brecha
-  description:
-  link:
-  height: 80
-  fit: contain
+  link_text:
+  link_url:
   type: web
 - file: busqueda1.png
   year: 2024
   title: Búsqueda
   description:
-  link:
-  height: 85
-  fit: contain
+  link_text:
+  link_url:
   type: web
 - file: busqueda2.png
   year: 2024
   title: Búsqueda
   description:
-  link:
-  height: 85
-  fit: contain
+  link_text:
+  link_url:
   type: web
 - file: busqueda3.png
   year: 2024
   title: Búsqueda
   description:
-  link:
-  height: 85
-  fit: contain
+  link_text:
+  link_url:
   type: web
 - file: cololo.jpg
   year:
   title:
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: criolla-1.mp4
   year: 2019
   title: Criolla
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: criolla-2.jpg
   year: 2019
   title: Criolla
   description:
-  link:
-  height: 90
-  fit: contain
-  type: image
-- file: criolla-3.jpg
-  year: 2019
-  title: Criolla
-  description:
-  link:
-  height: 90
-  fit: contain
-  type: image
-- file: cvuy-2.png
-  year:
-  title: CV UY
-  description:
-  link:
-  height: 90
-  fit: contain
-  type: image
-- file: cvuy-3.png
-  year:
-  title: CV UY
-  description:
-  link:
-  height: 90
-  fit: contain
-  type: image
-- file: cvuy-4.png
-  year:
-  title: CV UY
-  description:
-  link:
-  height: 90
-  fit: contain
-  type: image
-- file: cw3.png
-  year: 2025
-  title: ClassWallet
-  description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: cw4.png
   year: 2025
   title: ClassWallet
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: cwds1.png
   year: 2025
   title: ClassWallet Design System
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: cwds2.png
   year: 2025
   title: ClassWallet Design System
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: escobar-1.jpg
   year:
   title: Escobar
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: escobar-2.jpg
   year:
   title: Escobar
   description:
-  link:
-  height: 90
-  fit: contain
-  type: image
-- file: escobar-3.jpg
-  year:
-  title: Escobar
-  description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: fanii-1.mp4
   year:
   title: FANII
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: fanii-2.mp4
   year:
   title: FANII
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: gwick1.png
   year: 2019
   title: Gwick
   description:
-  link:
-  height: 90
-  fit: contain
-  type: image
+  link_text:
+  link_url:
+  type: web
 - file: gwick3.png
   year: 2019
   title: Gwick
   description:
-  link:
-  height: 90
-  fit: contain
-  type: image
+  link_text:
+  link_url:
+  type: web
 - file: gwick4.png
   year: 2019
   title: Gwick
   description:
-  link:
-  height: 90
-  fit: contain
-  type: image
+  link_text:
+  link_url:
+  type: web
 - file: gwick5.png
   year: 2019
   title: Gwick
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: hostburo-1.mp4
   year: 2014
   title: HostBuro
   description:
-  link:
-  height: 90
-  fit: contain
-  type: image
+  link_text:
+  link_url:
+  type: web
 - file: isp-2.mp4
   year: 2022
   title: ISP
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: jacobin-2.mp4
   year: 2022
   title: Jacobin
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: kromo-5.jpg
   year:
   title: Kromo
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: leac-1.jpg
   year:
   title: LEAC
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: leac-3.jpg
   year:
   title: LEAC
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: leac-5.jpg
   year:
   title: LEAC
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: leac-7.jpg
   year:
   title: LEAC
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: melu-1.jpg
   year:
   title: Melu
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: melu-3.jpg
   year:
   title: Melu
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: melu-4.jpg
   year:
   title: Melu
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: miem-1.mp4
   year:
   title: MIEM
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: monitor-1.jpg
   year: 2015
   title: Monitor Cannabis
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: monitor-3.mp4
   year: 2015
   title: Monitor Cannabis
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: monitor-4.mp4
   year: 2015
   title: Monitor Cannabis
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: monitor-5.mp4
   year: 2015
   title: Monitor Cannabis
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: oriental-1.jpg
   year:
   title: Oriental
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: pei-1.mp4
   year: 2022
   title: PEI
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: penny-1.mp4
   year:
   title: Penny
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: pop-2.jpg
   year:
   title: Pop
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: pop-3.jpg
   year:
   title: Pop
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: pop-4.jpg
   year:
   title: Pop
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: pop-5.jpg
   year:
   title: Pop
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: prisma-1.mp4
   year:
   title: Prisma
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: reboot-1.jpg
   year: 2016
   title: Reboot
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: reboot-10.jpg
   year: 2016
   title: Reboot
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: reboot-11.jpg
   year: 2016
   title: Reboot
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: reboot-2.jpg
   year: 2016
   title: Reboot
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: reboot-3.jpg
   year: 2016
   title: Reboot
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: reboot-4.jpg
   year: 2016
   title: Reboot
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: reboot-5.jpg
   year: 2016
   title: Reboot
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: reboot-6.jpg
   year: 2016
   title: Reboot
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: reboot-7.jpg
   year: 2016
   title: Reboot
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: reboot-8.jpg
   year: 2016
   title: Reboot
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: reboot-9.jpg
   year: 2016
   title: Reboot
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: shibuya-1.mp4
   year: 2016
   title: Neo Shibuya
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: sq-1.mp4
   year: 2019
   title: SQ
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: sq-2.mp4
   year: 2019
   title: SQ
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: sso-1.mp4
   year:
   title: SSO
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: tend-1.mp4
   year: 2017
   title: Tend
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: tend-3.jpg
   year: 2017
   title: Tend
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: tipo-3.jpg
   year:
   title: Tipo
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: trama-0.mp4
   year:
   title: Trama
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: trama-4.mp4
   year:
   title: Trama
   description:
-  link:
-  height: 90
-  fit: contain
+  link_text:
+  link_url:
   type: image
 - file: ucu1.png
   year: 2023
   title: UCU
   description:
-  link:
-  height: 90
-  fit: contain
-  type: image
+  link_text:
+  link_url:
+  type: web
 - file: ucu2.png
   year: 2023
   title: UCU
   description:
-  link:
-  height: 90
-  fit: contain
-  type: image
+  link_text:
+  link_url:
+  type: web

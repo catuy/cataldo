@@ -354,7 +354,7 @@
             display: grid;
             grid-template-columns: 1fr 2fr 1fr;
             gap: 1rem;
-            align-items: center;
+            align-items: flex-start;
             font-size: 1rem;
             opacity: 0.8;
             color: #100F0F;
@@ -371,6 +371,9 @@
 
         .top-info-bar .description {
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .top-info-bar .counter {
@@ -432,6 +435,47 @@
         }
 
         #slideshowPlayPause.hidden {
+            display: none;
+        }
+
+        /* Project link text styles */
+        #projectLink {
+            color: inherit;
+        }
+
+        #projectLink:hover {
+            opacity: 1;
+        }
+
+        /* Video loader */
+        .video-loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .video-loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            border-top-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        body.dark-theme .video-loader-spinner {
+            border-color: rgba(0, 0, 0, 0.2);
+            border-top-color: rgba(0, 0, 0, 0.8);
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .video-loader.hidden {
             display: none;
         }
     </style>
@@ -652,6 +696,8 @@
         const yearDisplay = document.getElementById('yearDisplay');
         const counterDisplay = document.getElementById('counterDisplay');
         const topInfoBar = document.querySelector('.top-info-bar');
+        const projectLink = document.getElementById('projectLink');
+        const projectLinkText = document.getElementById('projectLinkText');
         const galleryToggle = document.getElementById('galleryToggle');
         const slideshowClose = document.getElementById('slideshowClose');
         const slideshowPrev = document.getElementById('slideshowPrev');
@@ -667,8 +713,13 @@
 
         function showSlide(index) {
             const slide = slideshowMedia[index];
-            const isVideo = slide.file.endsWith('.mp4');
+            const isVideoFile = slide.file.endsWith('.mp4');
             console.log('Showing slide:', index, slide.file);
+
+            // In autoplay mode, use poster images for videos
+            // In manual mode, use actual videos
+            const useVideoPoster = isVideoFile && isPlaying;
+            const isVideo = isVideoFile && !useVideoPoster;
 
             // Get properties with defaults
             const fit = slide.fit || 'contain';
@@ -681,30 +732,59 @@
                 const currentNum = String(index + 1).padStart(2, '0');
                 const totalNum = String(totalSlides).padStart(2, '0');
                 counterDisplay.textContent = `${currentNum}/${totalNum}`;
+
+                // Update link
+                if (slide.link_url && slide.link_text) {
+                    projectLink.href = slide.link_url;
+                    projectLinkText.textContent = slide.link_text;
+                    projectLink.style.display = 'block';
+                } else {
+                    projectLink.style.display = 'none';
+                }
+            } else {
+                // Hide link during autoplay
+                projectLink.style.display = 'none';
             }
 
             // Calculate max dimensions for media
-            // Top bar: ~4.5rem, Bottom spacer: 6rem, Extra margin: 1rem
-            const maxHeight = 'calc(100vh - 4.5rem - 6rem - 1rem)';
+            // Top bar: ~6rem (increased for 2 lines), Bottom spacer: 6rem, Extra margin: 1rem
+            const maxHeight = 'calc(100vh - 6rem - 6rem - 1rem)';
             const maxWidth = '85vw';
 
             // Create media HTML
             let mediaHTML = '';
+
+            // Determine which file to use
+            let mediaFile = slide.file;
+            if (useVideoPoster) {
+                // Replace .mp4 with -poster.jpg for autoplay mode
+                mediaFile = slide.file.replace('.mp4', '-poster.jpg');
+            }
+
             if (type === 'web') {
                 // For web type, create media element with browser chrome
                 let mediaElement = '';
                 // Calculate max height for content area (minus browser chrome ~48px)
-                const contentMaxHeight = 'calc(100vh - 4.5rem - 6rem - 1rem - 48px)';
+                const contentMaxHeight = 'calc(100vh - 6rem - 6rem - 1rem - 48px)';
 
                 if (isVideo) {
+                    // Get poster image for this video
+                    const posterFile = slide.file.replace('.mp4', '-poster.jpg');
                     mediaElement = `
-                        <video autoplay loop muted style="max-width: ${maxWidth}; max-height: ${contentMaxHeight}; display: block; object-fit: ${fit};">
-                            <source src="/assets/slideshow/${slide.file}" type="video/mp4">
-                        </video>
+                        <div style="position: relative; display: inline-block;">
+                            <video autoplay loop muted playsinline preload="auto" poster="/assets/slideshow/${posterFile}" style="max-width: ${maxWidth}; max-height: ${contentMaxHeight}; display: block; object-fit: contain;">
+                                <source src="/assets/slideshow/${slide.file}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-loader" id="videoLoader">
+                                <div class="video-loader-spinner"></div>
+                            </div>
+                        </div>
                     `;
                 } else {
+                    // Use mediaFile (could be poster or regular image)
                     mediaElement = `
-                        <img src="/assets/slideshow/${slide.file}" style="max-width: ${maxWidth}; max-height: ${contentMaxHeight}; display: block; object-fit: ${fit};" alt="${slide.title || 'Slideshow image'}">
+                        <img src="/assets/slideshow/${mediaFile}" style="max-width: ${maxWidth}; max-height: ${contentMaxHeight}; display: block; object-fit: contain;" alt="${slide.title || 'Slideshow image'}">
                     `;
                 }
 
@@ -732,19 +812,92 @@
             } else {
                 // For image type, display directly without browser chrome
                 if (isVideo) {
+                    // Get poster image for this video
+                    const posterFile = slide.file.replace('.mp4', '-poster.jpg');
                     mediaHTML = `
-                        <video autoplay loop muted style="max-width: ${maxWidth}; max-height: ${maxHeight}; object-fit: ${fit};">
-                            <source src="/assets/slideshow/${slide.file}" type="video/mp4">
-                        </video>
+                        <div style="position: relative; display: inline-block;">
+                            <video autoplay loop muted playsinline preload="auto" poster="/assets/slideshow/${posterFile}" style="max-width: ${maxWidth}; max-height: ${maxHeight}; object-fit: contain;">
+                                <source src="/assets/slideshow/${slide.file}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-loader" id="videoLoader">
+                                <div class="video-loader-spinner"></div>
+                            </div>
+                        </div>
                     `;
                 } else {
+                    // Use mediaFile (could be poster or regular image)
                     mediaHTML = `
-                        <img src="/assets/slideshow/${slide.file}" style="max-width: ${maxWidth}; max-height: ${maxHeight}; object-fit: ${fit};" alt="${slide.title || 'Slideshow image'}">
+                        <img src="/assets/slideshow/${mediaFile}" style="max-width: ${maxWidth}; max-height: ${maxHeight}; object-fit: contain;" alt="${slide.title || 'Slideshow image'}">
                     `;
                 }
             }
 
             slideshowContainer.innerHTML = mediaHTML;
+
+            // Handle video loading and playback (only in manual mode)
+            if (isVideo) {
+                const videoElement = slideshowContainer.querySelector('video');
+                const loader = slideshowContainer.querySelector('.video-loader');
+
+                if (videoElement && loader) {
+                    console.log('Loading video:', slide.file);
+
+                    // Show loader
+                    loader.classList.remove('hidden');
+
+                    // Force load the video
+                    videoElement.load();
+
+                    // Hide loader and play when video is ready
+                    const attemptPlay = () => {
+                        console.log('Video ready, attempting play:', slide.file);
+
+                        // Hide loader
+                        loader.classList.add('hidden');
+
+                        const playPromise = videoElement.play();
+                        if (playPromise !== undefined) {
+                            playPromise
+                                .then(() => {
+                                    console.log('Video playing successfully:', slide.file);
+                                })
+                                .catch(error => {
+                                    if (error.name !== 'AbortError') {
+                                        console.warn('Video autoplay failed for', slide.file, ':', error);
+                                        // Try again after a short delay
+                                        setTimeout(() => {
+                                            videoElement.play().catch(e => console.error('Second play attempt failed:', e));
+                                        }, 500);
+                                    }
+                                });
+                        }
+                    };
+
+                    // Listen for when video is ready
+                    if (videoElement.readyState >= 3) {
+                        // Video already loaded enough
+                        attemptPlay();
+                    } else {
+                        videoElement.addEventListener('canplay', attemptPlay, { once: true });
+                    }
+
+                    // Hide loader on error
+                    videoElement.addEventListener('error', (e) => {
+                        loader.classList.add('hidden');
+                        console.error('Video error for', slide.file);
+                        if (videoElement.error) {
+                            console.error('Error code:', videoElement.error.code);
+                            console.error('Error message:', videoElement.error.message);
+                        }
+                    }, { once: true });
+
+                    // Log when video loads successfully
+                    videoElement.addEventListener('loadeddata', () => {
+                        console.log('Video data loaded:', slide.file);
+                    }, { once: true });
+                }
+            }
         }
 
         function nextSlide() {
@@ -869,6 +1022,7 @@
             nextSlide();
         });
         slideshowPlayPause.addEventListener('click', togglePlayPause);
+
         }); // End DOMContentLoaded for slideshow
 
         // Theme Toggle
@@ -1124,7 +1278,12 @@
             <!-- Top info bar with year, description, and counter -->
             <div class="top-info-bar">
                 <div class="year" id="yearDisplay"></div>
-                <div class="description" id="descriptionDisplay"></div>
+                <div class="description">
+                    <div id="descriptionDisplay"></div>
+                    <a id="projectLink" href="#" target="_blank" rel="noopener noreferrer" style="display: none; margin-top: 0.5rem; text-decoration: underline; opacity: 0.8;">
+                        <span id="projectLinkText">View Project</span>
+                    </a>
+                </div>
                 <div class="counter" id="counterDisplay"></div>
             </div>
 
