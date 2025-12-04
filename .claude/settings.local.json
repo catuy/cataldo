@@ -13,7 +13,10 @@
       "Bash(chmod:*)",
       "Bash(./convert-videos.sh:*)",
       "Bash(./generate-posters.sh:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)",
+      "Bash(npm run build:css:*)"
     ],
     "deny": [],
     "ask": []

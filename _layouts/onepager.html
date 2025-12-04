@@ -547,6 +547,9 @@
         <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-full px-3 py-3 shadow-lg">
             <div class="flex items-center gap-2">
                 <!-- Regular Navigation Links -->
+                <!-- <a href="#clients" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
+                    Clients
+                </a> -->
                 <a href="#about" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
                     About
                 </a>
@@ -1036,6 +1039,23 @@
             themeToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"></path></svg>';
         }
 
+        // Function to toggle client logos
+        // function toggleClientLogos(isDark) {
+        //     const lightLogos = document.querySelectorAll('.client-logo');
+        //     const darkLogos = document.querySelectorAll('.client-logo-dark');
+
+        //     if (isDark) {
+        //         lightLogos.forEach(logo => logo.classList.add('hidden'));
+        //         darkLogos.forEach(logo => logo.classList.remove('hidden'));
+        //     } else {
+        //         lightLogos.forEach(logo => logo.classList.remove('hidden'));
+        //         darkLogos.forEach(logo => logo.classList.add('hidden'));
+        //     }
+        // }
+
+        // Initialize client logos based on current theme
+        // toggleClientLogos(body.classList.contains('dark-theme'));
+
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-theme');
 
@@ -1043,11 +1063,14 @@
             const theme = body.classList.contains('dark-theme') ? 'dark' : 'light';
             localStorage.setItem('theme', theme);
 
+            // Toggle client logos
+            // toggleClientLogos(theme === 'dark');
+
             // Update button icon
             if (theme === 'dark') {
                 themeToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"></path></svg>';
             } else {
-                themeToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56,104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z"></path></svg>';
+                themeToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56A104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z"></path></svg>';
             }
         });
 
@@ -1248,6 +1271,20 @@
             duration: 0.8,
             ease: "power2.out"
         });
+
+        // Clients section animation
+        // gsap.from("#clients .grid > div", {
+        //     scrollTrigger: {
+        //         trigger: "#clients",
+        //         start: "top 80%",
+        //         toggleActions: "play none none none"
+        //     },
+        //     opacity: 0,
+        //     y: 20,
+        //     stagger: 0.05,
+        //     duration: 0.6,
+        //     ease: "power2.out"
+        // });
 
         // About section animation
         gsap.from("#about .bg-white", {
