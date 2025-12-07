@@ -16,7 +16,20 @@
       "Bash(git commit:*)",
       "Bash(lsof:*)",
       "Bash(xargs kill:*)",
-      "Bash(npm run build:css:*)"
+      "Bash(npm run build:css:*)",
+      "Bash(./compress-large-videos.sh)",
+      "Bash(for:*)",
+      "Bash(do poster=\"$video%.mp4-poster.jpg\")",
+      "Bash(if [ ! -f \"$poster\" ])",
+      "Bash(then echo \"Missing poster: $video\")",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(do echo \"Generating poster for $video...\")",
+      "Bash(ffmpeg:*)",
+      "Bash(echo:*)",
+      "Bash(./generate-slideshow-yml.sh:*)",
+      "Bash(ls:*)",
+      "Bash(git restore:*)"
     ],
     "deny": [],
     "ask": []

@@ -18,16 +18,16 @@
                 {{ paragraph }}
             </p>
             {% endfor %}
+
+            <!-- Skills Tags -->
+            <div class="flex flex-wrap gap-2 mt-6">
+                {% for skill in site.data.about.skills %}
+                <span class="px-3 py-1 bg-white rounded-full border border-black text-base font-medium text-black/70">{{ skill }}</span>
+                {% endfor %}
+            </div>
         </div>
         <button id="readMoreBtn" class="text-lg text-black leading-relaxed mb-6 hover:underline">
             Read more
         </button>
-
-        <!-- Skills Tags -->
-        <div class="flex flex-wrap gap-2">
-            {% for skill in site.data.about.skills %}
-            <span class="px-3 py-1 bg-white rounded-full border border-black text-base font-medium text-black/70">{{ skill }}</span>
-            {% endfor %}
-        </div>
     </div>
 </section>

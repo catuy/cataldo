@@ -348,6 +348,29 @@
             background: #1C1B1A; /* fx-base-950 */
         }
 
+        /* Mobile device styles */
+        .mobile-device {
+            background: #E5E4DF; /* Same as browser chrome light */
+            border: 6px solid #E5E4DF;
+            position: relative;
+        }
+
+        .mobile-content {
+            background: white;
+            overflow: hidden;
+            border-radius: 26px; /* Slightly less than device border-radius (32px - 6px border) */
+        }
+
+        /* Dark theme for mobile device */
+        body.dark-theme .mobile-device {
+            background: #282726; /* Same as browser chrome dark - fx-base-900 */
+            border-color: #282726;
+        }
+
+        body.dark-theme .mobile-content {
+            background: #1C1B1A; /* fx-base-950 */
+        }
+
         /* Top info bar with 3 columns */
         .top-info-bar {
             padding: 1.5rem 2rem;
@@ -812,8 +835,39 @@
                         </div>
                     </div>
                 `;
+            } else if (type === 'mobile') {
+                // For mobile type, create media element with mobile device frame
+                let mediaElement = '';
+
+                if (isVideo) {
+                    // Get poster image for this video
+                    const posterFile = slide.file.replace('.mp4', '-poster.jpg');
+                    mediaElement = `
+                        <video autoplay loop muted playsinline preload="auto" poster="/assets/slideshow/${posterFile}" style="max-width: ${maxWidth}; max-height: ${maxHeight}; display: block; object-fit: contain;">
+                            <source src="/assets/slideshow/${slide.file}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-loader" id="videoLoader">
+                            <div class="video-loader-spinner"></div>
+                        </div>
+                    `;
+                } else {
+                    // Use mediaFile (could be poster or regular image)
+                    mediaElement = `
+                        <img src="/assets/slideshow/${mediaFile}" style="max-width: ${maxWidth}; max-height: ${maxHeight}; display: block; object-fit: contain;" alt="${slide.title || 'Slideshow image'}">
+                    `;
+                }
+
+                mediaHTML = `
+                    <div class="mobile-device" style="display: inline-flex; flex-direction: column; border-radius: 32px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.4); max-height: ${maxHeight};">
+                        <!-- Content -->
+                        <div class="mobile-content" style="display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                            ${mediaElement}
+                        </div>
+                    </div>
+                `;
             } else {
-                // For image type, display directly without browser chrome
+                // For image type, display directly without browser chrome or device frame
                 if (isVideo) {
                     // Get poster image for this video
                     const posterFile = slide.file.replace('.mp4', '-poster.jpg');
@@ -849,6 +903,12 @@
                     // Show loader
                     loader.classList.remove('hidden');
 
+                    // Safety timeout: hide loader after 5 seconds no matter what
+                    const safetyTimeout = setTimeout(() => {
+                        console.warn('Video loader timeout for:', slide.file);
+                        loader.classList.add('hidden');
+                    }, 5000);
+
                     // Force load the video
                     videoElement.load();
 
@@ -856,7 +916,8 @@
                     const attemptPlay = () => {
                         console.log('Video ready, attempting play:', slide.file);
 
-                        // Hide loader
+                        // Clear safety timeout and hide loader
+                        clearTimeout(safetyTimeout);
                         loader.classList.add('hidden');
 
                         const playPromise = videoElement.play();
@@ -877,27 +938,25 @@
                         }
                     };
 
-                    // Listen for when video is ready
+                    // Listen for when video is ready - use multiple events for better compatibility
                     if (videoElement.readyState >= 3) {
                         // Video already loaded enough
                         attemptPlay();
                     } else {
+                        // Try multiple events to ensure we catch when video is ready
                         videoElement.addEventListener('canplay', attemptPlay, { once: true });
+                        videoElement.addEventListener('loadeddata', attemptPlay, { once: true });
                     }
 
                     // Hide loader on error
                     videoElement.addEventListener('error', (e) => {
+                        clearTimeout(safetyTimeout);
                         loader.classList.add('hidden');
                         console.error('Video error for', slide.file);
                         if (videoElement.error) {
                             console.error('Error code:', videoElement.error.code);
                             console.error('Error message:', videoElement.error.message);
                         }
-                    }, { once: true });
-
-                    // Log when video loads successfully
-                    videoElement.addEventListener('loadeddata', () => {
-                        console.log('Video data loaded:', slide.file);
                     }, { once: true });
                 }
             }

@@ -1,471 +1,317 @@
 ---
-- file: anii-1.mp4
-  year: 2020
-  title: ANII Framework
-  description: Design system and framework for the National Agency for Research and
-    Innovation.
-  link_text: View Project
-  link_url: https://mail.google.com/mail/u/0/?ui=2#inbox
-  type: web
 - file: atlas-1.mp4
-  year: 2020
-  title: Atlas
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  year: 
+  title: atlas
+  description:
   link_text:
   link_url:
   type: web
+- file: sbdg.mp4
+  year: 
+  title: sbdg
+  description:
+  link_text:
+  link_url:
+  type: mobile
 - file: atlas-5.mp4
-  year: 2020
-  title: cabezaaaaa
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  year: 
+  title: atlas
+  description:
   link_text:
   link_url:
   type: web
 - file: brecha-1.mp4
-  year: 2020
-  title: Brecha
+  year: 
+  title: brecha
+  description:
+  link_text:
+  link_url:
+  type: web
+- file: brecha-4.mp4
+  year: 
+  title: brecha
+  description:
+  link_text:
+  link_url:
+  type: web
+- file: agenda.png
+  year: 
+  title: agenda
+  description:
+  link_text:
+  link_url:
+  type: image
+- file: goos.mp4
+  year: 
+  title: goos
+  description:
+  link_text:
+  link_url:
+  type: web
+- file: gwick.webp
+  year: 
+  title: gwick
+  description:
+  link_text:
+  link_url:
+  type: mobile
+- file: hostburo-1.mp4
+  year: 
+  title: hostburo
+  description:
+  link_text:
+  link_url:
+  type: web
+- file: alver-1.mp4
+  year: 
+  title: alver
+  description:
+  link_text:
+  link_url:
+  type: web
+- file: bus1.mp4
+  year: 
+  title: bus
+  description:
+  link_text:
+  link_url:
+  type: web
+- file: bus4.mp4
+  year: 
+  title: bus
   description:
   link_text:
   link_url:
   type: web
 - file: busqueda1.png
-  year: 2024
-  title: Búsqueda
+  year: 
+  title: busqueda
   description:
   link_text:
   link_url:
-  type: web
-- file: busqueda2.png
-  year: 2024
-  title: Búsqueda
-  description:
-  link_text:
-  link_url:
-  type: web
+  type: mobile
 - file: busqueda3.png
-  year: 2024
-  title: Búsqueda
+  year: 
+  title: busqueda
+  description:
+  link_text:
+  link_url:
+  type: mobile
+- file: cafe-1.mp4
+  year: 
+  title: cafe
   description:
   link_text:
   link_url:
   type: web
-- file: cololo.jpg
-  year:
-  title:
+- file: cook-1.mp4
+  year: 
+  title: cook
   description:
   link_text:
   link_url:
-  type: image
+  type: web
 - file: criolla-1.mp4
-  year: 2019
-  title: Criolla
+  year: 
+  title: criolla
   description:
   link_text:
   link_url:
-  type: image
+  type: web
 - file: criolla-2.jpg
-  year: 2019
-  title: Criolla
+  year: 
+  title: criolla
   description:
   link_text:
   link_url:
   type: image
 - file: cw4.png
-  year: 2025
-  title: ClassWallet
+  year: 
+  title: cw
   description:
   link_text:
   link_url:
-  type: image
-- file: cwds1.png
-  year: 2025
-  title: ClassWallet Design System
-  description:
-  link_text:
-  link_url:
-  type: image
+  type: mobile
 - file: cwds2.png
-  year: 2025
-  title: ClassWallet Design System
+  year: 
+  title: cwds
   description:
   link_text:
   link_url:
-  type: image
-- file: escobar-1.jpg
-  year:
-  title: Escobar
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: escobar-2.jpg
-  year:
-  title: Escobar
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: fanii-1.mp4
-  year:
-  title: FANII
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: fanii-2.mp4
-  year:
-  title: FANII
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: gwick1.png
-  year: 2019
-  title: Gwick
-  description:
-  link_text:
-  link_url:
-  type: web
-- file: gwick3.png
-  year: 2019
-  title: Gwick
-  description:
-  link_text:
-  link_url:
-  type: web
-- file: gwick4.png
-  year: 2019
-  title: Gwick
-  description:
-  link_text:
-  link_url:
-  type: web
-- file: gwick5.png
-  year: 2019
-  title: Gwick
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: hostburo-1.mp4
-  year: 2014
-  title: HostBuro
-  description:
-  link_text:
-  link_url:
-  type: web
-- file: isp-2.mp4
-  year: 2022
-  title: ISP
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: jacobin-2.mp4
-  year: 2022
-  title: Jacobin
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: kromo-5.jpg
-  year:
-  title: Kromo
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: leac-1.jpg
-  year:
-  title: LEAC
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: leac-3.jpg
-  year:
-  title: LEAC
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: leac-5.jpg
-  year:
-  title: LEAC
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: leac-7.jpg
-  year:
-  title: LEAC
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: melu-1.jpg
-  year:
-  title: Melu
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: melu-3.jpg
-  year:
-  title: Melu
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: melu-4.jpg
-  year:
-  title: Melu
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: miem-1.mp4
-  year:
-  title: MIEM
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: monitor-1.jpg
-  year: 2015
-  title: Monitor Cannabis
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: monitor-3.mp4
-  year: 2015
-  title: Monitor Cannabis
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: monitor-4.mp4
-  year: 2015
-  title: Monitor Cannabis
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: monitor-5.mp4
-  year: 2015
-  title: Monitor Cannabis
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: oriental-1.jpg
-  year:
-  title: Oriental
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: pei-1.mp4
-  year: 2022
-  title: PEI
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: penny-1.mp4
-  year:
-  title: Penny
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: pop-2.jpg
-  year:
-  title: Pop
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: pop-3.jpg
-  year:
-  title: Pop
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: pop-4.jpg
-  year:
-  title: Pop
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: pop-5.jpg
-  year:
-  title: Pop
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: prisma-1.mp4
-  year:
-  title: Prisma
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: reboot-1.jpg
-  year: 2016
-  title: Reboot
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: reboot-10.jpg
-  year: 2016
-  title: Reboot
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: reboot-11.jpg
-  year: 2016
-  title: Reboot
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: reboot-2.jpg
-  year: 2016
-  title: Reboot
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: reboot-3.jpg
-  year: 2016
-  title: Reboot
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: reboot-4.jpg
-  year: 2016
-  title: Reboot
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: reboot-5.jpg
-  year: 2016
-  title: Reboot
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: reboot-6.jpg
-  year: 2016
-  title: Reboot
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: reboot-7.jpg
-  year: 2016
-  title: Reboot
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: reboot-8.jpg
-  year: 2016
-  title: Reboot
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: reboot-9.jpg
-  year: 2016
-  title: Reboot
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: shibuya-1.mp4
-  year: 2016
-  title: Neo Shibuya
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: sq-1.mp4
-  year: 2019
-  title: SQ
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: sq-2.mp4
-  year: 2019
-  title: SQ
+  type: mobile
+- file: escobar.webp
+  year: 
+  title: escobar
   description:
   link_text:
   link_url:
   type: image
 - file: sso-1.mp4
-  year:
-  title: SSO
+  year: 
+  title: sso
+  description:
+  link_text:
+  link_url:
+  type: web
+- file: fanii-1.mp4
+  year: 
+  title: fanii
+  description:
+  link_text:
+  link_url:
+  type: web
+- file: fanii-2.mp4
+  year: 
+  title: fanii
+  description:
+  link_text:
+  link_url:
+  type: web
+- file: jacobin-2.mp4
+  year: 
+  title: jacobin
+  description:
+  link_text:
+  link_url:
+  type: web
+- file: kromo-5.jpg
+  year: 
+  title: kromo
   description:
   link_text:
   link_url:
   type: image
+- file: leac.webp
+  year: 
+  title: leac
+  description:
+  link_text:
+  link_url:
+  type: image
+- file: melu.webp
+  year: 
+  title: melu
+  description:
+  link_text:
+  link_url:
+  type: image
+- file: monitor-1.jpg
+  year: 
+  title: monitor
+  description:
+  link_text:
+  link_url:
+  type: image
+- file: monitor-3.mp4
+  year: 
+  title: monitor
+  description:
+  link_text:
+  link_url:
+  type: web
+- file: monitor-4.mp4
+  year:
+  title: monitor
+  description:
+  link_text:
+  link_url:
+  type: web
+- file: oriental-1.jpg
+  year: 
+  title: oriental
+  description:
+  link_text:
+  link_url:
+  type: web
+- file: pop.webp
+  year: 
+  title: pop
+  description:
+  link_text:
+  link_url:
+  type: image
+- file: prisma-1.mp4
+  year: 
+  title: prisma
+  description:
+  link_text:
+  link_url:
+  type: web
+- file: reboot.webp
+  year: 
+  title: reboot
+  description:
+  link_text:
+  link_url:
+  type: image
+- file: shibuya-1.mp4
+  year: 
+  title: shibuya
+  description:
+  link_text:
+  link_url:
+  type: web
+- file: sq-1.mp4
+  year: 
+  title: sq
+  description:
+  link_text:
+  link_url:
+  type: web
+- file: sq-2.mp4
+  year: 
+  title: sq
+  description:
+  link_text:
+  link_url:
+  type: web
 - file: tend-1.mp4
-  year: 2017
-  title: Tend
+  year: 
+  title: tend
   description:
   link_text:
   link_url:
-  type: image
-- file: tend-3.jpg
-  year: 2017
-  title: Tend
-  description:
-  link_text:
-  link_url:
-  type: image
-- file: tipo-3.jpg
-  year:
-  title: Tipo
-  description:
-  link_text:
-  link_url:
-  type: image
+  type: web
 - file: trama-0.mp4
-  year:
-  title: Trama
+  year: 
+  title: trama
   description:
   link_text:
   link_url:
-  type: image
-- file: trama-4.mp4
-  year:
-  title: Trama
-  description:
-  link_text:
-  link_url:
-  type: image
+  type: web
 - file: ucu1.png
-  year: 2023
-  title: UCU
+  year: 
+  title: ucu
   description:
   link_text:
   link_url:
   type: web
-- file: ucu2.png
-  year: 2023
-  title: UCU
+- file: 1976-1.jpg
+  year: 
+  title: 
   description:
   link_text:
   link_url:
-  type: web
+  type: image
+- file: seri1.png
+  year: 
+  title: 
+  description:
+  link_text:
+  link_url:
+  type: image
+- file: seri2.png
+  year: 
+  title: 
+  description:
+  link_text:
+  link_url:
+  type: image
+- file: seri3.jpg
+  year: 
+  title: 
+  description:
+  link_text:
+  link_url:
+  type: image
+
