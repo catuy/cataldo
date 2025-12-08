@@ -4,29 +4,29 @@
 
     <div>
         <h3 class="text-3xl md:text-4xl font-medium mb-4">{{ site.data.about.title }}</h3>
-        <p class="text-lg text-black/70 leading-relaxed mb-4">
+        <p class="text-xl text-black/70 leading-relaxed mb-4">
             {{ site.data.about.intro }}
         </p>
         {% for paragraph in site.data.about.paragraphs %}
-        <p class="text-lg text-black/70 leading-relaxed mb-4">
+        <p class="text-xl text-black/70 leading-relaxed mb-4">
             {{ paragraph }}
         </p>
         {% endfor %}
-        <div id="aboutMoreContent" class="hidden">
+        <div id="aboutMoreContent" class="hidden mb-8">
             {% for paragraph in site.data.about.more_content %}
-            <p class="text-lg text-black/70 leading-relaxed mb-4">
+            <p class="text-xl text-black/70 leading-relaxed mb-8">
                 {{ paragraph }}
             </p>
             {% endfor %}
 
             <!-- Skills Tags -->
-            <div class="flex flex-wrap gap-2 mt-6">
+            <div class="flex flex-wrap gap-2 mt-10">
                 {% for skill in site.data.about.skills %}
                 <span class="px-3 py-1 bg-white rounded-full border border-black text-base font-medium text-black/70">{{ skill }}</span>
                 {% endfor %}
             </div>
         </div>
-        <button id="readMoreBtn" class="text-lg text-black leading-relaxed mb-6 hover:underline">
+        <button id="readMoreBtn" class="text-lg text-black leading-relaxed mb-6 hover:underline mt-12">
             Read more
         </button>
     </div>

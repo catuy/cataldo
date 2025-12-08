@@ -29,7 +29,12 @@
       "Bash(echo:*)",
       "Bash(./generate-slideshow-yml.sh:*)",
       "Bash(ls:*)",
-      "Bash(git restore:*)"
+      "Bash(git restore:*)",
+      "Bash(open http://127.0.0.1:4000/)",
+      "Bash(cat:*)",
+      "Bash(pkill:*)",
+      "Bash(curl:*)",
+      "Bash(open http://127.0.0.1:4000/test-tooltips.html)"
     ],
     "deny": [],
     "ask": []
