@@ -8,7 +8,7 @@ images: /assets/thumbs/monitor.png
 country: Uruguay
 tags:
   - Web
-description: "Monitor Cannabis<br>Supporting a regional knowledge platform for cannabis policy by designing its identity, brand system, and digital communication strategy."
+description: "Created the identity and digital platform for Uruguay's cannabis policy monitoring initiative, facilitating knowledge exchange between stakeholders."
 ---
 Monitorcannabis.uy is part of the project “Towards a strategy for evaluating and monitoring cannabis regulation in Uruguay”, managed by the Friedrich Ebert Foundation in Uruguay (FESUR) and funded by the Open Society Foundations. The project involves collaboration with the National Drug Board, the University of the Republic, and ProDerechos. Its goal is to facilitate the exchange of relevant information on the implementation, monitoring, and evaluation of cannabis regulation in Uruguay—among local stakeholders as well as regional and international actors.
 
