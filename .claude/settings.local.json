@@ -39,7 +39,8 @@
       "WebFetch(domain:jacobinlat.com)",
       "Bash(gh pr create:*)",
       "Bash(git checkout:*)",
-      "Bash(git pull:*)"
+      "Bash(git pull:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

@@ -470,9 +470,15 @@
 
         .top-info-bar .description {
             text-align: center;
-            display: flex;
+            display: none;
             flex-direction: column;
             align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .top-info-bar .description {
+                display: flex;
+            }
         }
 
         .top-info-bar .counter {
@@ -1201,6 +1207,7 @@
             galleryToggle.classList.add('hidden');
             document.getElementById('experimentalToggle').classList.add('hidden');
             document.getElementById('themeToggle').classList.add('hidden');
+            document.getElementById('mobileMenuToggle').classList.add('hidden');
 
             showSlide(currentSlideIndex);
 
@@ -1220,6 +1227,7 @@
             galleryToggle.classList.remove('hidden');
             document.getElementById('experimentalToggle').classList.remove('hidden');
             document.getElementById('themeToggle').classList.remove('hidden');
+            document.getElementById('mobileMenuToggle').classList.remove('hidden');
 
             if (isPlaying) {
                 togglePlayPause();
@@ -1545,7 +1553,7 @@
             <!-- Top info bar with year, description, and counter -->
             <div class="top-info-bar">
                 <div class="year" id="yearDisplay"></div>
-                <div class="description">
+                <div class="description hidden md:flex">
                     <div id="descriptionDisplay"></div>
                     <a id="projectLink" href="#" target="_blank" rel="noopener noreferrer" style="display: none; margin-top: 0.5rem; text-decoration: underline; opacity: 0.8;">
                         <span id="projectLinkText">View Project</span>
@@ -1644,6 +1652,7 @@
             document.getElementById('galleryToggle').classList.add('hidden');
             document.getElementById('experimentalToggle').classList.add('hidden');
             document.getElementById('themeToggle').classList.add('hidden');
+            document.getElementById('mobileMenuToggle').classList.add('hidden');
 
             // Load random sketch
             loadLabSketch(getRandomLabSketch());
@@ -1665,6 +1674,7 @@
             document.getElementById('galleryToggle').classList.remove('hidden');
             document.getElementById('experimentalToggle').classList.remove('hidden');
             document.getElementById('themeToggle').classList.remove('hidden');
+            document.getElementById('mobileMenuToggle').classList.remove('hidden');
 
             // Clean up p5 instance
             if (window.currentP5Instance && typeof window.currentP5Instance.remove === 'function') {
