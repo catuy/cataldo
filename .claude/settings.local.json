@@ -36,7 +36,8 @@
       "Bash(curl:*)",
       "Bash(open http://127.0.0.1:4000/test-tooltips.html)",
       "Bash(git push)",
-      "WebFetch(domain:jacobinlat.com)"
+      "WebFetch(domain:jacobinlat.com)",
+      "Bash(gh pr create:*)"
     ],
     "deny": [],
     "ask": []
