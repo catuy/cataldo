@@ -1387,31 +1387,19 @@
             delay: 1 // Wait for preloader to finish
         });
 
-        heroTimeline
-            .from("#hero .flex.items-center.gap-4", {
-                opacity: 0,
-                y: 30,
-                duration: 1,
-                clearProps: "all"
-            })
-            .from("#hero #rotating-title", {
-                opacity: 0,
-                y: 20,
-                duration: 0.8,
-                clearProps: "all"
-            }, "-=0.5")
-            .from("#hero p", {
-                opacity: 0,
-                y: 20,
-                duration: 0.8,
-                clearProps: "all"
-            }, "-=0.4")
-            .from("#hero .flex.items-center.gap-2:last-child", {
-                opacity: 0,
-                y: 10,
-                duration: 0.6,
-                clearProps: "all"
-            }, "-=0.3");
+        // Animate hero section children that exist
+        const heroElements = ["#hero img", "#hero h1", "#hero #rotating-title", "#hero p"];
+        heroElements.forEach((selector, index) => {
+            const element = document.querySelector(selector);
+            if (element) {
+                heroTimeline.from(selector, {
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.8,
+                    clearProps: "all"
+                }, index === 0 ? 0 : "-=0.4");
+            }
+        });
 
         // Section headers animation
         gsap.utils.toArray("section h2").forEach(header => {
@@ -1429,18 +1417,21 @@
         });
 
         // Experience cards staggered animation
-        gsap.from("#experience .space-y-6 > div", {
-            scrollTrigger: {
-                trigger: "#experience",
-                start: "top 80%",
-                toggleActions: "play none none none"
-            },
-            opacity: 0,
-            y: 30,
-            stagger: 0.15,
-            duration: 0.8,
-            ease: "power2.out"
-        });
+        const experienceCards = document.querySelectorAll("#experience .bg-white");
+        if (experienceCards.length > 0) {
+            gsap.from(experienceCards, {
+                scrollTrigger: {
+                    trigger: "#experience",
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                },
+                opacity: 0,
+                y: 30,
+                stagger: 0.15,
+                duration: 0.8,
+                ease: "power2.out"
+            });
+        }
 
         // Projects cards grid animation
         gsap.from("#projects .grid > div", {
