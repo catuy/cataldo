@@ -48,6 +48,16 @@
             color: #ffffff !important;
         }
 
+        /* Hide scrollbar for navigation */
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
         /* Custom Tooltips */
         button[title] {
             position: relative;
@@ -198,6 +208,45 @@
         body.dark-theme #themeToggle {
             background-color: #FFFCF0; /* fx-paper */
             color: #100F0F; /* fx-black */
+        }
+
+        /* Mobile Menu Styles - Light Theme */
+        .mobile-menu-overlay {
+            background-color: rgba(16, 15, 15, 0.5); /* fx-black with opacity */
+            backdrop-filter: blur(4px);
+        }
+
+        .mobile-menu-panel {
+            background-color: rgba(255, 252, 240, 0.95); /* fx-paper with opacity */
+            backdrop-filter: blur(24px);
+            border-color: rgba(230, 228, 217, 0.2); /* fx-base-100 with opacity */
+        }
+
+        .mobile-menu-link {
+            color: #100F0F; /* fx-black */
+        }
+
+        .mobile-menu-link:hover {
+            background-color: #F2F0E5; /* fx-base-50 */
+        }
+
+        /* Mobile Menu Styles - Dark Theme */
+        body.dark-theme .mobile-menu-overlay {
+            background-color: rgba(255, 252, 240, 0.5); /* fx-paper with opacity */
+        }
+
+        body.dark-theme .mobile-menu-panel {
+            background-color: rgba(28, 27, 26, 0.95); /* fx-base-950 with opacity */
+            backdrop-filter: blur(24px);
+            border-color: rgba(40, 39, 38, 0.2); /* fx-base-900 with opacity */
+        }
+
+        body.dark-theme .mobile-menu-link {
+            color: #FFFCF0; /* fx-paper */
+        }
+
+        body.dark-theme .mobile-menu-link:hover {
+            background-color: #282726; /* fx-base-900 */
         }
 
         body.dark-theme #galleryToggle:hover,
@@ -592,35 +641,71 @@
 
     </main>
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenuOverlay" class="fixed inset-0 mobile-menu-overlay hidden md:hidden" style="z-index: 999998;"></div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenuPanel" class="fixed bottom-0 left-0 right-0 mobile-menu-panel border-t rounded-t-3xl p-6 pb-24 transform translate-y-full transition-transform duration-300 md:hidden" style="z-index: 999998;">
+        <div class="flex flex-col gap-2">
+            <a href="#about" class="nav-link mobile-nav-link px-4 py-3 rounded-xl mobile-menu-link transition-colors text-base font-medium">
+                About
+            </a>
+            <a href="#experience" class="nav-link mobile-nav-link px-4 py-3 rounded-xl mobile-menu-link transition-colors text-base font-medium">
+                Experience
+            </a>
+            <a href="#projects" class="nav-link mobile-nav-link px-4 py-3 rounded-xl mobile-menu-link transition-colors text-base font-medium">
+                Projects
+            </a>
+            <a href="#services" class="nav-link mobile-nav-link px-4 py-3 rounded-xl mobile-menu-link transition-colors text-base font-medium">
+                Services
+            </a>
+            <a href="#awards" class="nav-link mobile-nav-link px-4 py-3 rounded-xl mobile-menu-link transition-colors text-base font-medium">
+                Awards
+            </a>
+            <a href="#recommendations" class="nav-link mobile-nav-link px-4 py-3 rounded-xl mobile-menu-link transition-colors text-base font-medium">
+                Testimonials
+            </a>
+            <a href="#contact" class="nav-link mobile-nav-link px-4 py-3 rounded-xl mobile-menu-link transition-colors text-base font-medium">
+                Contact
+            </a>
+        </div>
+    </div>
+
     <!-- Fixed Bottom Navigation Menu -->
     <nav class="fixed bottom-6 left-1/2 transform -translate-x-1/2" style="z-index: 999999;">
         <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-full px-3 py-3 shadow-lg">
             <div class="flex items-center gap-2">
-                <!-- Regular Navigation Links -->
-                <!-- <a href="#clients" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
-                    Clients
-                </a> -->
-                <a href="#about" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
-                    About
-                </a>
-                <a href="#experience" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
-                    Experience
-                </a>
-                <a href="#projects" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
-                    Projects
-                </a>
-                <a href="#services" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
-                    Services
-                </a>
-                <a href="#awards" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
-                    Awards
-                </a>
-                <a href="#recommendations" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
-                    Testimonials
-                </a>
-                <a href="#contact" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
-                    Contact
-                </a>
+                <!-- Hamburger Menu (Mobile Only) -->
+                <button id="mobileMenuToggle" class="md:hidden w-10 h-10 rounded-full hover:bg-white/20 transition-colors flex items-center justify-center text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+                    </svg>
+                </button>
+
+                <!-- Desktop Navigation Links (Hidden on Mobile) -->
+                <div class="hidden md:flex items-center gap-2">
+                    <a href="#about" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
+                        About
+                    </a>
+                    <a href="#experience" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
+                        Experience
+                    </a>
+                    <a href="#projects" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
+                        Projects
+                    </a>
+                    <a href="#services" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
+                        Services
+                    </a>
+                    <a href="#awards" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
+                        Awards
+                    </a>
+                    <a href="#recommendations" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
+                        Testimonials
+                    </a>
+                    <a href="#contact" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
+                        Contact
+                    </a>
+                </div>
 
                 <!-- Slideshow Controls (hidden by default) -->
                 <button id="slideshowPrev" class="slideshow-control hidden w-10 h-10 rounded-full hover:bg-white/20 transition-colors flex items-center justify-center text-black">
@@ -724,6 +809,48 @@
 
         // Rotate every 3 seconds
         setInterval(rotateTitle, 3000);
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenuPanel = document.getElementById('mobileMenuPanel');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            console.log('Opening mobile menu');
+            mobileMenuPanel.classList.remove('translate-y-full');
+            mobileMenuOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            console.log('Closing mobile menu');
+            mobileMenuPanel.classList.add('translate-y-full');
+            mobileMenuOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', (e) => {
+                console.log('Mobile menu toggle clicked');
+                e.preventDefault();
+                e.stopPropagation();
+                if (mobileMenuPanel.classList.contains('translate-y-full')) {
+                    openMobileMenu();
+                } else {
+                    closeMobileMenu();
+                }
+            });
+        }
+
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu when clicking on a link
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                closeMobileMenu();
+            });
+        });
 
         // Read More Toggle
         const readMoreBtn = document.getElementById('readMoreBtn');
