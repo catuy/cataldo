@@ -1,26 +1,32 @@
 <!-- Hero Section -->
-<section id="hero" class="min-h-screen flex flex-col justify-center">
+<section id="hero" class="md:min-h-screen flex flex-col md:justify-center py-20 md:py-0">
     <div>
+        <!-- Photo - Only visible on mobile -->
+        <div class="mb-6 md:hidden">
+            <img src="{{ site.data.hero.photo }}" alt="{{ site.data.hero.name }}" class="w-16 h-16 rounded-full object-cover border-2 border-border-light">
+        </div>
+
         <!-- Headline -->
-        <div class="mb-8">
+        <div class="mb-6 md:mb-8">
             <!-- Hi, I'm Diego + Photo -->
-            <div class="flex items-center gap-4 mb-4">
-                <h1 class="text-[64px] md:text-[72px] font-medium leading-none">
+            <div class="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                <h1 class="text-[36px] sm:text-[48px] md:text-[72px] font-medium leading-none">
                     Hi, I'm {{ site.data.hero.name }}
                 </h1>
-                <img src="{{ site.data.hero.photo }}" alt="{{ site.data.hero.name }}" class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-border-light">
+                <!-- Photo - Only visible on desktop -->
+                <img src="{{ site.data.hero.photo }}" alt="{{ site.data.hero.name }}" class="hidden md:block w-20 h-20 rounded-full object-cover border-2 border-border-light flex-shrink-0">
             </div>
 
             <!-- Role -->
             <div class="flex items-center gap-2">
-                <h1 id="rotating-title" class="text-[64px] md:text-[72px] font-medium leading-none text-text-secondary">
+                <h1 id="rotating-title" class="text-[36px] sm:text-[48px] md:text-[72px] font-medium leading-none text-text-secondary">
                     {{ site.data.hero.role }}
                 </h1>
             </div>
         </div>
 
         <!-- Description -->
-        <p class="text-xl md:text-2xl text-text-primary mb-8 leading-relaxed">
+        <p class="text-base sm:text-lg md:text-2xl text-text-primary mb-6 md:mb-8 leading-relaxed">
             {{ site.data.hero.description }}
         </p>
 
@@ -29,7 +35,7 @@
             <div class="relative">
                 <div class="w-2.5 h-2.5 rounded-full bg-green-dot green-dot-shadow"></div>
             </div>
-            <p class="text-base text-text-secondary">{{ site.data.hero.location }}</p>
+            <p class="text-sm sm:text-base text-text-secondary">{{ site.data.hero.location }}</p>
         </div>
     </div>
 </section>

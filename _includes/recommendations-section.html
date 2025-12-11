@@ -1,20 +1,20 @@
 <!-- Recommendations Section -->
-<section id="recommendations" class="mb-16">
-    <h2 class="text-md text-text-secondary mb-6">What people say (Under Construction)</h2>
+<section id="recommendations" class="mb-12 md:mb-16">
+    <h2 class="text-sm md:text-md text-text-secondary mb-4 md:mb-6">What people say (Under Construction)</h2>
 
-    <div class="grid md:grid-cols-2 gap-6">
+    <div class="grid md:grid-cols-2 gap-6 md:gap-6">
         {% for recommendation in site.data.recommendations %}
         <!-- Recommendation Card -->
-        <div class="bg-white rounded-2xl p-6 border border-border-light">
-            <div class="flex items-center gap-3 mb-4">
+        <div class="bg-white rounded-2xl p-4 md:p-6 border border-border-light mb-6 md:mb-0">
+            <div class="flex items-center gap-3 mb-3 md:mb-4">
                 {% if recommendation.avatar %}
-                <img src="{{ recommendation.avatar }}" alt="{{ recommendation.name }}" class="w-12 h-12 rounded-full object-cover">
+                <img src="{{ recommendation.avatar }}" alt="{{ recommendation.name }}" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover">
                 {% else %}
-                <div class="w-12 h-12 rounded-full bg-gradient-to-br {{ recommendation.gradient }}"></div>
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br {{ recommendation.gradient }}"></div>
                 {% endif %}
                 <div>
-                    <h4 class="font-medium">{{ recommendation.name }}</h4>
-                    <p class="text-sm text-text-secondary">{{ recommendation.role }}</p>
+                    <h4 class="text-sm md:text-base font-medium">{{ recommendation.name }}</h4>
+                    <p class="text-xs md:text-sm text-text-secondary">{{ recommendation.role }}</p>
                 </div>
             </div>
             <p class="text-black/70 text-sm leading-relaxed">
