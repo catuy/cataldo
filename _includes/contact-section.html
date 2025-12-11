@@ -1,0 +1,42 @@
+<!-- Contact Section -->
+<section id="contact" class="mb-12 md:mb-16">
+    <h2 class="text-sm md:text-md text-text-secondary mb-4 md:mb-6">Get in touch</h2>
+
+    <div class="bg-white rounded-2xl p-0 md:p-12 md:border border-border-light mb-6 md:mb-8">
+        <div>
+            <h3 class="text-xl md:text-3xl font-medium mb-3 md:mb-4">{{ site.data.contact.title }}</h3>
+            <p class="text-sm md:text-base text-black/70 leading-relaxed mb-6 md:mb-8">
+                {{ site.data.contact.intro }}
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+                {% for link in site.data.contact.social_links %}
+                <!-- Social Link -->
+                <a href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noopener"{% endif %} class="flex items-start gap-3 md:gap-4 p-3 md:p-4 rounded-xl hover:bg-black/5 transition-colors group">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl {{ link.icon_bg }} flex items-center justify-center flex-shrink-0 {{ link.icon_hover_bg }} transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 256 256" fill="{{ link.icon_color }}" class="md:w-5 md:h-5">
+                            <path d="{{ link.icon_path }}"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="text-sm md:text-base font-medium mb-1">{{ link.name }}</h4>
+                        <p class="text-xs md:text-sm text-text-secondary">{{ link.value }}</p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- CV Download Button -->
+    {% if site.data.contact.cv_button %}
+    <div class="flex justify-center">
+        <a id="cvDownloadBtn" href="{{ site.data.contact.cv_button.url }}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 bg-fx-black text-fx-paper border border-fx-black rounded-full text-lg font-medium hover:bg-fx-paper hover:text-fx-black transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+                <path d="M224,144v64a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V144a8,8,0,0,1,16,0v56H208V144a8,8,0,0,1,16,0Zm-101.66,5.66a8,8,0,0,0,11.32,0l40-40a8,8,0,0,0-11.32-11.32L136,124.69V40a8,8,0,0,0-16,0v84.69L93.66,98.34a8,8,0,0,0-11.32,11.32Z"></path>
+            </svg>
+            {{ site.data.contact.cv_button.text }}
+        </a>
+    </div>
+    {% endif %}
+</section>

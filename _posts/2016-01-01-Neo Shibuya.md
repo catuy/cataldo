@@ -6,5 +6,5 @@ description: "One of my <a href='https://www.instagram.com/p/CPjtKKNjX9s/?img_in
 categories: todos academicos
 # images: /assets/blogimages/tiles/reboot.jpg
 tags: [Instalación]
-visible: true
+visible: false
 ---

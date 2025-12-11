@@ -1,17 +1,12 @@
 ---
 layout: post
 title:  "National Agency for Research and Innovation"
-date:   2024-12-10 17:12:20 -0300
-description: "National Agency for Research and Innovation<br>Lead Product Designer, crafting user-centered platforms to support government initiatives, enhancing collaboration across Uruguay’s scientific and educational sectors."
+date:   2025-05-01 17:12:20 -0300
+visible: true
+description: "Built Uruguay's first government design system, creating scalable digital platforms that transformed how citizens access innovation funding and research programs."
 categories: todos consultorias
-images: 
-    - /assets/blogimages/tiles/anii.gif
-    - /assets/blogimages/tiles/fanii.jpg
-    - /assets/blogimages/tiles/formularios.jpg
-    - /assets/blogimages/tiles/foco.jpg
-    - /assets/blogimages/tiles/cvuy.jpg
-    - /assets/blogimages/tiles/prisma.jpg
-
+images: /assets/thumbs/anii2.png
+country: Uruguay
 tags: [Web]
 ---
 <!-- Intro -->

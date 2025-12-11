@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Cataldo - Full-Stack Designer</title>
+    <meta name="description" content="Full-Stack Designer specialized in strategy, design, and development. Creating impactful digital experiences from Montevideo, Uruguay.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+
+    <link rel="stylesheet" href="{{ '/assets/css/output.css' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6, p, a, span, div {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        .green-dot-shadow {
+            box-shadow: 0 0 0 4px rgba(4, 237, 2, 0.2);
+        }
+
+        /* Navigation Active State */
+        nav a.nav-link.bg-black {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+        }
+
+        /* Hide scrollbar for navigation */
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Custom Tooltips */
+        button[title] {
+            position: relative;
+        }
+
+        button[title]::after {
+            content: attr(title);
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+            z-index: 10000;
+        }
+
+        button[title]:hover::after {
+            opacity: 1;
+        }
+
+        /* Rotating Title Animation */
+        #rotating-title {
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        #rotating-title.fade-out {
+            opacity: 0;
+        }
+
+
+        /* Flexoki Light Theme Styles */
+        body {
+            background-color: #FFFCF0; /* fx-paper */
+            color: #100F0F; /* fx-black */
+        }
+
+        .bg-white {
+            background-color: #FFFCF0; /* fx-paper */
+        }
+
+        .text-text-secondary {
+            color: #6F6E69; /* fx-base-600 */
+        }
+
+        .text-text-primary {
+            color: #100F0F; /* fx-black */
+        }
+
+        .text-black {
+            color: #100F0F; /* fx-black */
+        }
+
+        .text-black\/70 {
+            color: #403E3C; /* fx-base-800 */
+        }
+
+        .border-border-light {
+            border-color: #E6E4D9; /* fx-base-100 */
+        }
+
+        .border-border-medium {
+            border-color: #CECDC3; /* fx-base-200 */
+        }
+
+        .border-black {
+            border-color: #100F0F; /* fx-black */
+        }
+
+        .bg-black\/5 {
+            background-color: #F2F0E5; /* fx-base-50 */
+        }
+
+        .hover\:bg-black\/5:hover {
+            background-color: #F2F0E5; /* fx-base-50 */
+        }
+
+        .bg-black\/20 {
+            background-color: #E6E4D9; /* fx-base-100 */
+        }
+
+        /* Flexoki Dark Theme Styles */
+        body.dark-theme {
+            background-color: #100F0F !important; /* fx-black */
+            color: #FFFCF0; /* fx-paper */
+        }
+
+        body.dark-theme h1,
+        body.dark-theme h2,
+        body.dark-theme h3,
+        body.dark-theme p {
+            color: #FFFCF0; /* fx-paper */
+        }
+
+        body.dark-theme .text-text-secondary {
+            color: #B7B5AC !important; /* fx-base-300 */
+        }
+
+        body.dark-theme .text-text-primary {
+            color: #FFFCF0 !important; /* fx-paper */
+        }
+
+        body.dark-theme .bg-white {
+            background-color: #1C1B1A; /* fx-base-950 */
+        }
+
+        body.dark-theme .border-black {
+            border-color: #FFFCF0; /* fx-paper */
+        }
+
+        body.dark-theme .text-black {
+            color: #FFFCF0; /* fx-paper */
+        }
+
+        body.dark-theme .border-border-light {
+            border-color: #282726; /* fx-base-900 */
+        }
+
+        body.dark-theme .border-border-medium {
+            border-color: #343331; /* fx-base-850 */
+        }
+
+        body.dark-theme nav div {
+            border-color: #403E3C !important; /* fx-base-800 */
+        }
+
+        body.dark-theme nav a.nav-link {
+            color: #FFFCF0 !important; /* fx-paper */
+        }
+
+        body.dark-theme nav a.nav-link:hover {
+            background-color: #282726 !important; /* fx-base-900 */
+        }
+
+        body.dark-theme nav a.nav-link.bg-black {
+            background-color: #FFFCF0 !important; /* fx-paper */
+            color: #100F0F !important; /* fx-black */
+        }
+
+        body.dark-theme #galleryToggle,
+        body.dark-theme #experimentalToggle,
+        body.dark-theme #themeToggle {
+            background-color: #FFFCF0; /* fx-paper */
+            color: #100F0F; /* fx-black */
+        }
+
+        /* Mobile Menu Styles - Light Theme */
+        .mobile-menu-overlay {
+            background-color: rgba(16, 15, 15, 0.5); /* fx-black with opacity */
+            backdrop-filter: blur(4px);
+        }
+
+        .mobile-menu-panel {
+            background-color: rgba(255, 252, 240, 0.95); /* fx-paper with opacity */
+            backdrop-filter: blur(24px);
+            border-color: rgba(230, 228, 217, 0.2); /* fx-base-100 with opacity */
+        }
+
+        .mobile-menu-link {
+            color: #100F0F; /* fx-black */
+        }
+
+        .mobile-menu-link:hover {
+            background-color: #F2F0E5; /* fx-base-50 */
+        }
+
+        /* Mobile Menu Styles - Dark Theme */
+        body.dark-theme .mobile-menu-overlay {
+            background-color: rgba(255, 252, 240, 0.5); /* fx-paper with opacity */
+        }
+
+        body.dark-theme .mobile-menu-panel {
+            background-color: rgba(28, 27, 26, 0.95); /* fx-base-950 with opacity */
+            backdrop-filter: blur(24px);
+            border-color: rgba(40, 39, 38, 0.2); /* fx-base-900 with opacity */
+        }
+
+        body.dark-theme .mobile-menu-link {
+            color: #FFFCF0; /* fx-paper */
+        }
+
+        body.dark-theme .mobile-menu-link:hover {
+            background-color: #282726; /* fx-base-900 */
+        }
+
+        body.dark-theme #galleryToggle:hover,
+        body.dark-theme #experimentalToggle:hover,
+        body.dark-theme #themeToggle:hover {
+            background-color: #F2F0E5; /* fx-base-50 */
+        }
+
+        body.dark-theme .bg-black\/20 {
+            background-color: #343331 !important; /* fx-base-850 */
+        }
+
+        body.dark-theme #readMoreBtn {
+            color: #FFFCF0; /* fx-paper */
+        }
+
+        /* Slideshow button dark theme */
+        body.dark-theme #slideshowBtn {
+            background-color: #1C1B1A !important; /* fx-base-950 - same as cards */
+            border-color: #575653 !important; /* fx-base-700 */
+            color: #FFFCF0 !important; /* fx-paper */
+        }
+
+        body.dark-theme #slideshowBtn:hover {
+            background-color: #282726 !important; /* fx-base-900 */
+        }
+
+        body.dark-theme img.grayscale {
+            filter: grayscale(1) invert(1);
+        }
+
+        body.dark-theme .bg-blue-100,
+        body.dark-theme .bg-purple-100,
+        body.dark-theme .bg-green-100,
+        body.dark-theme .bg-orange-100,
+        body.dark-theme .bg-red-100,
+        body.dark-theme .bg-teal-100,
+        body.dark-theme .bg-yellow-100,
+        body.dark-theme .bg-pink-100,
+        body.dark-theme .bg-gray-100 {
+            background-color: #282726 !important; /* fx-base-900 */
+        }
+
+        body.dark-theme .text-black\/70 {
+            color: #CECDC3 !important; /* fx-base-200 */
+        }
+
+        body.dark-theme .hover\:bg-black\/5:hover {
+            background-color: #282726 !important; /* fx-base-900 */
+        }
+
+        body.dark-theme .bg-black\/5 {
+            background-color: #282726 !important; /* fx-base-900 */
+        }
+
+        body.dark-theme .text-fx-base-900 {
+            color: #CECDC3 !important; /* fx-base-200 */
+        }
+
+        body.dark-theme #services svg[fill] {
+            fill: #FFFCF0 !important; /* fx-paper - same as h3 titles */
+        }
+
+        body.dark-theme #awards svg[fill] {
+            fill: #FFFCF0 !important; /* fx-paper - same as h3 titles */
+        }
+
+        body.dark-theme #experience svg[fill] {
+            fill: #FFFCF0 !important; /* fx-paper - same as h3 titles */
+        }
+
+        body.dark-theme #contact svg[fill] {
+            fill: #FFFCF0 !important; /* fx-paper - same as h3 titles */
+        }
+
+        /* Navigation menu buttons in dark mode */
+        body.dark-theme nav button {
+            background-color: rgba(0, 0, 0, 0.1) !important;
+        }
+
+        body.dark-theme nav button:hover {
+            background-color: rgba(0, 0, 0, 0.2) !important;
+        }
+
+        body.dark-theme nav button svg {
+            fill: #FFFCF0 !important; /* fx-paper */
+        }
+
+        /* CV Download button dark theme */
+        body.dark-theme #cvDownloadBtn {
+            background-color: #1C1B1A !important; /* fx-base-950 - same as cards */
+            border-color: #575653 !important; /* fx-base-700 */
+            color: #FFFCF0 !important; /* fx-paper */
+        }
+
+        body.dark-theme #cvDownloadBtn:hover {
+            background-color: #282726 !important; /* fx-base-900 */
+        }
+
+        body.dark-theme .bg-gradient-to-br {
+            filter: brightness(0.5);
+        }
+
+        /* Preloader styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Slideshow overlay styles */
+        #slideshowOverlay {
+            transition: opacity 0.3s ease, background-color 0.3s ease;
+            opacity: 1;
+            background-color: #FFFCF0; /* fx-paper light */
+        }
+
+        body.dark-theme #slideshowOverlay {
+            background-color: #100F0F; /* fx-black dark */
+        }
+
+        #slideshowOverlay.hidden {
+            display: none !important;
+            opacity: 0;
+        }
+
+        #slideshowOverlay:not(.hidden) {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        #slideshowContainer img,
+        #slideshowContainer video {
+            transition: opacity 0.3s ease;
+        }
+
+        /* Browser window styles */
+        .browser-window {
+            background: #FFFCF0; /* fx-paper */
+        }
+
+        .browser-chrome {
+            background: #E5E4DF; /* light gray */
+            border-bottom: 1px solid #D0CFC9;
+        }
+
+        .browser-address-bar {
+            background: white;
+            color: #6F6E69;
+        }
+
+        .browser-content {
+            background: white;
+        }
+
+        /* Dark theme for browser window */
+        body.dark-theme .browser-window {
+            background: #1C1B1A; /* fx-base-950 */
+        }
+
+        body.dark-theme .browser-chrome {
+            background: #282726; /* fx-base-900 */
+            border-bottom: 1px solid #403E3C; /* fx-base-800 */
+        }
+
+        body.dark-theme .browser-address-bar {
+            background: #403E3C; /* fx-base-800 */
+            color: #B7B5AC; /* fx-base-400 */
+        }
+
+        body.dark-theme .browser-content {
+            background: #1C1B1A; /* fx-base-950 */
+        }
+
+        /* Mobile device styles */
+        .mobile-device {
+            background: #E5E4DF; /* Same as browser chrome light */
+            border: 6px solid #E5E4DF;
+            position: relative;
+        }
+
+        .mobile-content {
+            background: white;
+            overflow: hidden;
+            border-radius: 26px; /* Slightly less than device border-radius (32px - 6px border) */
+        }
+
+        /* Dark theme for mobile device */
+        body.dark-theme .mobile-device {
+            background: #282726; /* Same as browser chrome dark - fx-base-900 */
+            border-color: #282726;
+        }
+
+        body.dark-theme .mobile-content {
+            background: #1C1B1A; /* fx-base-950 */
+        }
+
+        /* Top info bar with 3 columns */
+        .top-info-bar {
+            padding: 1.5rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 1rem;
+            align-items: flex-start;
+            font-size: 1rem;
+            opacity: 0.8;
+            color: #100F0F;
+            flex-shrink: 0;
+        }
+
+        body.dark-theme .top-info-bar {
+            color: #FFFCF0;
+        }
+
+        .top-info-bar .year {
+            text-align: left;
+        }
+
+        .top-info-bar .description {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .top-info-bar .counter {
+            text-align: right;
+        }
+
+        /* Bottom spacer - reserves space for nav controls */
+        .bottom-spacer {
+            padding-bottom: 6rem;
+            flex-shrink: 0;
+        }
+
+        /* Slideshow container should fill remaining space */
+        #slideshowContainer {
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible;
+        }
+
+        /* Progress circle animation */
+        #progressCirclePath {
+            transition: stroke-dashoffset 0.3s ease-out;
+        }
+
+        /* Top info bar transition */
+        .top-info-bar {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .top-info-bar.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Hover effect for progress circle button */
+        #slideshowPlayPause:hover #countdownNumber {
+            opacity: 0 !important;
+        }
+
+        #slideshowPlayPause:hover #hoverPauseIcon {
+            opacity: 1 !important;
+        }
+
+        #countdownNumber {
+            opacity: 1;
+        }
+
+        #hoverPauseIcon {
+            opacity: 0;
+        }
+
+        #slideshowPlayPause {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #slideshowPlayPause.hidden {
+            display: none;
+        }
+
+        /* Project link text styles */
+        #projectLink {
+            color: inherit;
+        }
+
+        #projectLink:hover {
+            opacity: 1;
+        }
+
+        /* Video loader */
+        .video-loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .video-loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            border-top-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        body.dark-theme .video-loader-spinner {
+            border-color: rgba(0, 0, 0, 0.2);
+            border-top-color: rgba(0, 0, 0, 0.8);
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .video-loader.hidden {
+            display: none;
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-31X1TYL0TS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-31X1TYL0TS');
+    </script>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+<body class="min-h-screen transition-colors duration-300">
+
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-fx-black z-[9999] flex items-center justify-center">
+        <div class="w-16 h-16 border-4 border-fx-paper border-t-transparent rounded-full animate-spin"></div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="max-w-[1040px] mx-auto px-6 md:px-12 pb-32">
+
+        {% include hero-section.html %}
+
+        <!-- Divider -->
+        <div class="border-t border-black/10 my-12 mb-8"></div>
+
+        {% include about-section.html %}
+
+        <!-- Divider -->
+        <div class="border-t border-black/10 my-12 mb-8"></div>
+
+        {% include experience-section.html %}
+
+        <!-- Divider -->
+        <div class="border-t border-black/10 my-12 mb-8"></div>
+
+        {% include projects-section.html %}
+
+        <!-- Divider -->
+        <div class="border-t border-black/10 my-12 mb-8"></div>
+
+        {% include services-section.html %}
+
+        <!-- Divider -->
+        <div class="border-t border-black/10 my-12 mb-8"></div>
+
+        {% include awards-section.html %}
+
+        <!-- Divider -->
+        <div class="border-t border-black/10 my-12 mb-8"></div>
+
+        {% include recommendations-section.html %}
+
+        <!-- Divider -->
+        <div class="border-t border-black/10 my-12 mb-8"></div>
+
+        {% include contact-section.html %}
+
+    </main>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenuOverlay" class="fixed inset-0 mobile-menu-overlay hidden md:hidden" style="z-index: 999998;"></div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenuPanel" class="fixed bottom-0 left-0 right-0 mobile-menu-panel border-t rounded-t-3xl p-6 pb-24 transform translate-y-full transition-transform duration-300 md:hidden" style="z-index: 999998;">
+        <div class="flex flex-col gap-2">
+            <a href="#about" class="nav-link mobile-nav-link px-4 py-3 rounded-xl mobile-menu-link transition-colors text-base font-medium">
+                About
+            </a>
+            <a href="#experience" class="nav-link mobile-nav-link px-4 py-3 rounded-xl mobile-menu-link transition-colors text-base font-medium">
+                Experience
+            </a>
+            <a href="#projects" class="nav-link mobile-nav-link px-4 py-3 rounded-xl mobile-menu-link transition-colors text-base font-medium">
+                Projects
+            </a>
+            <a href="#services" class="nav-link mobile-nav-link px-4 py-3 rounded-xl mobile-menu-link transition-colors text-base font-medium">
+                Services
+            </a>
+            <a href="#awards" class="nav-link mobile-nav-link px-4 py-3 rounded-xl mobile-menu-link transition-colors text-base font-medium">
+                Awards
+            </a>
+            <a href="#recommendations" class="nav-link mobile-nav-link px-4 py-3 rounded-xl mobile-menu-link transition-colors text-base font-medium">
+                Testimonials
+            </a>
+            <a href="#contact" class="nav-link mobile-nav-link px-4 py-3 rounded-xl mobile-menu-link transition-colors text-base font-medium">
+                Contact
+            </a>
+        </div>
+    </div>
+
+    <!-- Fixed Bottom Navigation Menu -->
+    <nav class="fixed bottom-6 left-1/2 transform -translate-x-1/2" style="z-index: 999999;">
+        <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-full px-3 py-3 shadow-lg">
+            <div class="flex items-center gap-2">
+                <!-- Hamburger Menu (Mobile Only) -->
+                <button id="mobileMenuToggle" class="md:hidden w-10 h-10 rounded-full hover:bg-white/20 transition-colors flex items-center justify-center text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+                    </svg>
+                </button>
+
+                <!-- Desktop Navigation Links (Hidden on Mobile) -->
+                <div class="hidden md:flex items-center gap-2">
+                    <a href="#about" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
+                        About
+                    </a>
+                    <a href="#experience" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
+                        Experience
+                    </a>
+                    <a href="#projects" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
+                        Projects
+                    </a>
+                    <a href="#services" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
+                        Services
+                    </a>
+                    <a href="#awards" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
+                        Awards
+                    </a>
+                    <a href="#recommendations" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
+                        Testimonials
+                    </a>
+                    <a href="#contact" class="nav-link px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-md font-medium text-black">
+                        Contact
+                    </a>
+                </div>
+
+                <!-- Slideshow Controls (hidden by default) -->
+                <button id="slideshowPrev" class="slideshow-control hidden w-10 h-10 rounded-full hover:bg-white/20 transition-colors flex items-center justify-center text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+                        <path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path>
+                    </svg>
+                </button>
+                <button id="slideshowPlayPause" class="slideshow-control hidden w-10 h-10 rounded-full hover:bg-white/20 transition-colors relative text-black">
+                    <!-- Play Icon -->
+                    <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+                        <path d="M232.4,114.49,88.32,26.35a16,16,0,0,0-16.2-.3A15.86,15.86,0,0,0,64,39.87V216.13A15.94,15.94,0,0,0,80,232a16.07,16.07,0,0,0,8.36-2.35L232.4,141.51a15.81,15.81,0,0,0,0-27ZM80,215.94V40l143.83,88Z"></path>
+                    </svg>
+                    <!-- Progress Circle Container (shown during autoplay) -->
+                    <div id="progressCircle" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none; align-items: center; justify-content: center;">
+                        <!-- SVG Circle with text overlay -->
+                        <svg width="40" height="40" viewBox="0 0 40 40" style="position: absolute; transform: rotate(-90deg);">
+                            <!-- Background circle -->
+                            <circle cx="20" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="2" opacity="0.2"/>
+                            <!-- Progress circle -->
+                            <circle id="progressCirclePath" cx="20" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-dasharray="100.53" stroke-dashoffset="100.53" stroke-linecap="round"/>
+                        </svg>
+                        <!-- Content container (number and pause icon) -->
+                        <div style="position: absolute; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                            <span id="countdownNumber" class="font-bold transition-opacity duration-200" style="font-size: 11px; line-height: 1; position: absolute;">76</span>
+                            <svg id="hoverPauseIcon" class="opacity-0 transition-opacity duration-200" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 256 256" fill="currentColor" style="position: absolute;">
+                                <path d="M200,32H160a16,16,0,0,0-16,16V208a16,16,0,0,0,16,16h40a16,16,0,0,0,16-16V48A16,16,0,0,0,200,32Zm0,176H160V48h40ZM96,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V48A16,16,0,0,0,96,32Zm0,176H56V48H96Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </button>
+                <button id="slideshowNext" class="slideshow-control hidden w-10 h-10 rounded-full hover:bg-white/20 transition-colors flex items-center justify-center text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+                        <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                    </svg>
+                </button>
+                <button id="slideshowClose" class="slideshow-control hidden w-10 h-10 rounded-full hover:bg-white/20 transition-colors flex items-center justify-center text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+                        <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+                    </svg>
+                </button>
+
+                <!-- Lab Controls (hidden by default) -->
+                <button id="labReload" class="lab-control hidden w-10 h-10 rounded-full hover:bg-white/20 transition-colors flex items-center justify-center text-black" title="Random sketch">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+                        <path d="M192,32H64A32,32,0,0,0,32,64V192a32,32,0,0,0,32,32H192a32,32,0,0,0,32-32V64A32,32,0,0,0,192,32Zm16,160a16,16,0,0,1-16,16H64a16,16,0,0,1-16-16V64A16,16,0,0,1,64,48H192a16,16,0,0,1,16,16ZM104,92A12,12,0,1,1,92,80,12,12,0,0,1,104,92Zm36,36a12,12,0,1,1-12-12A12,12,0,0,1,140,128Zm36,36a12,12,0,1,1-12-12A12,12,0,0,1,176,164Z"></path>
+                    </svg>
+                </button>
+                <button id="labClose" class="lab-control hidden w-10 h-10 rounded-full hover:bg-white/20 transition-colors flex items-center justify-center text-black" title="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+                        <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+                    </svg>
+                </button>
+
+                <div class="w-px h-6 bg-black/20 mx-1 nav-divider"></div>
+                <button id="galleryToggle" title="45s Overview" class="w-10 h-10 rounded-full hover:bg-white/20 transition-colors flex items-center justify-center text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+                        <path d="M192,48H64A16,16,0,0,0,48,64V192a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64A16,16,0,0,0,192,48Zm0,144H64V64H192V192ZM240,56V200a8,8,0,0,1-16,0V56a8,8,0,0,1,16,0ZM32,56V200a8,8,0,0,1-16,0V56a8,8,0,0,1,16,0Z"></path>
+                    </svg>
+                </button>
+                <button id="experimentalToggle" title="Code Lab" class="w-10 h-10 rounded-full hover:bg-white/20 transition-colors flex items-center justify-center text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+                        <path d="M221.69,199.77,160,96.92V40h8a8,8,0,0,0,0-16H88a8,8,0,0,0,0,16h8V96.92L34.31,199.77A16,16,0,0,0,48,224H208a16,16,0,0,0,13.72-24.23ZM110.86,103.25A7.93,7.93,0,0,0,112,99.14V40h32V99.14a7.93,7.93,0,0,0,1.14,4.11L183.36,167c-12,2.37-29.07,1.37-51.75-10.11-15.91-8.05-31.05-12.32-45.22-12.81ZM48,208l28.54-47.58c14.25-1.74,30.31,1.85,47.82,10.72,19,9.61,35,12.88,48,12.88a69.89,69.89,0,0,0,19.55-2.7L208,208Z"></path>
+                    </svg>
+                </button>
+                <button id="themeToggle" title="Toggle theme" class="w-10 h-10 rounded-full hover:bg-white/20 transition-colors flex items-center justify-center text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+                        <path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56A104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        // Rotating Title
+        const titles = [
+            'Lead Product Designer',
+            'Design Engineer',
+            'Creative Coder',
+            'Visual Artist',
+            'Creative Technologist'
+        ];
+        let currentIndex = 0;
+        const rotatingTitle = document.getElementById('rotating-title');
+
+        function rotateTitle() {
+            // Fade out
+            rotatingTitle.classList.add('fade-out');
+
+            setTimeout(() => {
+                // Change text
+                currentIndex = (currentIndex + 1) % titles.length;
+                rotatingTitle.textContent = titles[currentIndex];
+
+                // Fade in
+                rotatingTitle.classList.remove('fade-out');
+            }, 500); // Match the CSS transition duration
+        }
+
+        // Rotate every 3 seconds
+        setInterval(rotateTitle, 3000);
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenuPanel = document.getElementById('mobileMenuPanel');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            console.log('Opening mobile menu');
+            mobileMenuPanel.classList.remove('translate-y-full');
+            mobileMenuOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            console.log('Closing mobile menu');
+            mobileMenuPanel.classList.add('translate-y-full');
+            mobileMenuOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', (e) => {
+                console.log('Mobile menu toggle clicked');
+                e.preventDefault();
+                e.stopPropagation();
+                if (mobileMenuPanel.classList.contains('translate-y-full')) {
+                    openMobileMenu();
+                } else {
+                    closeMobileMenu();
+                }
+            });
+        }
+
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu when clicking on a link
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                closeMobileMenu();
+            });
+        });
+
+        // Read More Toggle
+        const readMoreBtn = document.getElementById('readMoreBtn');
+        const aboutMoreContent = document.getElementById('aboutMoreContent');
+        let aboutExpanded = false;
+
+        readMoreBtn.addEventListener('click', () => {
+            aboutExpanded = !aboutExpanded;
+
+            if (aboutExpanded) {
+                aboutMoreContent.classList.remove('hidden');
+                readMoreBtn.textContent = 'Read less';
+            } else {
+                aboutMoreContent.classList.add('hidden');
+                readMoreBtn.textContent = 'Read more';
+            }
+        });
+
+        // Slideshow Gallery - Wait for DOM to be ready
+        // @ts-nocheck
+        document.addEventListener('DOMContentLoaded', function() {
+        const slideshowMedia = {{ site.data.slideshow | jsonify }};
+        const totalSlides = slideshowMedia.length;
+
+        let currentSlideIndex = 0;
+        let slideshowInterval = null;
+        let isPlaying = false;
+        let secondsRemaining = totalSlides;
+        let countdownInterval = null;
+
+        const slideshowOverlay = document.getElementById('slideshowOverlay');
+        const slideshowContainer = document.getElementById('slideshowContainer');
+        const descriptionDisplay = document.getElementById('descriptionDisplay');
+        const yearDisplay = document.getElementById('yearDisplay');
+        const counterDisplay = document.getElementById('counterDisplay');
+        const topInfoBar = document.querySelector('.top-info-bar');
+        const projectLink = document.getElementById('projectLink');
+        const projectLinkText = document.getElementById('projectLinkText');
+        const galleryToggle = document.getElementById('galleryToggle');
+        const slideshowClose = document.getElementById('slideshowClose');
+        const slideshowPrev = document.getElementById('slideshowPrev');
+        const slideshowNext = document.getElementById('slideshowNext');
+        const slideshowPlayPause = document.getElementById('slideshowPlayPause');
+        const playIcon = document.getElementById('playIcon');
+        const progressCircle = document.getElementById('progressCircle');
+        const progressCirclePath = document.getElementById('progressCirclePath');
+        const countdownNumber = document.getElementById('countdownNumber');
+        const navigationLinks = document.querySelectorAll('.nav-link');
+        const navDivider = document.querySelector('.nav-divider');
+        const slideshowControls = document.querySelectorAll('.slideshow-control');
+
+        function showSlide(index) {
+            const slide = slideshowMedia[index];
+            const isVideoFile = slide.file.endsWith('.mp4');
+            console.log('Showing slide:', index, slide.file);
+
+            // In autoplay mode, use poster images for videos
+            // In manual mode, use actual videos
+            const useVideoPoster = isVideoFile && isPlaying;
+            const isVideo = isVideoFile && !useVideoPoster;
+
+            // Get properties with defaults
+            const fit = slide.fit || 'contain';
+            const type = slide.type || 'image';
+
+            // Update description display (only visible when not playing)
+            if (!isPlaying) {
+                descriptionDisplay.textContent = slide.description || '';
+                yearDisplay.textContent = slide.year || '';
+                const currentNum = String(index + 1).padStart(2, '0');
+                const totalNum = String(totalSlides).padStart(2, '0');
+                counterDisplay.textContent = `${currentNum}/${totalNum}`;
+
+                // Update link
+                if (slide.link_url && slide.link_text) {
+                    projectLink.href = slide.link_url;
+                    projectLinkText.textContent = slide.link_text;
+                    projectLink.style.display = 'block';
+                } else {
+                    projectLink.style.display = 'none';
+                }
+            } else {
+                // Hide link during autoplay
+                projectLink.style.display = 'none';
+            }
+
+            // Calculate max dimensions for media
+            // Top bar: ~6rem (increased for 2 lines), Bottom spacer: 6rem, Extra margin: 1rem
+            const maxHeight = 'calc(100vh - 6rem - 6rem - 1rem)';
+            const maxWidth = '85vw';
+
+            // Create media HTML
+            let mediaHTML = '';
+
+            // Determine which file to use
+            let mediaFile = slide.file;
+            if (useVideoPoster) {
+                // Replace .mp4 with -poster.jpg for autoplay mode
+                mediaFile = slide.file.replace('.mp4', '-poster.jpg');
+            }
+
+            if (type === 'web') {
+                // For web type, create media element with browser chrome
+                let mediaElement = '';
+                // Calculate max height for content area (minus browser chrome ~48px)
+                const contentMaxHeight = 'calc(100vh - 6rem - 6rem - 1rem - 48px)';
+
+                if (isVideo) {
+                    // Get poster image for this video
+                    const posterFile = slide.file.replace('.mp4', '-poster.jpg');
+                    mediaElement = `
+                        <div style="position: relative; display: inline-block;">
+                            <video autoplay loop muted playsinline preload="auto" poster="/assets/slideshow/${posterFile}" style="max-width: ${maxWidth}; max-height: ${contentMaxHeight}; display: block; object-fit: contain;">
+                                <source src="/assets/slideshow/${slide.file}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-loader" id="videoLoader">
+                                <div class="video-loader-spinner"></div>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    // Use mediaFile (could be poster or regular image)
+                    mediaElement = `
+                        <img src="/assets/slideshow/${mediaFile}" style="max-width: ${maxWidth}; max-height: ${contentMaxHeight}; display: block; object-fit: contain;" alt="${slide.title || 'Slideshow image'}">
+                    `;
+                }
+
+                mediaHTML = `
+                    <div class="browser-window" style="display: inline-flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3); max-height: ${maxHeight};">
+                        <!-- Browser chrome -->
+                        <div class="browser-chrome" style="padding: 12px 16px; display: flex; align-items: center; gap: 8px;">
+                            <!-- Traffic lights -->
+                            <div style="display: flex; gap: 8px; flex-shrink: 0;">
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background: #FF5F57;"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background: #FEBC2E;"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background: #28C840;"></div>
+                            </div>
+                            <!-- Address bar -->
+                            <div class="browser-address-bar" style="flex: 1; border-radius: 6px; padding: 6px 12px; font-size: 12px; min-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                ${slide.title || slide.file}
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="browser-content" style="display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                            ${mediaElement}
+                        </div>
+                    </div>
+                `;
+            } else if (type === 'mobile') {
+                // For mobile type, create media element with mobile device frame
+                let mediaElement = '';
+
+                if (isVideo) {
+                    // Get poster image for this video
+                    const posterFile = slide.file.replace('.mp4', '-poster.jpg');
+                    mediaElement = `
+                        <video autoplay loop muted playsinline preload="auto" poster="/assets/slideshow/${posterFile}" style="max-width: ${maxWidth}; max-height: ${maxHeight}; display: block; object-fit: contain;">
+                            <source src="/assets/slideshow/${slide.file}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-loader" id="videoLoader">
+                            <div class="video-loader-spinner"></div>
+                        </div>
+                    `;
+                } else {
+                    // Use mediaFile (could be poster or regular image)
+                    mediaElement = `
+                        <img src="/assets/slideshow/${mediaFile}" style="max-width: ${maxWidth}; max-height: ${maxHeight}; display: block; object-fit: contain;" alt="${slide.title || 'Slideshow image'}">
+                    `;
+                }
+
+                mediaHTML = `
+                    <div class="mobile-device" style="display: inline-flex; flex-direction: column; border-radius: 32px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.4); max-height: ${maxHeight};">
+                        <!-- Content -->
+                        <div class="mobile-content" style="display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                            ${mediaElement}
+                        </div>
+                    </div>
+                `;
+            } else {
+                // For image type, display directly without browser chrome or device frame
+                if (isVideo) {
+                    // Get poster image for this video
+                    const posterFile = slide.file.replace('.mp4', '-poster.jpg');
+                    mediaHTML = `
+                        <div style="position: relative; display: inline-block;">
+                            <video autoplay loop muted playsinline preload="auto" poster="/assets/slideshow/${posterFile}" style="max-width: ${maxWidth}; max-height: ${maxHeight}; object-fit: contain;">
+                                <source src="/assets/slideshow/${slide.file}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-loader" id="videoLoader">
+                                <div class="video-loader-spinner"></div>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    // Use mediaFile (could be poster or regular image)
+                    mediaHTML = `
+                        <img src="/assets/slideshow/${mediaFile}" style="max-width: ${maxWidth}; max-height: ${maxHeight}; object-fit: contain;" alt="${slide.title || 'Slideshow image'}">
+                    `;
+                }
+            }
+
+            slideshowContainer.innerHTML = mediaHTML;
+
+            // Handle video loading and playback (only in manual mode)
+            if (isVideo) {
+                const videoElement = slideshowContainer.querySelector('video');
+                const loader = slideshowContainer.querySelector('.video-loader');
+
+                if (videoElement && loader) {
+                    console.log('Loading video:', slide.file);
+
+                    // Show loader
+                    loader.classList.remove('hidden');
+
+                    // Safety timeout: hide loader after 5 seconds no matter what
+                    const safetyTimeout = setTimeout(() => {
+                        console.warn('Video loader timeout for:', slide.file);
+                        loader.classList.add('hidden');
+                    }, 5000);
+
+                    // Force load the video
+                    videoElement.load();
+
+                    // Hide loader and play when video is ready
+                    const attemptPlay = () => {
+                        console.log('Video ready, attempting play:', slide.file);
+
+                        // Clear safety timeout and hide loader
+                        clearTimeout(safetyTimeout);
+                        loader.classList.add('hidden');
+
+                        const playPromise = videoElement.play();
+                        if (playPromise !== undefined) {
+                            playPromise
+                                .then(() => {
+                                    console.log('Video playing successfully:', slide.file);
+                                })
+                                .catch(error => {
+                                    if (error.name !== 'AbortError') {
+                                        console.warn('Video autoplay failed for', slide.file, ':', error);
+                                        // Try again after a short delay
+                                        setTimeout(() => {
+                                            videoElement.play().catch(e => console.error('Second play attempt failed:', e));
+                                        }, 500);
+                                    }
+                                });
+                        }
+                    };
+
+                    // Listen for when video is ready - use multiple events for better compatibility
+                    if (videoElement.readyState >= 3) {
+                        // Video already loaded enough
+                        attemptPlay();
+                    } else {
+                        // Try multiple events to ensure we catch when video is ready
+                        videoElement.addEventListener('canplay', attemptPlay, { once: true });
+                        videoElement.addEventListener('loadeddata', attemptPlay, { once: true });
+                    }
+
+                    // Hide loader on error
+                    videoElement.addEventListener('error', (e) => {
+                        clearTimeout(safetyTimeout);
+                        loader.classList.add('hidden');
+                        console.error('Video error for', slide.file);
+                        if (videoElement.error) {
+                            console.error('Error code:', videoElement.error.code);
+                            console.error('Error message:', videoElement.error.message);
+                        }
+                    }, { once: true });
+                }
+            }
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            showSlide(currentSlideIndex);
+        }
+
+        function prevSlide() {
+            currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlideIndex);
+        }
+
+        function updateProgressCircle() {
+            const circumference = 100.53; // 2 * PI * r (where r=16)
+            const progress = (totalSlides - secondsRemaining) / totalSlides;
+            const offset = circumference * (1 - progress);
+            progressCirclePath.style.strokeDashoffset = offset;
+            countdownNumber.textContent = secondsRemaining;
+        }
+
+        function togglePlayPause() {
+            isPlaying = !isPlaying;
+
+            if (isPlaying) {
+                // Hide play icon, show progress circle
+                playIcon.style.display = 'none';
+                progressCircle.style.display = 'flex';
+
+                // Hide top info bar
+                topInfoBar.classList.add('hidden');
+
+                // Reset to first slide and countdown
+                currentSlideIndex = 0;
+                secondsRemaining = totalSlides;
+                showSlide(currentSlideIndex);
+                updateProgressCircle();
+
+                // Start slideshow interval (1 second)
+                slideshowInterval = setInterval(() => {
+                    if (secondsRemaining > 0 && currentSlideIndex < totalSlides - 1) {
+                        nextSlide();
+                        secondsRemaining--;
+                        updateProgressCircle();
+                    } else {
+                        // End of review
+                        togglePlayPause();
+                    }
+                }, 1000);
+            } else {
+                // Show play icon, hide progress circle
+                playIcon.style.display = 'block';
+                progressCircle.style.display = 'none';
+
+                // Show top info bar
+                topInfoBar.classList.remove('hidden');
+
+                // Clear intervals
+                clearInterval(slideshowInterval);
+                clearInterval(countdownInterval);
+
+                // Reset countdown
+                secondsRemaining = totalSlides;
+                updateProgressCircle();
+            }
+        }
+
+        function openSlideshow() {
+            console.log('Opening slideshow...');
+            slideshowOverlay.classList.remove('hidden');
+            console.log('Overlay classes:', slideshowOverlay.className);
+            navigationLinks.forEach(link => link.classList.add('hidden'));
+            navDivider.classList.add('hidden');
+            slideshowControls.forEach(control => control.classList.remove('hidden'));
+            galleryToggle.classList.add('hidden');
+            document.getElementById('experimentalToggle').classList.add('hidden');
+            document.getElementById('themeToggle').classList.add('hidden');
+
+            showSlide(currentSlideIndex);
+
+            // Auto-start playback
+            if (!isPlaying) {
+                togglePlayPause();
+            }
+
+            console.log('Slideshow opened');
+        }
+
+        function closeSlideshow() {
+            slideshowOverlay.classList.add('hidden');
+            navigationLinks.forEach(link => link.classList.remove('hidden'));
+            navDivider.classList.remove('hidden');
+            slideshowControls.forEach(control => control.classList.add('hidden'));
+            galleryToggle.classList.remove('hidden');
+            document.getElementById('experimentalToggle').classList.remove('hidden');
+            document.getElementById('themeToggle').classList.remove('hidden');
+
+            if (isPlaying) {
+                togglePlayPause();
+            }
+        }
+
+        // Event Listeners
+        galleryToggle.addEventListener('click', openSlideshow);
+
+        // Lab button
+        const experimentalToggle = document.getElementById('experimentalToggle');
+        if (experimentalToggle) {
+            experimentalToggle.addEventListener('click', openLab);
+        }
+
+        // Connect the "45s Overview" button
+        const slideshowBtn = document.getElementById('slideshowBtn');
+        if (slideshowBtn) {
+            slideshowBtn.addEventListener('click', openSlideshow);
+        }
+
+        slideshowClose.addEventListener('click', closeSlideshow);
+        slideshowPrev.addEventListener('click', () => {
+            if (isPlaying) {
+                togglePlayPause(); // Stop autoplay first
+            }
+            prevSlide();
+        });
+        slideshowNext.addEventListener('click', () => {
+            if (isPlaying) {
+                togglePlayPause(); // Stop autoplay first
+            }
+            nextSlide();
+        });
+        slideshowPlayPause.addEventListener('click', togglePlayPause);
+
+        }); // End DOMContentLoaded for slideshow
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-theme');
+            themeToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"></path></svg>';
+        }
+
+        // Function to toggle client logos
+        // function toggleClientLogos(isDark) {
+        //     const lightLogos = document.querySelectorAll('.client-logo');
+        //     const darkLogos = document.querySelectorAll('.client-logo-dark');
+
+        //     if (isDark) {
+        //         lightLogos.forEach(logo => logo.classList.add('hidden'));
+        //         darkLogos.forEach(logo => logo.classList.remove('hidden'));
+        //     } else {
+        //         lightLogos.forEach(logo => logo.classList.remove('hidden'));
+        //         darkLogos.forEach(logo => logo.classList.add('hidden'));
+        //     }
+        // }
+
+        // Initialize client logos based on current theme
+        // toggleClientLogos(body.classList.contains('dark-theme'));
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+
+            // Save theme preference
+            const theme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+
+            // Toggle client logos
+            // toggleClientLogos(theme === 'dark');
+
+            // Update button icon
+            if (theme === 'dark') {
+                themeToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"></path></svg>';
+            } else {
+                themeToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56A104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z"></path></svg>';
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight active menu item on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a.nav-link[href^="#"]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('bg-black', 'text-white', '!text-white');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('bg-black', 'text-white', '!text-white');
+                }
+            });
+        });
+    </script>
+
+    <!-- GSAP Animations -->
+    <script>
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Preloader animation
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+
+            gsap.to(preloader, {
+                opacity: 0,
+                duration: 0.8,
+                ease: "power2.inOut",
+                onComplete: () => {
+                    preloader.style.display = 'none';
+                }
+            });
+        });
+
+        // Animation settings
+        const fadeUpConfig = {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            ease: "power2.out"
+        };
+
+        // Hero section animation - sequential timeline
+        const heroTimeline = gsap.timeline({
+            defaults: { ease: "power3.out" },
+            delay: 1 // Wait for preloader to finish
+        });
+
+        heroTimeline
+            .from("#hero .flex.items-center.gap-4", {
+                opacity: 0,
+                y: 30,
+                duration: 1,
+                clearProps: "all"
+            })
+            .from("#hero #rotating-title", {
+                opacity: 0,
+                y: 20,
+                duration: 0.8,
+                clearProps: "all"
+            }, "-=0.5")
+            .from("#hero p", {
+                opacity: 0,
+                y: 20,
+                duration: 0.8,
+                clearProps: "all"
+            }, "-=0.4")
+            .from("#hero .flex.items-center.gap-2:last-child", {
+                opacity: 0,
+                y: 10,
+                duration: 0.6,
+                clearProps: "all"
+            }, "-=0.3");
+
+        // Section headers animation
+        gsap.utils.toArray("section h2").forEach(header => {
+            gsap.from(header, {
+                scrollTrigger: {
+                    trigger: header,
+                    start: "top 90%",
+                    toggleActions: "play none none none"
+                },
+                opacity: 0,
+                y: 20,
+                duration: 0.6,
+                ease: "power2.out"
+            });
+        });
+
+        // Experience cards staggered animation
+        gsap.from("#experience .space-y-6 > div", {
+            scrollTrigger: {
+                trigger: "#experience",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 30,
+            stagger: 0.15,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+
+        // Projects cards grid animation
+        gsap.from("#projects .grid > div", {
+            scrollTrigger: {
+                trigger: "#projects",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 30,
+            stagger: 0.1,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+
+        // Services cards grid animation
+        gsap.from("#services .grid > div", {
+            scrollTrigger: {
+                trigger: "#services",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 30,
+            stagger: 0.1,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+
+        // Awards cards animation
+        gsap.from("#awards .grid > div", {
+            scrollTrigger: {
+                trigger: "#awards",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 30,
+            stagger: 0.1,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+
+        // Recommendations cards animation
+        gsap.from("#recommendations .grid > div", {
+            scrollTrigger: {
+                trigger: "#recommendations",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 30,
+            stagger: 0.15,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+
+        // Contact section animation
+        gsap.from("#contact .bg-white", {
+            scrollTrigger: {
+                trigger: "#contact",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+
+        // Clients section animation
+        // gsap.from("#clients .grid > div", {
+        //     scrollTrigger: {
+        //         trigger: "#clients",
+        //         start: "top 80%",
+        //         toggleActions: "play none none none"
+        //     },
+        //     opacity: 0,
+        //     y: 20,
+        //     stagger: 0.05,
+        //     duration: 0.6,
+        //     ease: "power2.out"
+        // });
+
+        // About section animation
+        gsap.from("#about .bg-white", {
+            scrollTrigger: {
+                trigger: "#about",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+
+        // Navigation menu animation on load
+        gsap.from("nav", {
+            opacity: 0,
+            y: 20,
+            duration: 1,
+            delay: 0.5,
+            ease: "power3.out"
+        });
+    </script>
+
+    <!-- Slideshow Overlay -->
+    <div id="slideshowOverlay" class="hidden" style="position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 99999; pointer-events: auto;">
+        <div class="w-full h-full flex flex-col">
+            <!-- Top info bar with year, description, and counter -->
+            <div class="top-info-bar">
+                <div class="year" id="yearDisplay"></div>
+                <div class="description">
+                    <div id="descriptionDisplay"></div>
+                    <a id="projectLink" href="#" target="_blank" rel="noopener noreferrer" style="display: none; margin-top: 0.5rem; text-decoration: underline; opacity: 0.8;">
+                        <span id="projectLinkText">View Project</span>
+                    </a>
+                </div>
+                <div class="counter" id="counterDisplay"></div>
+            </div>
+
+            <!-- Image container in the middle (takes remaining space) -->
+            <div id="slideshowContainer">
+                <!-- Media will be loaded here -->
+            </div>
+
+            <!-- Bottom spacer to reserve space for nav controls -->
+            <div class="bottom-spacer"></div>
+        </div>
+    </div>
+
+    <!-- Lab Overlay -->
+    <div id="labOverlay" class="hidden" style="position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 99999; pointer-events: auto; background-color: #100F0F;">
+        <div id="labContainer" style="width: 100vw; height: 100vh;">
+            <!-- p5.js sketch will be loaded here -->
+        </div>
+    </div>
+
+    <!-- p5.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+
+    <!-- Lab Script -->
+    <script>
+        const labSketches = [
+            '{{ site.baseurl }}lab/sketch1-simple.js',
+            '{{ site.baseurl }}lab/sketch2-simple.js',
+            '{{ site.baseurl }}lab/sketch3-simple.js',
+            '{{ site.baseurl }}lab/sketch4-simple.js',
+            '{{ site.baseurl }}lab/sketch5-simple.js'
+        ];
+
+        let currentLabSketch = null;
+        let currentLabSketchIndex = -1;
+        let loadedSketchScript = null;
+
+        function getRandomLabSketch() {
+            let newIndex;
+            do {
+                newIndex = Math.floor(Math.random() * labSketches.length);
+            } while (newIndex === currentLabSketchIndex && labSketches.length > 1);
+            currentLabSketchIndex = newIndex;
+            console.log('Loading sketch index:', newIndex, 'Path:', labSketches[newIndex]);
+            return labSketches[newIndex];
+        }
+
+        function loadLabSketch(sketchPath) {
+            const container = document.getElementById('labContainer');
+
+            // Clear previous sketch
+            container.innerHTML = '';
+
+            // Remove previous p5 instance
+            if (window.currentP5Instance && typeof window.currentP5Instance.remove === 'function') {
+                window.currentP5Instance.remove();
+                window.currentP5Instance = null;
+            }
+
+            // Remove previous script
+            if (loadedSketchScript && loadedSketchScript.parentNode) {
+                loadedSketchScript.parentNode.removeChild(loadedSketchScript);
+            }
+
+            // Load new sketch
+            loadedSketchScript = document.createElement('script');
+            loadedSketchScript.src = sketchPath + '?t=' + new Date().getTime(); // Cache busting
+            loadedSketchScript.onload = () => {
+                console.log('Lab sketch loaded:', sketchPath);
+            };
+            loadedSketchScript.onerror = () => {
+                console.error('Error loading lab sketch:', sketchPath);
+                container.innerHTML = '<div style="color: #FFFCF0; display: flex; align-items: center; justify-content: center; height: 100vh; font-size: 18px;">Error loading sketch</div>';
+            };
+            document.body.appendChild(loadedSketchScript);
+        }
+
+        function openLab() {
+            const labOverlay = document.getElementById('labOverlay');
+            const navigationLinks = document.querySelectorAll('.nav-link');
+            const navDivider = document.querySelector('.nav-divider');
+            const labControls = document.querySelectorAll('.lab-control');
+
+            // Show lab overlay
+            labOverlay.classList.remove('hidden');
+
+            // Hide navigation and show lab controls
+            navigationLinks.forEach(link => link.classList.add('hidden'));
+            navDivider.classList.add('hidden');
+            labControls.forEach(control => control.classList.remove('hidden'));
+            document.getElementById('galleryToggle').classList.add('hidden');
+            document.getElementById('experimentalToggle').classList.add('hidden');
+            document.getElementById('themeToggle').classList.add('hidden');
+
+            // Load random sketch
+            loadLabSketch(getRandomLabSketch());
+        }
+
+        function closeLab() {
+            const labOverlay = document.getElementById('labOverlay');
+            const navigationLinks = document.querySelectorAll('.nav-link');
+            const navDivider = document.querySelector('.nav-divider');
+            const labControls = document.querySelectorAll('.lab-control');
+
+            // Hide lab overlay
+            labOverlay.classList.add('hidden');
+
+            // Show navigation and hide lab controls
+            navigationLinks.forEach(link => link.classList.remove('hidden'));
+            navDivider.classList.remove('hidden');
+            labControls.forEach(control => control.classList.add('hidden'));
+            document.getElementById('galleryToggle').classList.remove('hidden');
+            document.getElementById('experimentalToggle').classList.remove('hidden');
+            document.getElementById('themeToggle').classList.remove('hidden');
+
+            // Clean up p5 instance
+            if (window.currentP5Instance && typeof window.currentP5Instance.remove === 'function') {
+                window.currentP5Instance.remove();
+                window.currentP5Instance = null;
+            }
+
+            // Clear container
+            document.getElementById('labContainer').innerHTML = '';
+        }
+
+        // Lab event listeners
+        document.getElementById('labReload').addEventListener('click', () => {
+            loadLabSketch(getRandomLabSketch());
+        });
+
+        document.getElementById('labClose').addEventListener('click', closeLab);
+
+        // Keyboard shortcuts for lab
+        document.addEventListener('keydown', (e) => {
+            const labOverlay = document.getElementById('labOverlay');
+            if (!labOverlay.classList.contains('hidden')) {
+                if (e.key === 'Escape') {
+                    closeLab();
+                } else if (e.key === ' ' || e.key === 'r' || e.key === 'R') {
+                    e.preventDefault();
+                    loadLabSketch(getRandomLabSketch());
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

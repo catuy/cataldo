@@ -1,0 +1,317 @@
+---
+- file: atlas-1.mp4
+  year: 2020
+  title: Atlas
+  description: B2B development company — Designed and developed website
+  link_text:
+  link_url:
+  type: web
+- file: sbdg.mp4
+  year: 2024
+  title: SBDG
+  description: US holding company internal platform — Product Designer & Developer
+  link_text:
+  link_url:
+  type: mobile
+- file: atlas-5.mp4
+  year: 2020
+  title: Atlas
+  description: B2B development company — Designed and developed website
+  link_text:
+  link_url:
+  type: web
+- file: brecha-1.mp4
+  year: 2020
+  title: Brecha
+  description: Independent media outlet — Platform design & development
+  link_text: Visit website
+  link_url: https://brecha.com.uy/
+  type: web
+- file: brecha-4.mp4
+  year: 2020
+  title: Brecha
+  description: Independent media outlet — Platform design & development
+  link_text: Visit website
+  link_url: https://brecha.com.uy/
+  type: web
+- file: agenda.png
+  year: 2019
+  title: Agenda
+  description: B2B project — Designed native app
+  link_text:
+  link_url:
+  type: image
+- file: goos.mp4
+  year: 2025
+  title: UNESCO GOOS
+  description: Ocean Observing Report Card — Design System & React platform development
+  link_text: Visit website
+  link_url: https://www.ocean-ops.org/goosreport/
+  type: web
+- file: gwick.webp
+  year: 2019
+  title: Gwick
+  description: Digital gift card platform — Lead Product Designer for native app
+  link_text:
+  link_url:
+  type: mobile
+- file: hostburo-1.mp4
+  year: 2014
+  title: HostBüro
+  description: Hosting company — Identity and website design
+  link_text:
+  link_url:
+  type: web
+- file: alver-1.mp4
+  year: 2018
+  title: Alver
+  description: Award-winning national cinema project — Design, development & direction
+  link_text:
+  link_url:
+  type: web
+- file: bus1.mp4
+  year: 2024
+  title: Búsqueda
+  description: Leading political agenda-setting media in Uruguay — Digital transformation
+  link_text: Visit website
+  link_url: https://www.busqueda.com.uy/
+  type: web
+- file: bus4.mp4
+  year: 2024
+  title: Búsqueda
+  description: Leading political agenda-setting media in Uruguay — Digital transformation
+  link_text: Visit website
+  link_url: https://www.busqueda.com.uy/
+  type: web
+- file: busqueda1.png
+  year: 2024
+  title: Búsqueda
+  description: Leading political agenda-setting media in Uruguay — Digital transformation
+  link_text: Visit Galería
+  link_url: https://www.busqueda.com.uy/galeria
+  type: mobile
+- file: busqueda3.png
+  year: 2024
+  title: Búsqueda
+  description: Leading political agenda-setting media in Uruguay — Digital transformation
+  link_text: Visit Galería
+  link_url: https://www.busqueda.com.uy/galeria
+  type: mobile
+- file: cafe-1.mp4
+  year: 2015
+  title: MVD Roasters
+  description: Coffee roastery — Website design and development
+  link_text:
+  link_url:
+  type: web
+- file: cook-1.mp4
+  year: 2013
+  title: Cook
+  description: Gastronomic venture — Website design and development
+  link_text:
+  link_url:
+  type: web
+- file: criolla-1.mp4
+  year: 2019
+  title: Criolla Films
+  description: Film production company — Identity system, website design & development
+  link_text:
+  link_url:
+  type: web
+- file: criolla-2.jpg
+  year: 2019
+  title: Criolla Films
+  description: Film production company — Identity system, website design & development
+  link_text:
+  link_url:
+  type: image
+- file: cw4.png
+  year: 2025
+  title: ClassWallet
+  description: Education finance platform — Lead Product Designer
+  link_text:
+  link_url:
+  type: mobile
+- file: cwds2.png
+  year: 2025
+  title: ClassWallet DS
+  description: Design System in Figma — Integrated with React components & Storybook
+  link_text:
+  link_url:
+  type: mobile
+- file: escobar.webp
+  year: 2016
+  title: Escobar
+  description: Fusion TV series — Identity and on-screen titles design
+  link_text:
+  link_url:
+  type: image
+- file: sso-1.mp4
+  year: 2020
+  title: ANII SSO
+  description: National innovation agency — Single Sign-On system design
+  link_text: Visit website
+  link_url: https://anii.org.uy/
+  type: web
+- file: fanii-1.mp4
+  year: 2020
+  title: ANII Framework
+  description: National innovation agency — First internal design system & CSS framework
+  link_text: Visit website
+  link_url: https://anii.org.uy/
+  type: web
+- file: fanii-2.mp4
+  year: 2020
+  title: ANII Framework
+  description: National innovation agency — First internal design system & CSS framework
+  link_text: Visit website
+  link_url: https://anii.org.uy/
+  type: web
+- file: jacobin-2.mp4
+  year: 2022
+  title: Jacobin
+  description: Left-wing publication — UX/UI consulting, design & development
+  link_text: Visit website
+  link_url: https://jacobinlat.com/
+  type: web
+- file: kromo-5.jpg
+  year: 2017
+  title: Kromo
+  description: Image bank — Visual identity design
+  link_text:
+  link_url:
+  type: image
+- file: leac.webp
+  year: 2018
+  title: FAdu UdelaR
+  description: University of the Republic — Teaching activities as faculty member
+  link_text: View CV
+  link_url: https://cv.fadu.edu.uy/mod/data/view.php?d=6&rid=557&filter=1
+  type: image
+- file: melu.webp
+  year: 2016
+  title: Melu
+  description: Music album — Art direction and design
+  link_text:
+  link_url:
+  type: image
+- file: monitor-1.jpg
+  year: 2015
+  title: Monitor Cannabis
+  description: Cannabis policy platform — Identity, brand system & website design
+  link_text:
+  link_url:
+  type: image
+- file: monitor-3.mp4
+  year: 2015
+  title: Monitor Cannabis
+  description: Cannabis policy platform — Identity, brand system & website design
+  link_text:
+  link_url:
+  type: web
+- file: monitor-4.mp4
+  year: 2015
+  title: Monitor Cannabis
+  description: Cannabis policy platform — Identity, brand system & website design
+  link_text:
+  link_url:
+  type: web
+- file: oriental-1.jpg
+  year: 2017
+  title: Oriental
+  description: Audiovisual production company — Website development
+  link_text:
+  link_url:
+  type: web
+- file: pop.webp
+  year: 2018
+  title: Pop
+  description: Franchise — Visual identity design
+  link_text:
+  link_url:
+  type: image
+- file: prisma-1.mp4
+  year: 2022
+  title: PRISMA
+  description: National innovation indicators portal — Design strategy, UX/UI & product
+  link_text: Visit website
+  link_url: https://prisma.uy/
+  type: web
+- file: reboot.webp
+  year: 2016
+  title: Reboot
+  description: Venice Architecture Biennale 2016 — Curatorial team for Uruguay pavilion
+  link_text: View on Google Arts & Culture
+  link_url: https://artsandculture.google.com/partner/uruguay-biennale-architettura-2016
+  type: image
+- file: shibuya-1.mp4
+  year: 2021
+  title: Neo Shibuya TV
+  description: Creative coding project — Featured in 30 Seconds Museum, Tokyo
+  link_text:
+  link_url:
+  type: web
+- file: sq-1.mp4
+  year: 2019
+  title: SQ Factory
+  description: Application platform — Lead Product Designer, UX optimization & rebranding
+  link_text:
+  link_url:
+  type: web
+- file: sq-2.mp4
+  year: 2019
+  title: SQ Factory
+  description: Application platform — Lead Product Designer, UX optimization & rebranding
+  link_text:
+  link_url:
+  type: web
+- file: tend-1.mp4
+  year: 2017
+  title: Tend
+  description: Psychoanalytic Association's digital magazine — Product design & development
+  link_text: Visit website
+  link_url: https://tend.uy/
+  type: web
+- file: trama-0.mp4
+  year: 2020
+  title: Trama
+  description: Innovation ecosystem platform — Design strategy, UX/UI & product definition
+  link_text:
+  link_url:
+  type: web
+- file: ucu1.png
+  year: 2023
+  title: UCU
+  description: Catholic University — Enrollment & payment systems redesign
+  link_text:
+  link_url:
+  type: web
+- file: 1976-1.jpg
+  year: 2010
+  title: Uruguay 1976
+  description: Award-winning typeface — Portraits of detainees disappeared by Uruguay's dictatorship
+  link_text:
+  link_url:
+  type: image
+- file: seri1.png
+  year: 2015
+  title: Serigraphic Work
+  description: Screen printing projects — Awarded at Taiwan & Portugal biennials
+  link_text: Douro Biennial
+  link_url: https://bienaldouro.com/artists/diego.cataldo/11
+  type: image
+- file: seri2.png
+  year: 2015
+  title: Serigraphic Work
+  description: Screen printing projects — Awarded at Taiwan & Portugal biennials
+  link_text: Global Print
+  link_url: https://globalprintdouro.com/artists/diego.cataldo
+  type: image
+- file: seri3.jpg
+  year: 2015
+  title: Serigraphic Work
+  description: Screen printing projects — Awarded at Taiwan & Portugal biennials
+  link_text: Taiwan Biennial
+  link_url: https://printbiennial.ntmofa.gov.tw/w/print21EN/Index
+  type: image
+

@@ -1,0 +1,65 @@
+- title: Product Design & Development Consultant
+  company: UNESCO-IOC / Global Ocean Observing System (GOOS)
+  period: 2025 - Present
+  description: Led the design and development of the Interactive Ocean Observing Report Card for UNESCO-IOC's Global Ocean Observing System. Designed a comprehensive design system in Figma and developed a React-based web platform featuring interactive data visualizations, monitoring network cards with KPIs, and oceanographic data displays. Delivered complete component documentation through Storybook.
+  type: development
+  logo: assets/logos/unesco.jpg
+  tags:
+    - React
+    - Design Systems
+    - Data Visualization
+    - Tailwind CSS
+    - Storybook
+    - Figma
+
+- title: Lead Product Designer
+  company: ClassWallet
+  period: 2023 - Present
+  description: Senior Product Designer at ClassWallet, a U.S.-based fintech focused on education financing. My responsibilities include defining product strategy, designing complex user flows, and developing a cohesive design system aligned with company goals. I collaborate closely with internal product and engineering teams to ensure consistency, accessibility, and scalability across the platform.
+  type: design
+  logo: assets/logos/classwallet_logo.jpg
+  tags:
+    - Product Strategy
+    - Design Systems
+    - User Flows
+    - Fintech
+    - Education
+
+- title: UX Lead for Uruguay
+  company: Inter-American Development Bank (IDB)
+  period: 2022 - Present
+  description: Served as UX lead for the Inter-American Development Bank's digital transformation initiatives in Uruguay. Provided specialized consulting on usability and design strategy for public sector digital platforms, ensuring alignment with international standards and institutional impact objectives.
+  type: consulting
+  logo: assets/logos/inter_american_development_bank_logo.jpeg
+  tags:
+    - Digital Transformation
+    - Public Sector
+    - Design Strategy
+    - Usability
+    - International Standards
+
+- title: Senior UX Consultant
+  company: National Agency for Research and Innovation (ANII)
+  period: 2014 - 2023
+  description: For nearly a decade, I was a key UX consultant for ANII, Uruguay's national innovation agency. Led the redesign of their digital ecosystem, developing their design system and improving usability of public-facing platforms. My work focused on accessibility, interface consistency, and human-centered improvements to promote transparency and participation in innovation funding processes.
+  type: consulting
+  logo: assets/logos/anii.jpg
+  tags:
+    - Design Systems
+    - Accessibility
+    - Public Innovation
+    - Digital Ecosystems
+    - Government
+
+- title: Associate Professor
+  company: FADU, University of the Republic
+  period: 2013 - 2023
+  description: Mentored students in developing complex design challenges, participated in final evaluation panels, and contributed to academic and interdisciplinary research focused on innovation, communication, and design practice.
+  type: teaching
+  logo: assets/logos/fadu.jpg
+  tags:
+    - Teaching
+    - Mentoring
+    - Design Education
+    - Academic Research
+    - Innovation
