@@ -931,10 +931,10 @@
 
                     if (isVideoFile) {
                         // For videos, preload the poster
-                        imageSrc = slide.file.replace('.mp4', '-poster.jpg');
+                        imageSrc = '/assets/slideshow/' + slide.file.replace('.mp4', '-poster.jpg');
                     } else {
                         // For images, preload the actual image
-                        imageSrc = slide.file;
+                        imageSrc = '/assets/slideshow/' + slide.file;
                     }
 
                     const img = new Image();
