@@ -909,6 +909,70 @@
         const navDivider = document.querySelector('.nav-divider');
         const slideshowControls = document.querySelectorAll('.slideshow-control');
 
+        // Preload poster images for smooth slideshow
+        const preloadedImages = [];
+        let preloadedCount = 0;
+
+        function preloadPosters() {
+            console.log('Preloading slideshow posters...');
+
+            return new Promise((resolve) => {
+                let loadedCount = 0;
+                const totalImages = slideshowMedia.length;
+
+                if (totalImages === 0) {
+                    resolve();
+                    return;
+                }
+
+                slideshowMedia.forEach((slide, index) => {
+                    const isVideoFile = slide.file.endsWith('.mp4');
+                    let imageSrc;
+
+                    if (isVideoFile) {
+                        // For videos, preload the poster
+                        imageSrc = slide.file.replace('.mp4', '-poster.jpg');
+                    } else {
+                        // For images, preload the actual image
+                        imageSrc = slide.file;
+                    }
+
+                    const img = new Image();
+
+                    img.onload = () => {
+                        loadedCount++;
+                        preloadedCount = loadedCount;
+
+                        // Log progress every 10 images
+                        if (loadedCount % 10 === 0 || loadedCount === totalImages) {
+                            console.log(`Preloaded ${loadedCount}/${totalImages} images`);
+                        }
+
+                        if (loadedCount === totalImages) {
+                            console.log('All slideshow images preloaded!');
+                            resolve();
+                        }
+                    };
+
+                    img.onerror = () => {
+                        console.warn(`Failed to preload: ${imageSrc}`);
+                        loadedCount++;
+                        preloadedCount = loadedCount;
+
+                        if (loadedCount === totalImages) {
+                            resolve();
+                        }
+                    };
+
+                    img.src = imageSrc;
+                    preloadedImages[index] = img;
+                });
+            });
+        }
+
+        // Start preloading immediately in background
+        preloadPosters();
+
         function showSlide(index) {
             const slide = slideshowMedia[index];
             const isVideoFile = slide.file.endsWith('.mp4');
