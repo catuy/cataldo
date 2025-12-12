@@ -1297,8 +1297,11 @@
 
             // Prevent body scroll
             document.body.style.overflow = 'hidden';
-            document.body.style.position = 'fixed';
-            document.body.style.width = '100%';
+            if (window.innerWidth >= 768) {
+                // Only use position fixed on desktop
+                document.body.style.position = 'fixed';
+                document.body.style.width = '100%';
+            }
 
             navigationLinks.forEach(link => link.classList.add('hidden'));
             navDivider.classList.add('hidden');
@@ -1772,8 +1775,11 @@
 
             // Prevent body scroll
             document.body.style.overflow = 'hidden';
-            document.body.style.position = 'fixed';
-            document.body.style.width = '100%';
+            if (window.innerWidth >= 768) {
+                // Only use position fixed on desktop
+                document.body.style.position = 'fixed';
+                document.body.style.width = '100%';
+            }
 
             // Hide navigation and show lab controls
             navigationLinks.forEach(link => link.classList.add('hidden'));
