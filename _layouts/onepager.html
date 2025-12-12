@@ -468,6 +468,18 @@
             flex-shrink: 0;
         }
 
+        /* Mobile: only 2 columns (year and counter) */
+        @media (max-width: 767px) {
+            .top-info-bar {
+                grid-template-columns: auto 1fr;
+                justify-items: start;
+            }
+
+            .top-info-bar .counter {
+                justify-self: end;
+            }
+        }
+
         body.dark-theme .top-info-bar {
             color: #FFFCF0;
         }
@@ -686,7 +698,7 @@
     </div>
 
     <!-- Fixed Bottom Navigation Menu -->
-    <nav class="fixed bottom-6 left-1/2 transform -translate-x-1/2" style="z-index: 999999; opacity: 0;">
+    <nav class="fixed bottom-6 left-1/2" style="z-index: 999999; opacity: 0; transform: translateX(-50%);">
         <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-full px-3 py-3 shadow-lg">
             <div class="flex items-center gap-2">
                 <!-- Hamburger Menu (Mobile Only) -->
