@@ -1765,6 +1765,7 @@
             const navigationLinks = document.querySelectorAll('.nav-link');
             const navDivider = document.querySelector('.nav-divider');
             const labControls = document.querySelectorAll('.lab-control');
+            const slideshowControls = document.querySelectorAll('.slideshow-control');
 
             // Show lab overlay
             labOverlay.classList.remove('hidden');
@@ -1777,6 +1778,7 @@
             // Hide navigation and show lab controls
             navigationLinks.forEach(link => link.classList.add('hidden'));
             navDivider.classList.add('hidden');
+            slideshowControls.forEach(control => control.classList.add('hidden'));
             labControls.forEach(control => control.classList.remove('hidden'));
             document.getElementById('galleryToggle').classList.add('hidden');
             document.getElementById('experimentalToggle').classList.add('hidden');
@@ -1792,6 +1794,7 @@
             const navigationLinks = document.querySelectorAll('.nav-link');
             const navDivider = document.querySelector('.nav-divider');
             const labControls = document.querySelectorAll('.lab-control');
+            const slideshowControls = document.querySelectorAll('.slideshow-control');
 
             // Hide lab overlay
             labOverlay.classList.add('hidden');
@@ -1804,6 +1807,7 @@
             // Show navigation and hide lab controls
             navigationLinks.forEach(link => link.classList.remove('hidden'));
             navDivider.classList.remove('hidden');
+            slideshowControls.forEach(control => control.classList.add('hidden'));
             labControls.forEach(control => control.classList.add('hidden'));
             document.getElementById('galleryToggle').classList.remove('hidden');
             document.getElementById('experimentalToggle').classList.remove('hidden');
