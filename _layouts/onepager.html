@@ -171,6 +171,13 @@
             background-color: #1C1B1A; /* fx-base-950 */
         }
 
+        /* Experience cards transparent in mobile dark mode */
+        @media (max-width: 767px) {
+            body.dark-theme #experience .bg-white {
+                background-color: transparent;
+            }
+        }
+
         body.dark-theme .border-black {
             border-color: #FFFCF0; /* fx-paper */
         }
