@@ -679,7 +679,7 @@
     </div>
 
     <!-- Fixed Bottom Navigation Menu -->
-    <nav class="fixed bottom-6 left-1/2 transform -translate-x-1/2" style="z-index: 999999;">
+    <nav class="fixed bottom-6 left-1/2 transform -translate-x-1/2" style="z-index: 999999; opacity: 0;">
         <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-full px-3 py-3 shadow-lg">
             <div class="flex items-center gap-2">
                 <!-- Hamburger Menu (Mobile Only) -->
@@ -950,6 +950,7 @@
 
                         if (loadedCount === totalImages) {
                             console.log('All slideshow images preloaded!');
+                            slideshowImagesReady = true;
                             resolve();
                         }
                     };
@@ -960,6 +961,7 @@
                         preloadedCount = loadedCount;
 
                         if (loadedCount === totalImages) {
+                            slideshowImagesReady = true;
                             resolve();
                         }
                     };
@@ -1266,6 +1268,12 @@
             console.log('Opening slideshow...');
             slideshowOverlay.classList.remove('hidden');
             console.log('Overlay classes:', slideshowOverlay.className);
+
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+            document.body.style.width = '100%';
+
             navigationLinks.forEach(link => link.classList.add('hidden'));
             navDivider.classList.add('hidden');
             slideshowControls.forEach(control => control.classList.remove('hidden'));
@@ -1286,6 +1294,12 @@
 
         function closeSlideshow() {
             slideshowOverlay.classList.add('hidden');
+
+            // Restore body scroll
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
+
             navigationLinks.forEach(link => link.classList.remove('hidden'));
             navDivider.classList.remove('hidden');
             slideshowControls.forEach(control => control.classList.add('hidden'));
@@ -1423,9 +1437,33 @@
         // Register ScrollTrigger plugin
         gsap.registerPlugin(ScrollTrigger);
 
-        // Preloader animation
-        window.addEventListener('load', () => {
+        // Preloader animation - wait for slideshow images to load
+        let slideshowImagesReady = false;
+
+        window.addEventListener('load', async () => {
             const preloader = document.getElementById('preloader');
+
+            // Wait for slideshow images if they're not ready yet
+            if (!slideshowImagesReady) {
+                console.log('Waiting for slideshow images to finish loading...');
+                // Check every 100ms if images are ready
+                await new Promise(resolve => {
+                    const checkInterval = setInterval(() => {
+                        if (slideshowImagesReady) {
+                            clearInterval(checkInterval);
+                            resolve();
+                        }
+                    }, 100);
+
+                    // Safety timeout: don't wait more than 10 seconds
+                    setTimeout(() => {
+                        clearInterval(checkInterval);
+                        resolve();
+                    }, 10000);
+                });
+            }
+
+            console.log('All resources loaded, hiding preloader');
 
             gsap.to(preloader, {
                 opacity: 0,
@@ -1433,6 +1471,8 @@
                 ease: "power2.inOut",
                 onComplete: () => {
                     preloader.style.display = 'none';
+                    // Show navigation after preloader is hidden
+                    showNavigation();
                 }
             });
         });
@@ -1593,14 +1633,16 @@
             ease: "power2.out"
         });
 
-        // Navigation menu animation on load
-        gsap.from("nav", {
-            opacity: 0,
-            y: 20,
-            duration: 1,
-            delay: 0.5,
-            ease: "power3.out"
-        });
+        // Navigation menu animation - will be triggered after preloader
+        function showNavigation() {
+            gsap.to("nav", {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                delay: 0.5,
+                ease: "power3.out"
+            });
+        }
     </script>
 
     <!-- Slideshow Overlay -->
@@ -1629,8 +1671,8 @@
     </div>
 
     <!-- Lab Overlay -->
-    <div id="labOverlay" class="hidden" style="position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 99999; pointer-events: auto; background-color: #100F0F;">
-        <div id="labContainer" style="width: 100vw; height: 100vh;">
+    <div id="labOverlay" class="hidden" style="position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 99999; pointer-events: auto; background-color: #100F0F; overflow: hidden;">
+        <div id="labContainer" style="width: 100vw; height: 100vh; overflow: hidden;">
             <!-- p5.js sketch will be loaded here -->
         </div>
     </div>
@@ -1701,6 +1743,11 @@
             // Show lab overlay
             labOverlay.classList.remove('hidden');
 
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+            document.body.style.width = '100%';
+
             // Hide navigation and show lab controls
             navigationLinks.forEach(link => link.classList.add('hidden'));
             navDivider.classList.add('hidden');
@@ -1722,6 +1769,11 @@
 
             // Hide lab overlay
             labOverlay.classList.add('hidden');
+
+            // Restore body scroll
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
 
             // Show navigation and hide lab controls
             navigationLinks.forEach(link => link.classList.remove('hidden'));
