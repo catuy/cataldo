@@ -1,23 +1,27 @@
-- name: Sarah Johnson
-  role: Product Manager at TechCorp
-  text: Diego is an exceptional developer. Their attention to detail and ability to solve complex problems is outstanding. They consistently deliver high-quality work and are a pleasure to work with.
-  gradient: from-blue-400 to-purple-500
-  avatar: https://i.pravatar.cc/150?img=5
+- name: "Laura Stukonytė"
+  role: "Communications specialist at IOC of UNESCO / Global Ocean Observing System"
+  text: "Worked together on: Design and development of the Interactive Ocean Observing Report Card, including a scalable design system in Figma and a React-based platform with interactive data visualizations, monitoring network views, and KPIs for global ocean observing data."
+  linkedin: "https://www.linkedin.com/in/laura-stukonyte/"
+  gradient: "from-purple-400 to-pink-500"
+  avatar: "/assets/testimonials/laura.jpeg"
 
-- name: Michael Chen
-  role: CTO at StartupHub
-  text: Working with Diego was a game-changer for our team. They brought modern best practices and helped us build a scalable architecture that supports our rapid growth.
-  gradient: from-green-400 to-teal-500
-  avatar: https://i.pravatar.cc/150?img=12
+- name: "David Koplovitz"
+  role: "CTO at ClassWallet"
+  text: "Worked together on: Product strategy and UX leadership for a large-scale U.S. fintech platform, designing complex user flows and evolving a robust design system in close collaboration with product and engineering teams across multiple product lines."
+  linkedin: "https://www.linkedin.com/in/koplovitz/"
+  gradient: "from-blue-400 to-purple-500"
+  avatar: "/assets/testimonials/kop.jpeg"
 
-- name: Emily Rodriguez
-  role: Lead Designer at Creative Co.
-  text: Diego bridges the gap between design and development perfectly. They understand both the technical and creative aspects, making collaboration seamless and enjoyable.
-  gradient: from-orange-400 to-red-500
-  avatar: https://i.pravatar.cc/150?img=47
+- name: "Matías Burchio"
+  role: "CTO at ANII (National Agency for Research and Innovation)"
+  text: "Worked together on: Redesign and long-term evolution of ANII's digital ecosystem, leading UX improvements, accessibility initiatives, and the creation of a comprehensive design system for public-facing platforms supporting innovation funding and grant processes."
+  linkedin: "https://www.linkedin.com/in/mburchio/"
+  gradient: "from-green-400 to-teal-500"
+  avatar: "/assets/testimonials/matias.jpeg"
 
-- name: David Park
-  role: Senior Developer at Digital Agency
-  text: I've learned so much from Diego. Their mentorship helped me grow as a developer. They're always willing to share knowledge and help the team succeed.
-  gradient: from-pink-400 to-purple-500
-  avatar: https://i.pravatar.cc/150?img=15
+- name: "Victoria Gadea"
+  role: "Director of Digital Transformation at Búsqueda"
+  text: "Worked together on: Digital transformation efforts across editorial and business areas, supporting product discovery, UX strategy, and platform evolution through a human-centered and systems-oriented approach that unified multiple digital touchpoints."
+  linkedin: "https://www.linkedin.com/in/victoriagadea/"
+  gradient: "from-orange-400 to-red-500"
+  avatar: "/assets/testimonials/victoria.jpeg"

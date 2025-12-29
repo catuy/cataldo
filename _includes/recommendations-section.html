@@ -1,7 +1,6 @@
 <!-- Recommendations Section -->
 <section id="recommendations" class="mb-12 md:mb-16">
-    <h2 class="text-sm md:text-md text-text-secondary mb-4 md:mb-6">What people say (Under Construction)</h2>
-
+    <h2 class="text-sm md:text-md text-text-secondary mb-4 md:mb-6">Professional references</h2>
     <div class="grid md:grid-cols-2 gap-6 md:gap-6">
         {% for recommendation in site.data.recommendations %}
         <!-- Recommendation Card -->
@@ -18,7 +17,19 @@
                 </div>
             </div>
             <p class="text-black/70 text-sm leading-relaxed">
-                "{{ recommendation.text }}"
+                {% assign text_parts = recommendation.text | split: "Worked together on: " %}
+                {% if text_parts.size > 1 %}
+                    <em class="italic">Worked together on:</em><br>
+                    {{ text_parts[1] }}
+                {% else %}
+                    {{ recommendation.text }}
+                {% endif %}
+                {% if recommendation.linkedin %}
+                <br><br>
+                <a href="{{ recommendation.linkedin }}" target="_blank" class="text-blue-600 hover:text-blue-800 inline-flex items-center gap-1">
+                    🔗 LinkedIn
+                </a>
+                {% endif %}
             </p>
         </div>
         {% endfor %}
