@@ -5,10 +5,6 @@ date: 2025-04-01 00:00:00 -0300
 visible: true
 images: /assets/thumbs/goos.png
 country: France
-tags:
-  - Design Systems
-  - Data Visualization
-  - React
 categories: todos consultorias
 description: Designed and developed an interactive platform for ocean observing data, creating a design system and React-based data visualization tools for global monitoring networks.
 ---
