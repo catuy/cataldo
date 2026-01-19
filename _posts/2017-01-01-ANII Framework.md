@@ -7,11 +7,10 @@ description: "Built Uruguay's first government design system, creating scalable 
 categories: todos consultorias
 images: /assets/thumbs/anii2.png
 country: Uruguay
-tags:   - Product Design
-        - UX/UI
-        - Government Digital Services
-        - Design Systems
-        - Public Sector Innovation
+tags:
+  - Product Design
+  - Development
+  - Strategy
 ---
 <!-- Intro -->
 <div class="row">
