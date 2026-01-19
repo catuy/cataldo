@@ -12,7 +12,6 @@ tags:   - Product Design
         - Government Digital Services
         - Design Systems
         - Public Sector Innovation
-        
 ---
 <!-- Intro -->
 <div class="row">
