@@ -9,8 +9,10 @@ images: /assets/thumbs/anii2.png
 country: Uruguay
 tags:
   - Product Design
-  - Development
-  - Strategy
+  - UX/UI
+  - Government Digital Services
+  - Design Systems
+  - Public Sector Innovation
 ---
 <!-- Intro -->
 <div class="row">
